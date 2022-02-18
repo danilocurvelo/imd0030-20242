@@ -20,6 +20,7 @@ author: Kevin Lin
 baseurl: '/courses/cse373/23wi' # the subpath of your site, e.g. /blog
 url: 'https://courses.cs.washington.edu' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+include: [".htaccess"]
 google_site_verification: 'QclY_1udbdKts462GzFHLmFoaioICIQ16kjZumjRJIg'
 canvas: 'https://canvas.uw.edu/courses/1612302'
 
