@@ -1,24 +1,18 @@
 ---
-layout: page
+layout: minimal
 title: Staff
-description: A listing of all the course staff members.
+description: &desc All the teaching and learning assistants.
+summary: *desc
+parent: CSE 373
 ---
 
-# Staff
+# {{ page.title }}
+{: .no_toc .mb-2 }
 
-## Instructors
+{{ page.description }}
+{: .fs-6 .fw-300 }
 
-{% assign instructors = site.staffers | where: 'role', 'Instructor' %}
-{% for staffer in instructors %}
-{{ staffer }}
-{% endfor %}
-
-{% assign teaching_assistants = site.staffers | where: 'role', 'Teaching Assistant' %}
-{% assign num_teaching_assistants = teaching_assistants | size %}
-{% if num_teaching_assistants != 0 %}
-## Teaching Assistants
-
+{% assign teaching_assistants = site.staffers | where: 'role', 'Teaching Assistant' | sort: 'section' %}
 {% for staffer in teaching_assistants %}
 {{ staffer }}
 {% endfor %}
-{% endif %}
