@@ -1,5 +1,6 @@
 ---
 timeline:
+  - '8:30 AM'
   - '9:00 AM'
   - '9:30 AM'
   - '10:00 AM'
@@ -18,49 +19,32 @@ timeline:
   - '4:30 PM'
   - '5:00 PM'
   - '5:30 PM'
+  - '6:00 PM'
+  - '6:30 PM'
+  - '7:00 PM'
 schedule:
   - name: Monday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+        start: 3:30 PM
+        end: 4:30 PM
+        location: ARC 147
   - name: Tuesday
   - name: Wednesday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+        start: 3:30 PM
+        end: 4:30 PM
+        location: ARC 147
   - name: Thursday
+    events:
+      - name: Sections
+        start: 8:30 AM
+        end: 4:30 PM
   - name: Friday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+        start: 3:30 PM
+        end: 4:30 PM
+        location: ARC 147
 ---
