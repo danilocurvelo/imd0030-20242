@@ -43,6 +43,8 @@ callouts:
     color: yellow
   warning:
     color: red
+  deliverable:
+    color: green
 
 # Collections for website data
 collections:
