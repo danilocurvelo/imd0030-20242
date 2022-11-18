@@ -42,6 +42,7 @@ callouts:
   hint:
     color: yellow
   warning:
+    title: Warning
     color: red
   deliverable:
     title: Deliverable
