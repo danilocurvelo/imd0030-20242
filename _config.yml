@@ -44,6 +44,7 @@ callouts:
   warning:
     color: red
   deliverable:
+    title: Deliverable
     color: green
 
 # Collections for website data
