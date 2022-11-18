@@ -54,6 +54,14 @@ summary {
       margin-top: 1em;
     }
   }
+
+  .full-width {
+    height: 100%;
+    margin: 1rem -1rem;
+    max-width: none;
+    padding: 0;
+    width: calc(100% + 2rem)
+  }
 }
 
 .search {
