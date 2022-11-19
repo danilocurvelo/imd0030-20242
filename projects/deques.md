@@ -80,6 +80,9 @@ An **array deque** is like the array-based list data structures that you've lear
 
 {% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vShi1Nl3Nsi_6sZF2Bm3yUZ_S9ojRyaJoovidRWxSQVURMJ3BykmqPpCrY-Uqu26DtuxwsDXXwaNo0R/embed" aspect_ratio="16/9" %}
 
+{: .hint }
+To step back in the slides, click on the slides and press the left arrow key or the backspace key.
+
 [^1]: Josh Hug. 2019. [cs61b sp19 proj1 slides](https://docs.google.com/presentation/d/1XBJOht0xWz1tEvLuvOL4lOIaY0NSfArXAvqgkrx0zpc/edit). In CS 61B: Data Structures, Spring 2019.
 
 We've provided an `ArrayDeque` class that includes a bug, and a failing test case that causes the bug to emerge. Identify and fix the bug in the `ArrayDeque` class by **changing at least 2 lines of code**. Follow the debugging cycle to address the bug.
