@@ -76,7 +76,9 @@ Unlike your prior programming courses, the focus of this course is not only to b
 
 ### ArrayDeque
 
-An [**ArrayDeque**](https://docs.google.com/presentation/d/1c9RdR7fz-CyTH9bHzJ5bhlfmlUHgpC-EK9d3a8PMiuo/edit?usp=sharing)[^1] is like the array-based list data structures that you've learned before, but different in that elements aren't necessarily stored starting at index 0. Instead, their start and end positions are determined by two fields called `front` and `back`.
+An **array deque** is like the array-based list data structures that you've learned before, but different in that elements aren't necessarily stored starting at index 0. Instead, their start and end positions are determined by two fields called `front` and `back`.[^1]
+
+{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vShi1Nl3Nsi_6sZF2Bm3yUZ_S9ojRyaJoovidRWxSQVURMJ3BykmqPpCrY-Uqu26DtuxwsDXXwaNo0R/embed" aspect_ratio="16/9" %}
 
 [^1]: Josh Hug. 2019. [cs61b sp19 proj1 slides](https://docs.google.com/presentation/d/1XBJOht0xWz1tEvLuvOL4lOIaY0NSfArXAvqgkrx0zpc/edit). In CS 61B: Data Structures, Spring 2019.
 
@@ -95,8 +97,7 @@ It's easy to lose track of time and get stuck in a deep hole when debugging. Com
 
 To develop a hypothesis, we can use the debugger to pause the program at any point in time. [Watch this video](https://youtu.be/e7K8CNr3j2w) by one of our TAs, Iris Zhou, to learn more about how to debug your deques in IntelliJ. At each step, compare your thinking to the state of the debugger. If it's a bit hard to understand the state of the debugger, try switching over to the **jGRASP** and **Java Visualizer** tabs while debugging the program.
 
-<iframe src="https://www.youtube.com/embed/e7K8CNr3j2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{: .module .full-width style="aspect-ratio: 1280/777" }
+{% include video.html src="https://www.youtube.com/embed/e7K8CNr3j2w" aspect_ratio="1280/777" %}
 
 After you implement a fix that resolves the bug in the `confusingTest`, make sure that it also works with this alternative sequence of tricky removes. Edit the `confusingTest` and swap out the final two code segments for the following code.
 
@@ -123,7 +124,9 @@ Implement the `LinkedDeque` class with the following additional requirements:
 1. The amount of memory used by the deque must always be proportional to its size. If a client adds 10,000 items and then removes 9,999 items, the resulting deque should use about the same amount of memory as a deque where we only ever added 1 item. To achieve this, remove references to items that are no longer in the deque.
 1. The class is implemented with the help of **sentinel nodes** according to the following **invariants**, or implementation requirements that must be true before and after any of the data structure's operations. Use the doubly-linked `Node` class defined at the bottom of the `LinkedDeque.java` file.
 
-A [**sentinel node**](https://docs.google.com/presentation/d/1qNaYV6fq-ARyhMGnY5-HJXHG1srNf3R5uofhYiJ80Y0/edit?usp=sharing)[^2] is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods.
+A **sentinel node** is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods.[^2]
+
+{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vQtRcMfikTI7KxNrzAwXorzpHAKQWOuQ8m-i1gTEs9s17boY3OrNoZqtvRZIqw1bG8uDch9LvTp4TE-/embed" aspect_ratio="16/9" %}
 
 [^2]: Josh Hug. 2019. [cs61b lec5 2019 lists3, dllists and arrays](https://docs.google.com/presentation/d/1nRGXdApMS7yVqs04MRGZ62dZ9SoZLzrxqvX462G2UbA/edit). In CS 61B: Data Structures, Spring 2019.
 

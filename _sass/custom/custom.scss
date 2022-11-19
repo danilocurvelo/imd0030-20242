@@ -59,8 +59,15 @@ summary {
     height: 100%;
     margin: 1rem -1rem;
     max-width: none;
+    overflow: hidden;
     padding: 0;
     width: calc(100% + 2rem)
+  }
+
+  .slide {
+    clip-path: inset(0 0 1.5px 0);
+    max-width: none;
+    width: calc(100% + 2px);
   }
 }
 
