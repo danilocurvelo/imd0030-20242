@@ -76,7 +76,7 @@ Unlike your prior programming courses, the focus of this course is not only to b
 
 ### ArrayDeque
 
-An **array deque** is like the array-based list data structures that you've learned before, but different in that elements aren't necessarily stored starting at index 0. Instead, their start and end positions are determined by two fields called `front` and `back`.[^1]
+An **array deque** is like an `ArrayList`, but different in that elements aren't necessarily stored starting at index 0. Instead, their start and end positions are determined by two fields called `front` and `back`.[^1]
 
 {% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vShi1Nl3Nsi_6sZF2Bm3yUZ_S9ojRyaJoovidRWxSQVURMJ3BykmqPpCrY-Uqu26DtuxwsDXXwaNo0R/embed" aspect_ratio="16/9" %}
 
