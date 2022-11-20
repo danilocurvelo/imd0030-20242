@@ -125,9 +125,13 @@ Implement the `LinkedDeque` class with the following additional requirements:
 
 1. The methods `addFirst`, `addLast`, `removeFirst`, and `removeLast` must run in constant time with respect to the size of the deque. To achieve this, don't use any iteration or recursion.
 1. The amount of memory used by the deque must always be proportional to its size. If a client adds 10,000 items and then removes 9,999 items, the resulting deque should use about the same amount of memory as a deque where we only ever added 1 item. To achieve this, remove references to items that are no longer in the deque.
-1. The class is implemented with the help of **sentinel nodes** according to the following **invariants**, or implementation requirements that must be true before and after any of the data structure's operations. Use the doubly-linked `Node` class defined at the bottom of the `LinkedDeque.java` file.
+1. The class is implemented with the help of **sentinel nodes** according to the following invariants. Use the doubly-linked `Node` class defined at the bottom of the `LinkedDeque.java` file.
 
-A **sentinel node** is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods.[^2]
+Invariant
+: An property of an implementation that must be true before and after any data structure operations. For example, in an `ArrayList`, the _i_-th item in the list is always stored at `elementData[i]`.
+
+Sentinel node
+: A sentinel node is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods. We recommend using two sentinel nodes to simplify your code, providing access to both the front and the back of the deque.[^2]
 
 {% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vQtRcMfikTI7KxNrzAwXorzpHAKQWOuQ8m-i1gTEs9s17boY3OrNoZqtvRZIqw1bG8uDch9LvTp4TE-/embed" aspect_ratio="16/9" %}
 
@@ -140,11 +144,11 @@ A `LinkedDeque` should always maintain the following invariants before and after
 - The nodes in your deque have consistent `next` and `prev` fields. If a node `curr` has a `curr.next`, we expect `curr.next.prev == curr`.
 
 {: .hint }
-Write down what your `LinkedDeque` will look like on paper before writing code! Drawing more pictures often leads to more successful implementations. Better yet, if you can find a willing partner, have them give some instructions while you attempt to draw everything out. Be sure to think carefully about what happens if the data structure starts empty, some items are added, all the items are removed, and then some items are added again.
+Write down what your `LinkedDeque` will look like on paper before writing code! Drawing more pictures often leads to more successful implementations. Better yet, if you can find a willing partner, have them give some instructions while you attempt to draw everything out. Plan-out and double-check what you want to change before writing any code. The staff solution adds between 4 to 6 lines of code per method and doesn't introduce any additional `if` statements.
 
 To assist in debugging, we've provided a `checkInvariants` method that returns a string describing any problems with invariants (at the time the method is called), or null if there are no problems. You can use this by adding debugging print statements to help you verify a hypothesis. But it can be tedious editing code, moving the line around, and then running it again just to call `checkInvariants` at a different point in time. A better way is by [Using Evaluate Expression and Watches with IntelliJ](https://youtu.be/u5NSgMCkqOg). This allows you to pause the program at any point in time and call `checkInvariants()`.
 
-Lastly, if your first try goes badly, don't be afraid to scrap your code and start over. My solution adds between 4 to 6 lines of code per method and doesn't add any additional `if` statements.
+Lastly, if your first try goes badly, don't be afraid to scrap your code and start over.
 
 {: .deliverable }
 Explain the part of the `LinkedDeque` class that you're most proud of programming.
