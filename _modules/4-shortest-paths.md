@@ -9,12 +9,14 @@ Feb 20
 
 Feb 22
 : **Shortest Paths Trees**
+: {% include learning_objectives.md lesson="Shortest Paths Tree" %}
 
 Feb 23
 : **Sec**{: .label .label-purple }**Graph Algorithms**
 
 Feb 24
 : **Dynamic Programming**
+: {% include learning_objectives.md lesson="Dynamic Programming" %}
 
 #### Graph Applications
 

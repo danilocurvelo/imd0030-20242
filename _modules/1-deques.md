@@ -17,12 +17,15 @@ Jan 6
 
 Jan 9
 : **Asymptotic Analysis**
+: {% include learning_objectives.md lesson="Asymptotic Analysis" %}
 
 Jan 11
 : **Iterative Sorts**
+: {% include learning_objectives.md lesson="Iterative Sorts" %}
 
 Jan 12
 : **Sec**{: .label .label-purple }**Sorting Algorithms**
 
 Jan 13
 : **Merge Sort**
+: {% include learning_objectives.md lesson="Merge Sort" %}

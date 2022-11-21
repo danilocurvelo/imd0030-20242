@@ -1,0 +1,79 @@
+Asymptotic Analysis:
+  - Compare and contrast runtime analysis, asymptotic analysis, and case analysis.
+  - Analyze the order of growth of a function as constant, linear, or quadratic.
+  - Identify big-theta asymptotic notation for the order of growth of a function.
+
+Iterative Sorts:
+  - Describe the problem of sorting, ordering relations, and stability.
+  - Trace each iteration of selection sort and insertion sort.
+  - Identify a run of selection sort and insertion sort on an array.
+
+Merge Sort:
+  - Analyze the runtime of a recursive algorithm using recurrences.
+  - Trace the recursive execution of merge sort.
+  - Identify a run of merge sort on an array.
+
+Search Trees:
+  - Identify a best/worst-case height BST insertion order for given elements.
+  - Trace the search and insertion procedures in a BST and a TST.
+  - Explain in plain English the TST collection or traversal algorithm.
+
+2-3 Trees:
+  - Identify element promotions during the 2-3 tree insertion process.
+  - Identify an insertion order that will increase the height of a 2-3 tree.
+  - Analyze the best-case and worst-case height of a 2-3 tree.
+
+Left-Leaning Red-Black Trees:
+  - Given a 2-3 tree, identify itsa corresponding LLRB tree (and vice-versa).
+  - Apply rotations and color flips for a single LLRB tree insertion.
+  - Using 1-1 correspondence, give the LLRB tree for a series of insertions.
+
+Quicksort:
+  - Compare comparison sorting algorithms on efficiency and stability.
+  - Given the runtime of a partitioning algorithm, describe the runtime of quicksort.
+  - Describe the search trees analogies for quicksort algorithms.
+
+Counting Sorts:
+  - Explain the worst-case lower bound for comparison sorting.
+  - Describe counting sort, MSD radix sort, and LSD radix sort.
+  - Explain how the subsort is used in MSD and LSD radix sort.
+
+Binary Heaps:
+  - Apply sink/swim operations to trace heap element insertion and removal.
+  - Identify possible binary heap indices for the n-th smallest value.
+  - Given an array index, find the parent, left child, and right child indexes.
+
+Hash Tables:
+  - Explain and trace hash table algorithms such as insertion and search.
+  - Evaluate how a hash table will behave in response to a given data type.
+  - Analyze the runtime of a hash table with a given bucket data structure.
+
+Affordance Analysis:
+  - Describe how abstractions can embody values and structure social relations.
+  - Identify the affordances of a programming abstraction such as a class or interface.
+  - Evaluate affordances by applying the 3 value-sensitive design principles.
+
+Graph Data Type:
+  - Identify the features and representation for an example graph or graph problem.
+  - Analyze the runtime of a graph representation in terms of vertices and edges.
+  - Analyze the affordances of a graph interface or method for a particular problem.
+
+Graph Traversals:
+  - Trace and explain each data structure in BFS and DFS graph traversal.
+  - Analyze the runtime of a graph algorithm in terms of vertices and edges.
+  - Define an appropriate graph abstraction for a given image processing problem.
+
+Minimum Spanning Trees:
+  - Trace Prim's algorithm to find a minimum spanning tree in a graph.
+  - Compare and contrast Prim's algorithm and breadth-first search.
+  - Apply the super-source node pattern to simplify graph problems.
+
+Shortest Paths Trees:
+  - Trace Dijkstra's and the topological sorting algorithm for weighted shortest paths.
+  - Explain why Dijkstra's algorithm might not work on negative edge-weighted graphs.
+  - Explain the runtime for Dijkstra's algorithm in terms of priority queue operations.
+
+Dynamic Programming:
+  - Identify whether a recursive algorithm can be rewritten using DP.
+  - Explain how unique paths can be counted using recursion and DP.
+  - Explain how a min-cost seam can be found using recursion and DP.
