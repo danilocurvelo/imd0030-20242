@@ -27,6 +27,12 @@ summary {
   width: 100%;
 }
 
+.main-header {
+  background-color: transparent;
+  display: block;
+  z-index: auto;
+}
+
 .main-content-wrap {
   max-width: $content-width;
   margin: auto;
