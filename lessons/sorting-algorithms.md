@@ -400,7 +400,7 @@ Here's an example of a recurrence diagram for merge sort on a 64-element array.
 - And on and on until the algorithm reaches its base case.
 
 {: style="display: block; margin: auto; max-height: 16em;" }
-{% include_relative recurrence-diagram.svg %}
+{% include_relative _images/recurrence-diagram.svg %}
 
 By identifying the pattern in the recurrence diagram, we can see that all the nodes that are on the same layer will take about 64 units of time. Since the entire runtime of merge sort is represented by this diagram, we can find the total time spent by multiplying the number of layers by the time spent on each layer. If we think about the problem more generally in terms of the size of the current subproblem _N_, then:
 
