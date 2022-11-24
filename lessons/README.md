@@ -37,19 +37,17 @@ email.addEventListener("input", event => {
     if (!seed.endsWith("@uw.edu")) {
         for (const heading of weeks) {
             const ul = heading.nextElementSibling;
-            for (const li of ul.getElementsByTagName("li")) {
-                li.classList.remove("d-none");
+            for (const input of ul.getElementsByTagName("input")) {
+                input.removeAttribute("checked");
             };
         };
         return;
     }
     for (const heading of weeks) {
         const ul = heading.nextElementSibling;
-        const objectives = Array.from(ul.getElementsByTagName("li"));
-        objectives.forEach(li => li.classList.add("d-none"));
-        const shuffled = new Chance(heading.textContent + seed).shuffle(objectives);
+        const shuffled = new Chance(heading.textContent + seed).shuffle(ul.getElementsByTagName("input"));
         const questions = shuffled.slice(0, 2).sort((x, y) => x - y);
-        questions.forEach(li => li.classList.remove("d-none"));
+        questions.forEach(input => input.setAttribute("checked", "checked"));
     };
 });
 </script>
