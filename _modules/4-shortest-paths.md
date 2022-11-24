@@ -4,30 +4,30 @@ title: Shortest Paths
 
 #### Graph Algorithms
 
-Feb 20
+2/20
 : *Holiday*
 
-Feb 22
+2/22
 : **Shortest Paths Trees**
 : {% include learning_objectives.md lesson="Shortest Paths Tree" %}
 
-Feb 23
+2/23
 : **Sec**{: .label .label-purple }**Graph Algorithms**
 
-Feb 24
+2/24
 : **Dynamic Programming**
 : {% include learning_objectives.md lesson="Dynamic Programming" %}
 
 #### Graph Applications
 
-Feb 27
+2/27
 : **Disjoint Sets**
 
-Mar 1
+3/1
 : **Reduction Algorithms**
 
-Mar 2
+3/2
 : **Sec**{: .label .label-purple }**Graph Algorithms**
 
-Mar 3
+3/3
 : **Knowledge Graphs**
