@@ -1,3 +1,3 @@
 {%- for objective in site.data.lessons[include.lesson]-%}
-- [ ] {{ objective }}
+1. {{ objective }}
 {% endfor %}
