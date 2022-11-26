@@ -20,16 +20,18 @@ grand_parent: CSE 373
 
 {% include learning_objectives.md lesson="Asymptotic Analysis" %}
 
-One of the values in this course is to have different perspectives of evaluating a data structure or algorithm. In your previous programming experience, we focused on **correctness** and **maintainability**---code that produces the expected output given a particular input, and code that is easy to improve or extend in the future. **Asymptotic runtime analysis** is the process of predicting the amount of time an algorithm will take to run on large inputs.
+In your previous programming experience, we focused on **correctness** and **maintainability**---code that produces the expected output given a particular input, and code that is easy to improve or extend in the future. But, as we'll see throughout this course, it's also important that we design programs with a focus on **efficiency** too.
 
-The focus on program efficiency for large inputs (as the size of the input approaches infinity, or its _asymptote_) helps us compare different algorithms for solving the same problem. For example, the performance issue that we discussed about `ArrayListDeque` only appears when a large number of web pages have been stored in browser history; `ArrayListDeque` is perfectly fine and quite fast when only a few web pages have been visited. The differences in runtime become more appreciable when the number of items increases too. The goal of asymptotic runtime analysis is to produce a (1) _predictive_ and (2) _easy-to-compare_ description of the running time of an algorithm.
+**Asymptotic runtime analysis** is the process of predicting the amount of time an algorithm will take to run on large inputs. The focus on program efficiency for large inputs (as the size of the input approaches infinity, or its _asymptote_) helps us compare different algorithms for solving the same problem. For example, the performance issue in `ArrayListDeque` only appears when a large number of web pages have been stored in browser history; `ArrayListDeque` is quite fast when only a few web pages have been stored. The differences in runtime become more appreciable when the number of items increases.
+
+The goal of asymptotic runtime analysis is to produce a (1) _predictive_ and (2) _easy-to-compare_ description of the running time of an algorithm.
 
 <details markdown="block">
 <summary>Why not just record the time it takes for an algorithm to run?</summary>
 
-We'll do exactly that in the projects, but there are some drawbacks to this **experimental analysis**. For example, experimental analysis relies on having a program already written. What if you want to know which design is more efficient _before_ coding it? We need a analysis that can helps us _predict_ the runtime, not just measure it.
+This idea, called **experimental analysis**, has some drawbacks. For example, experimental analysis relies on having a program already written. What if you want to know which design is more efficient _before_ coding it? Asymptotic analysis can helps us _predict_ the runtime, not just measure it.
 
-It's also not necessarily clear how we might compare the results of an experimental analysis. As you'll see in the experimental analysis parts of the project, we need to not only implement the algorithm, but also write code to measure and plot the running times. We have to make choices about what we measure, how we measure it, and then make inferences based on the data that we collected to inform a decision about the algorithm that we'd ultimately like to use in our program. It's not _easy to compare_ the results of an experimental analysis.
+It's also not easy to compare the results of an experimental analysis. We need to not only implement the algorithm, but we also have to make choices about what to measure, how to measure it, and infer results based on the data that we collected.
 </details>
 
 Consider the `indexOf` method, which returns the index of a `target` number in an `int[] A` or -1 if `target` is not in the array.
