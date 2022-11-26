@@ -34,20 +34,22 @@ const weeks = document.getElementsByClassName("text-gamma");
 
 email.addEventListener("input", event => {
     const seed = event.target.value.trim().toLowerCase();
-    if (!seed.endsWith("@uw.edu")) {
-        for (const heading of weeks) {
-            const ul = heading.nextElementSibling;
-            for (const input of ul.getElementsByTagName("input")) {
-                input.removeAttribute("checked");
-            };
+    for (const heading of weeks) {
+        const ul = heading.nextElementSibling;
+        for (const input of ul.getElementsByTagName("input")) {
+            input.removeAttribute("checked");
         };
+    };
+    if (!seed.endsWith("@uw.edu")) {
         return;
     }
     for (const heading of weeks) {
         const ul = heading.nextElementSibling;
-        const shuffled = new Chance(heading.textContent + seed).shuffle(ul.getElementsByTagName("input"));
-        const questions = shuffled.slice(0, 2).sort((x, y) => x - y);
-        questions.forEach(input => input.setAttribute("checked", "checked"));
+        const chance = new Chance(heading.textContent + seed);
+        const shuffled = chance.shuffle(ul.getElementsByTagName("input"));
+        for (const input of shuffled.slice(0, 2).sort((x, y) => x - y)) {
+            input.setAttribute("checked", "checked");
+        };
     };
 });
 </script>
