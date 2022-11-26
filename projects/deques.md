@@ -54,17 +54,32 @@ We also understand that not everyone is comfortable giving a voiceover presentat
 
 ## Deque interface
 
-Interfaces are a useful way to indicate common methods provided by all implementations (Java classes). For example, `List` is an interface with implementations such as `ArrayList` and `LinkedList`. Deques are like lists but without the capability to add or remove items from anywhere except for the front or the back. For testing purposes, however, there is also a method that allows access to any element in the deque. Implementations of `Deque` must provide the following methods:
+Interfaces are a useful way to indicate common methods that will be provided by different implementations (Java classes). For example, `List` is an interface with implementations such as `ArrayList` and `LinkedList`. Deques are like lists but without the capability to add, remove, or get items from anywhere except for the front or the back. For testing purposes, we included a method to get any element by its index in the deque.
 
-- `void addFirst(T item)`. Adds an item of type `T` to the front of the deque.
-- `void addLast(T item)`. Adds an item of type `T` to the back of the deque.
-- `T get(int index)`. Gets the item at the given index, where 0 is the front, 1 is the next item, etc.
-- `boolean isEmpty()`. Returns true if deque is empty, false otherwise.
-- `T removeFirst()`. Removes and returns the item at the front of the deque.
-- `T removeLast()`. Removes and returns the item at the back of the deque.
-- `int size()`. Returns the number of items in the deque.
+Implementations of `Deque` must provide the following methods:
 
-The interface defines `isEmpty` as a **default method** that returns `size() == 0`, so implementations of `Deque` don't also need to define an `isEmpty` method.
+`void addFirst(T item)`
+: Adds an item of type `T` to the front of the deque.
+
+`void addLast(T item)`
+: Adds an item of type `T` to the back of the deque.
+
+`T get(int index)`
+: Gets the item at the given index, where 0 is the front, 1 is the next item, etc.
+
+`boolean isEmpty()`
+: Returns true if deque is empty, false otherwise.
+
+`T removeFirst()`
+: Removes and returns the item at the front of the deque.
+
+`T removeLast()`
+: Removes and returns the item at the back of the deque.
+
+`int size()`
+: Returns the number of items in the deque.
+
+The interface defines a **default method** `isEmpty` that returns `size() == 0`.
 
 ### Reference implementation
 
