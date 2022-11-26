@@ -49,7 +49,7 @@ Your video presentation should meet the following requirements:
 
 We do not ask for your code. Given enough time and support, we're certain you would be able to write a fully-functional program that meets the specification. The goal of this course is to learn how to design program specifications in the first place. Although this doesn't requires fully-functional code, you'll often need to write programs that are close enough to the specification for it to provide a meaningful basis for further analysis and discussion.
 
-We also understand that not everyone is comfortable giving a voiceover presentation. If you don't feel comfortable recording a presentation (e.g. gender and voice dysphoria, limited access to resources, complicated living situations), we would be happy to work with you to find a better way to present your project. Reach out to the course staff to discuss options and alternatives. You do not need to tell us why you feel comfortable; our list above is an incomplete list of some things that we were thinking about in designing for equity and access.
+We also understand that not everyone is comfortable giving a voiceover presentation. If you don't feel comfortable recording a presentation (e.g. gender and voice dysphoria, limited access to resources, complicated living situations), we would be happy to work with you to find a better way to present your project. Reach out to the course staff to discuss options and alternatives. You do not need to tell us why you feel uncomfortable; our list above is an incomplete list of some things that we were thinking about in designing for equity and access.
 </details>
 
 ## Deque interface
