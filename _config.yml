@@ -49,6 +49,11 @@ callouts:
     title: Deliverable
     color: green
 
+just_the_docs:
+  collections:
+    posts:
+      nav_exclude: true
+
 # Collections for website data
 collections:
   staffers:
@@ -56,6 +61,11 @@ collections:
   schedules:
 # Default layouts for each collection type
 defaults:
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: redirect
   - scope:
       path: 'lessons'
       type: pages
