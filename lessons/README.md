@@ -39,16 +39,12 @@ email.addEventListener("input", event => {
         for (const input of ul.getElementsByTagName("input")) {
             input.removeAttribute("checked");
         };
-    };
-    if (!seed.endsWith("@uw.edu")) {
-        return;
-    }
-    for (const heading of weeks) {
-        const ul = heading.nextElementSibling;
-        const chance = new Chance(heading.textContent + seed);
-        const shuffled = chance.shuffle(ul.getElementsByTagName("input"));
-        for (const input of shuffled.slice(0, 2).sort((x, y) => x - y)) {
-            input.setAttribute("checked", "checked");
+        if (seed.endsWith("@uw.edu")) {
+            const chance = new Chance(heading.textContent + seed);
+            const shuffled = chance.shuffle(ul.getElementsByTagName("input"));
+            for (const input of shuffled.slice(0, 2).sort((x, y) => x - y)) {
+                input.setAttribute("checked", "checked");
+            };
         };
     };
 });
