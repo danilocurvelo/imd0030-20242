@@ -9,8 +9,13 @@
 // Overrides
 code {
   font-size: 14px;
-  padding: 0.2em 0.4em;
-  border: none;
+  padding: 0.15em 0.25em 0.1em;
+}
+
+div.highlighter-rouge,
+div.listingblock > div.content,
+figure.highlight {
+  border: $border $border-color;
 }
 
 iframe {
