@@ -9,7 +9,7 @@ title: Shortest Paths
 
 2/22
 : **Shortest Paths Trees**
-: {% include learning_objectives.md lesson="Shortest Paths Tree" %}
+: {% include learning_objectives.md lesson="Shortest Paths Trees" %}
 
 2/23
 : **Sec**{: .label .label-purple }**Graph Algorithms**
