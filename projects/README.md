@@ -48,10 +48,7 @@ Once IntelliJ is installed, [run IntelliJ IDEA](https://www.jetbrains.com/help/i
 
 Now that you've installed IntelliJ, look toward the bottom of the screen and **Take a quick onboarding tour** by clicking **Start Tour**. This short tour will help familiarize yourself with some of the most frequently-used buttons and features. In this class, we'll mostly focus only on the basics of editing, running, and debugging code. You're welcome to search online or ask us about how to do something in IntelliJ. If there's something tedious or repetitive, IntelliJ probably has a feature to make the task less frustrating.
 
-Once you finish the onboarding tour, return to the **Welcome to IntelliJ IDEA** screen. Select **Plugins** from the sidebar and then install these two plugins from the marketplace.
-
-1. jGRASP
-1. Java Visualizer
+Once you finish the onboarding tour, return to the **Welcome to IntelliJ IDEA** screen. Select **Plugins** from the sidebar and then install **jGRASP** from the marketplace.
 
 ### Obtain and run project code
 

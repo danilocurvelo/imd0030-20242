@@ -113,7 +113,7 @@ For example, we might _hypothesize_ that the problem is caused by the `newIndex`
 {: .hint }
 It's easy to lose track of time and get stuck in a deep hole when debugging. Come to office hours, chat with other students, or return after taking a break!
 
-To develop a hypothesis, we can use the debugger to pause the program at any point in time. [Watch this video](https://youtu.be/e7K8CNr3j2w) by one of our TAs, Iris Zhou, to learn more about how to debug your deques in IntelliJ. At each step, compare your thinking to the state of the debugger. If it's a bit hard to understand the state of the debugger, try switching over to the **jGRASP** and **Java Visualizer** tabs while debugging the program.
+To develop a hypothesis, we can use the debugger to pause the program at any point in time. [Watch this video](https://youtu.be/e7K8CNr3j2w) by one of our TAs, Iris Zhou, to learn more about how to debug your deques in IntelliJ. At each step, compare your thinking to the state of the debugger. If it's a bit hard to understand the state of the debugger, try switching over to the **jGRASP** tab while debugging the program.
 
 {% include video.html src="https://www.youtube.com/embed/e7K8CNr3j2w" aspect_ratio="1280/777" %}
 
