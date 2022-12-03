@@ -44,7 +44,7 @@ The `sudo` command may require a password prompt. When you type into the passwor
 
 Once IntelliJ is installed, [run IntelliJ IDEA](https://www.jetbrains.com/help/idea/run-for-the-first-time.html) and select **Skip Remaining and Set Defaults**. You should see the **Welcome to IntelliJ IDEA** screen.
 
-![Welcome screen](https://resources.jetbrains.com/help/img/idea/2022.2/ij_welcome_window.png)
+![Welcome screen](https://resources.jetbrains.com/help/img/idea/2022.3/ij_welcome_window.png)
 
 Now that you've installed IntelliJ, select **Customize** from the sidebar and then choose **All settings...** at the bottom to open a new window. Under **Appearance & Behavior \| New UI**, choose **Enable new UI**, press **OK** and restart IntelliJ. Once you're back at the **Welcome to IntelliJ IDEA** screen, select **Plugins** from the sidebar, search for "jGRASP", and then install the **jGRASP** plugin.
 
@@ -76,7 +76,7 @@ cs.uw.edu notify.uw.edu
 
 If you're instead seeing a "Cannot start compiler" notification with a suggestion to configure the Project SDK. Follow the link in the notification, or from the main menu select **File \| Project Structure**. In the **Project Structure** window, open the **SDK** dropdown.
 
-![Change the project SDK](https://resources.jetbrains.com/help/img/idea/2022.2/sdks_project_structure_project.png)
+![Change the project SDK](https://resources.jetbrains.com/help/img/idea/2022.3/sdks_project_structure_project.png)
 
 If IntelliJ detected an existing Java SDK, it will be listed under **Detected SDKs**.
 
