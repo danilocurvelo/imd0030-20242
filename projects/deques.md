@@ -143,7 +143,7 @@ Implement the `LinkedDeque` class with the following additional requirements:
 1. The class is implemented with the help of **sentinel nodes** according to the following invariants. Use the doubly-linked `Node` class defined at the bottom of the `LinkedDeque.java` file.
 
 Invariant
-: An property of an implementation that must be true before and after any data structure operations. For example, in an `ArrayList`, the _i_-th item in the list is always stored at `elementData[i]`.
+: An property of an implementation that must be true before and after any methods. For example, in an `ArrayList`, the _i_-th item in the list is always stored at `elementData[i]`.
 
 Sentinel node
 : A sentinel node is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods. We recommend using two sentinel nodes to simplify your code, providing access to both the front and the back of the deque.[^2]
@@ -172,18 +172,18 @@ Explain the part of the `LinkedDeque` class that you're most proud of programmin
 
 ### Asymptotic analysis
 
-{: .deliverable }
-_Most of the time_, the order of growth of the runtime for `ArrayDeque` methods are constant with respect to the size of the deque. Give a best-case and a worst-case asymptotic runtime bound for each of `addFirst`, `addLast`, `removeFirst`, and `removeLast` across both `ArrayDeque` and `ArrayListDeque`. Briefly explain how you determined your runtime bounds.
+In computer science, simpler solutions are typically preferred over more complicated solutions because they're less likely to contain subtle bugs. `ArrayListDeque` provided a simple solution to implementing a deque, but exhibited significantly degraded performance on some methods. How does `ArrayDeque` compare to `ArrayListDeque`?
 
 {: .deliverable }
-`ArrayListDeque` required much less code to implement than `ArrayDeque`. In computer science, simpler solutions are typically preferred over more complicated solutions because they're less likely to contain subtle bugs. Give an argument informed by asymptotic analysis about why we might prefer the more complicated `ArrayDeque` class over the simpler `ArrayListDeque` class.
+Give a best-case and worst-case asymptotic runtime analysis for each of `addFirst`, `addLast`, `removeFirst`, and `removeLast` in both `ArrayDeque` and `ArrayListDeque`. Explain the runtime of each implementation in a couple sentences while referencing the code. Summarize your results by explaining why experienced software engineers prefer `ArrayDeque` over `ArrayListDeque` for implementing browser history.
 
 ### Experimental analysis
 
-At the bottom of the `DequeTests` class, you'll find a nested class called `RuntimeExperiments`. Run the deque tests and open the test results. For each implementation's `RuntimeExperiments`, open it to see the average time it takes to make a single call to `addLast` on a deque that already contains `size` number of elements.
+At the bottom of the `DequeTests` class, you'll find a nested class called `RuntimeExperiments`. This nested class defines the code that will be used to evaluate the program's runtime by measuring how long it takes to run on your computer.
 
-{: .deliverable }
+Run the deque tests and open the test results. For each implementation's `RuntimeExperiments`, open it to see the average time it takes to make a single call to `addLast` on a deque that already contains `size` number of elements.
+
 Copy and paste each result into its own [Desmos graphing calculator](https://www.desmos.com/calculator) to plot all the points. For each plot, [calculate a line of best fit using Desmos](https://youtu.be/ADaNyIf6NhY) for the time it takes to call `addLast`. Adjust the line of best fit accordingly based on your asymptotic analysis. For example, if you predicted a constant runtime, choose a constant line of best fit.
 
 {: .deliverable }
-Finally, use experimental analysis to support your earlier asymptotic analysis argument for the `ArrayListDeque` performance issue. Choose an operation that will demonstrate a significant difference in runtime and modify the `RuntimeExperiments` class so that it measures this difference. Finally, re-run the tests and make new plots (and lines of best fit) to confirm that `ArrayDeque` is more efficient than `ArrayListDeque` for your chosen operation.
+Compare your plots and lines of best fit for the `addLast` method between all three implementations: `ArrayListDeque`, `ArrayDeque`, and `LinkedDeque`. Then, identify an operation that should show a significant difference between `ArrayListDeque` and the `ArrayDeque`, and modify the `RuntimeExperiments` class so that it measures this difference. Compare your new plots and lines of best fit to confirm that `ArrayDeque` is more efficient than `ArrayListDeque` for your operation.
