@@ -46,7 +46,7 @@ Once IntelliJ is installed, [run IntelliJ IDEA](https://www.jetbrains.com/help/i
 
 ![Welcome screen](https://resources.jetbrains.com/help/img/idea/2022.2/ij_welcome_window.png)
 
-Now that you've installed IntelliJ, select **Customize** from the sidebar and then choose **All settings...** at the bottom to open a new window. Under **Appearance & Behavior | New UI**, choose **Enable new UI**, press **OK** and restart IntelliJ. Once you're back at the **Welcome to IntelliJ IDEA** screen, select **Plugins** from the sidebar, search for "jGRASP", and then install the **jGRASP** plugin.
+Now that you've installed IntelliJ, select **Customize** from the sidebar and then choose **All settings...** at the bottom to open a new window. Under **Appearance & Behavior \| New UI**, choose **Enable new UI**, press **OK** and restart IntelliJ. Once you're back at the **Welcome to IntelliJ IDEA** screen, select **Plugins** from the sidebar, search for "jGRASP", and then install the **jGRASP** plugin.
 
 ### Obtain and run project code
 
