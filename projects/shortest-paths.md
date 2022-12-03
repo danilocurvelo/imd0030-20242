@@ -49,7 +49,7 @@ Seam carving depends on algorithms that can find a least-noticeable horizontal s
 : A class representing a digital image where the color of each pixel is an `int`. In image processing, pixel _(x, y)_ refers to the pixel in column _x_ and row _y_ where pixel _(0, 0)_ is the upper-left corner and the lower-right corner is the pixel with the largest coordinates.
 
 {: .warning }
-This is opposite to linear algebra, where _(i, j)_ refers to row _i_ column _j_ and _(0, 0)_ is the lower-left corner.
+This is opposite to linear algebra, where _(i, j)_ is row _i_ column _j_ and _(0, 0)_ is the lower-left corner.
 
 `EnergyFunction`
 : An interface specifying a single method, `apply`, for computing the importance of a given pixel in the picture. The higher the energy of a pixel, the more noticeable it is in the picture.
