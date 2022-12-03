@@ -231,7 +231,7 @@ System.out.println("     i: " + i);
 > Returns
 > : the index of the search key, if it is contained in the list; otherwise, `(-(insertion point) - 1)`. The _insertion point_ is defined as the point at which the key would be inserted into the list: the index of the first element greater than the key, or `list.size()` if all elements in the list are less than the specified key. Note that this guarantees that the return value will be `>= 0` if and only if the key is found.
 >
-> Since the prefix often will not exactly match an element in the list, we can use algebra to recover the _insertion point_.
+> Since the prefix often will not exactly match an element in the list, we can use algebra to recover the _insertion point_. The `start` value represents the index of the first term that could match the prefix.
 >
 > ```java
 > int start = i;
