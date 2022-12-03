@@ -207,7 +207,7 @@ Copy-paste the text into plotting software such as [Desmos](https://www.desmos.c
 - `DynamicProgrammingSeamFinder()`
 
 {: .deliverable }
-Compare the runtimes across different approaches. Are certain algorithms faster than others? What might explain the differences? Briefly speculate possible implications for algorithm design.
+Compare the runtimes across all 5 approaches. Are certain algorithms faster than others? What might explain the differences? How does the choice of `SeamFinder` and the choice of `ShortestPathSolver` affect the runtime? Briefly speculate possible implications for algorithm design.
 
 ## Critique and connect
 
