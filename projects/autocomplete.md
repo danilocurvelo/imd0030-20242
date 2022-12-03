@@ -245,7 +245,7 @@ Explain the part of the `BinarySearchAutocomplete` class that you're most proud 
 
 ### TernarySearchTreeAutocomplete
 
-Terms are added to a ternary search tree using the [`TST`](https://github.com/kevin-wayne/algs4/blob/2a3d7f7a36d76fbf5222c26b3d71fcca85d82fc1/src/main/java/edu/princeton/cs/algs4/TST.java#L63-L255) class as a reference.
+Terms are added to a ternary search tree using the [`TST`](https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/TST.java) class as a reference.
 
 1. Skim the `TST` class. What do you notice will work for `Autocomplete`? What needs to change?
 1. Identify methods in the `TST` class that are most similar to `Autocomplete`.
