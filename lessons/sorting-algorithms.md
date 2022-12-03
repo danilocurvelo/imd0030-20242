@@ -167,7 +167,7 @@ Asymptotic notation provides precise, mathematical shorthand for orders of growt
 Consider this graph that depicts three functions of _N_.
 
 {: .full-width style="aspect-ratio: 2" }
-<iframe src="https://www.desmos.com/calculator/umjn1qperg?embed" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/apxggji6kz?embed" frameborder=0></iframe>
 
 <details markdown="block">
 <summary>What do the x-axis and the y-axis represent in the graph?</summary>
@@ -177,9 +177,10 @@ The x-axis represents the size of the input, _N_. The y-axis represents the mode
 
 The three functions depicted in the graph are:
 
-1. The uppermost blue function depicts 5_N_<sup>2</sup>.
+1. The top blue function depicts 5_N_<sup>2</sup>.
 1. The middle red function depicts 40 sin(_N_) + 4_N_<sup>2</sup>.
-1. The bottommost green function depicts 3_N_<sup>2</sup>.
+1. The bottom green function depicts 3_N_<sup>2</sup>.
+1. The shaded area shows the functions that fall between the top and bottom functions.
 
 This graph provides a visual demonstration of the big-theta definition. We can say that the function 40 sin(_N_) + 4_N_<sup>2</sup> _is in_ Θ(_N_<sup>2</sup>) because because it is bounded below by the green function 3_N_<sup>2</sup> (_k_<sub>1</sub> = 3) and bounded above by the blue function 5_N_<sup>2</sup> (_k_<sub>2</sub> = 5).
 
