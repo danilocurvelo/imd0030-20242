@@ -140,7 +140,7 @@ Best case `indexOf` orders of growth
 : In the **best case**, the order of growth for the runtime of `indexOf` is **constant**.
 
 Worst case `indexOf` orders of growth
-- In the **worst case**, the order of growth for the runtime of `indexOf` is **linear** with respect to _N_, the length of `A`.
+: In the **worst case**, the order of growth for the runtime of `indexOf` is **linear** with respect to _N_, the length of `A`.
 
 {: .hint }
 When the order of growth is constant, we don't specify "with respect to _N_" because constant order of growth implies that the runtime does not scale with _N_.
