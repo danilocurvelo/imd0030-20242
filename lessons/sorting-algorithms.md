@@ -118,7 +118,7 @@ When the order of growth is constant, we don't specify "with respect to _N_" bec
 
 Orders of growth help us compare runtime in terms of words like _constant_, _linear_, and _quadratic_. In practice, though, you'll rarely see computer scientists writing out the full orders of growth sentence. Instead, computer scientists communicate orders of growth using asymptotic notation.
 
-### Asymptotic notation
+### Apply asymptotic notation
 
 Asymptotic notation provides precise, mathematical shorthand for orders of growth.
 
@@ -182,14 +182,15 @@ Model the number of steps
   </details>
 
 Formalize the runtime model
-: Best case `dup1` orders of growth
-  : In the **best case**, the order of growth for the runtime of `dup1` is **constant**.
+: In the **best case**, the order of growth for the runtime of `dup1` is **constant**.
+: In the **worst case**, the order of growth for the runtime of `dup1` is **quadratic** with respect to _N_, the length of `A`.
 
-  Worst case `dup1` orders of growth
-  : In the **worst case**, the order of growth for the runtime of `dup1` is **quadratic** with respect to _N_, the length of `A`.
+{: .hint }
+In the worst case, there are no duplicates in `A`. If we need to go through all the iterations of the nested for loop, then on the first iteration `i = 0`, the inner loop runs from `j = 1` to `j = N`; then from `j = 2` to `j = N`; then from `j = 3` to `j = N`; and so forth. In total, we end up checking `A[i] == A[j]` exactly (_N_ - 1) + (_N_ - 2) + ... + 3 + 2 + 1 times. [The sum of this series](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) is about _N_<sup>2</sup> / 2, which is quadratic.
 
-  {: .hint }
-  In the worst case, there are no duplicates in `A`. If we need to go through all the iterations of the nested for loop, then on the first iteration `i = 0`, the inner loop runs from `j = 1` to `j = N`; then from `j = 2` to `j = N`; then from `j = 3` to `j = N`; and so forth. In total, we end up checking `A[i] == A[j]` exactly (_N_ - 1) + (_N_ - 2) + ... + 3 + 2 + 1 times. [The sum of this series](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) is about _N_<sup>2</sup> / 2, which is quadratic.
+Apply asymptotic notation
+: In the best case, the runtime of `dup1` is in Θ(1).
+: In the worst case, the runtime of `dup1` is in Θ(_N_<sup>2</sup>) with respect to _N_, the length of `A`.
 
 ## Iterative sorts
 
