@@ -50,7 +50,7 @@ Hash Tables:
 
 Affordance Analysis:
   - Describe how abstractions can embody values and structure social relations.
-  - Identify the affordances of a programming abstraction such as a class or interface.
+  - Identify the affordances of a program abstraction such as a class or interface.
   - Evaluate affordances by applying the 3 value-sensitive design principles.
 
 Graph Data Type:
@@ -69,8 +69,8 @@ Minimum Spanning Trees:
   - Apply the super-source node pattern to simplify graph problems.
 
 Shortest Paths Trees:
-  - Trace Dijkstra's and the topological sorting algorithm for weighted shortest paths.
-  - Explain why Dijkstra's algorithm might not work on negative edge-weighted graphs.
+  - Trace Dijkstra's and the topological sorting algorithm for shortest paths trees.
+  - Explain why Dijkstra's algorithm might not work with negative edge weights.
   - Explain the runtime for Dijkstra's algorithm in terms of priority queue operations.
 
 Dynamic Programming:
