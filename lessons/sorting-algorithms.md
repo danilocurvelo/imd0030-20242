@@ -299,6 +299,9 @@ In each iteration, **insertion sort** inserts the _next unsorted item_ into the 
 Unlike selection sort, insertion sort is affected by the order of items. When the input is _already sorted_, insertion sort has a linear order of growth because there are no items that need to be swapped to the left. On the other hand, given a reverse-sorted input, insertion sort needs to perform a very large number of swaps to move each _next unsorted item_ into its correct position. The summation is exactly the same as `dup1` and selection sort, which we determined to have a quadratic order of growth.
 </details>
 
+{: .hint }
+To visualize sorting algorithms, open the VisuAlgo module on [Sorting](https://visualgo.net/en/sorting). Press `Esc` to exit the e-Lecture Mode, and choose either **SEL** or **INS** from the top navigation bar to switch to selection sort or insertion sort respectively.
+
 ## Merge sort
 
 {% include learning_objectives.md lesson="Merge Sort" %}
