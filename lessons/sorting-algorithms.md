@@ -98,35 +98,6 @@ Worst case `indexOf`
 {: .hint }
 All other factors not covered by the asymptotic variable are considered in case analysis. In this course, we'll focus only on the best and worst case: take all the remaining factors that you have at your disposal and choose a situation that produces the fastest (best case) or the slowest (worst case) runtime.
 
-Consider the following `dup1` algorithm for determining if `A` contains any duplicate values by checking every possible pair of values until a duplicate is found. We've chosen `N = A.length` as the asymptotic variable.
-
-```java
-boolean dup1(int[] A) {
-    int N = A.length;
-    for (int i = 0; i < N; i += 1)
-        for (int j = i + 1; j < N; j += 1)
-            if (A[i] == A[j])
-                return true;
-    return false;
-}
-```
-
-<details markdown="block">
-<summary>Describe a best case situation for the runtime.</summary>
-
-A very long array where the first pair of items `A[0]` and `A[1]` are duplicates!
-</details>
-
-Suppose your teammate answer the above question:
-
-> The best case occurs when `A.length` is 2, so we only need to compare `A[0]` to `A[1]`.
-
-<details markdown="block">
-<summary>Explain why your teammate's answer is not an asymptotic analysis.</summary>
-
-Although your teammate makes a good observation about the runtime of the program, asymptotic analysis focuses on large inputs. So we can't use an empty, 1-element, or 2-element array in our reasoning.
-</details>
-
 We now have a predictive model for the number of steps (a proxy for the time) it takes to run an algorithm. But this model is not easy to compare. To communicate our model, we'll introduce some new vocabulary used to express asymptotic analysis.
 
 ### Formalize the runtime model
@@ -144,17 +115,6 @@ Worst case `indexOf` orders of growth
 
 {: .hint }
 When the order of growth is constant, we don't specify "with respect to _N_" because constant order of growth implies that the runtime does not scale with _N_.
-
-Applying this same process to `dup1`, we can describe the runtime model as:
-
-Best case `dup1` orders of growth
-: In the **best case**, the order of growth for the runtime of `dup1` is **constant**.
-
-Worst case `dup1` orders of growth
-: In the **worst case**, the order of growth for the runtime of `dup1` is **quadratic** with respect to _N_, the length of `A`.
-
-{: .hint }
-In the worst case, there are no duplicates in `A`. If we need to go through all the iterations of the nested for loop, then on the first iteration `i = 0`, the inner loop runs from `j = 1` to `j = N`; then from `j = 2` to `j = N`; then from `j = 3` to `j = N`; and so forth. In total, we end up checking `A[i] == A[j]` exactly (_N_ - 1) + (_N_ - 2) + ... + 3 + 2 + 1 times. [The sum of this series](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) is about _N_<sup>2</sup> / 2, which is quadratic.
 
 Orders of growth help us compare runtime in terms of words like _constant_, _linear_, and _quadratic_. In practice, though, you'll rarely see computer scientists writing out the full orders of growth sentence. Instead, computer scientists communicate orders of growth using asymptotic notation.
 
@@ -188,6 +148,48 @@ This graph provides a visual demonstration of the big-theta definition. We can s
 The red function is only "squeezed" between the blue and green functions for _N_ > 6. This is why big-theta is an _asymptotic notation_: its logic applies to all values of _N_ greater than some initial _N_<sub>0</sub>. When we make a claim about asymptotic runtime, we can't just pick _N_ = 1 billion. We have to make sure that our analysis holds true for all possible "large inputs" _N_.
 
 During class, we'll also introduce two other asymptotic notation called big-oh and big-omega.
+
+### Duplicate finding case study
+
+`dup1` is an algorithm for determining if an array `A` contains any duplicate values by checking every possible pair of values until a duplicate is found. We've chosen `N = A.length` as the asymptotic variable.
+
+```java
+boolean dup1(int[] A) {
+    int N = A.length;
+    for (int i = 0; i < N; i += 1)
+        for (int j = i + 1; j < N; j += 1)
+            if (A[i] == A[j])
+                return true;
+    return false;
+}
+```
+
+Model the number of steps
+: <details markdown="block">
+  <summary>Describe a best case situation for the runtime.</summary>
+
+  A very long array where the first pair of items `A[0]` and `A[1]` are duplicates!
+  </details>
+
+  Suppose your teammate answer the above question:
+
+  > The best case occurs when `A.length` is 2, so we only need to compare `A[0]` to `A[1]`.
+
+  <details markdown="block">
+  <summary>Explain why your teammate's answer is not an asymptotic analysis.</summary>
+
+  Although your teammate makes a good observation about the runtime of the program, asymptotic analysis focuses on large inputs. We can't use an empty, 1-element, or 2-element array as an example.
+  </details>
+
+Formalize the runtime model
+: Best case `dup1` orders of growth
+  : In the **best case**, the order of growth for the runtime of `dup1` is **constant**.
+
+  Worst case `dup1` orders of growth
+  : In the **worst case**, the order of growth for the runtime of `dup1` is **quadratic** with respect to _N_, the length of `A`.
+
+  {: .hint }
+  In the worst case, there are no duplicates in `A`. If we need to go through all the iterations of the nested for loop, then on the first iteration `i = 0`, the inner loop runs from `j = 1` to `j = N`; then from `j = 2` to `j = N`; then from `j = 3` to `j = N`; and so forth. In total, we end up checking `A[i] == A[j]` exactly (_N_ - 1) + (_N_ - 2) + ... + 3 + 2 + 1 times. [The sum of this series](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) is about _N_<sup>2</sup> / 2, which is quadratic.
 
 ## Iterative sorts
 
