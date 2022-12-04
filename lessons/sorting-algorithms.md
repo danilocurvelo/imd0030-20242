@@ -189,37 +189,6 @@ The red function is only "squeezed" between the blue and green functions for _N_
 
 During class, we'll also introduce two other asymptotic notation called big-oh and big-omega.
 
-### How fast is fast enough?
-
-How much faster is a linear time algorithm versus a quadratic time algorithm? A **quadratic time algorithm** (e.g. worst case `dup1`) might have the following real-world runtimes.
-
-- When _N_ = 10, less than 1 second.
-- When _N_ = 100, less than 1 second.
-- When _N_ = 1,000, about 1 second.
-- When _N_ = 10,000, **about 2 minutes**.
-- When _N_ = 100,000, **about 3 hours**.
-- When _N_ = 1,000,000, **about 12 days**.
-
-<details markdown="block">
-<summary>What do you think the bolded times would be for a linear time algorithm?</summary>
-
-A **linear time algorithm** might have the following real-world runtimes.
-
-- When _N_ = 10, less than 1 second.
-- When _N_ = 100, less than 1 second.
-- When _N_ = 1,000, less than 1 second.
-- When _N_ = 10,000, **less than 1 second**.
-- When _N_ = 100,000, **less than 1 second**.
-- When _N_ = 1,000,000, **about 1 second**.
-
-Comparing an input of _N_ = 1 million, a quadratic time algorithm takes 12 *days* to process whereas a linear time algorithm only takes about 1 *second*. Given the vast amount of data that internet-connected apps might need to process, there are many situations where quadratic time algorithms are unusably slow.
-</details>
-
-Key takeaways
-: **Many algorithms (including all the algorithms we will learn in this class) are fast on tiny inputs, e.g. when _N_ < 100**. While there may be situations where we care about the efficiency of algorithms processing tiny inputs, these differences are often unnoticeable. When they are noticeable, they may be caused by fluctuations in your computer's workload rather than algorithms themselves. This is why we always default to the assumption of asymptotic analysis.
-: **Differences become more appreciable when inefficient algorithms (e.g. quadratic or worse) run on inputs of size _N_ > 1000**. Whether the runtime is tolerable depends on the problem. An inefficient algorithm may be acceptable if some or all of the conditions are true: we only need to run it infrequently, the size of the input is not particularly big, the amount of processing power can compensate for an inefficient algorithm, or there are no better alternatives available.
-: **Conversely, efficient algorithms can process massive amounts of data even as _N_ > 1 million**. Computer scientists generally want algorithms that have either linear order of growth or better. More efficient data structures enable more efficient algorithms, which is why "Data Structures and Algorithms" was coined many decades ago.
-
 ## Iterative sorts
 
 {% include learning_objectives.md lesson="Iterative Sorts" %}
