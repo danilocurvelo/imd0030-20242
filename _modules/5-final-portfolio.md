@@ -2,16 +2,16 @@
 title: Final Portfolio
 ---
 
-#### Software Engineering
+#### Conclusion
 
 3/6
-: **Algorithm Limits**
+: **Ask us anything**
 
 3/8
-: **Software Engineering**
+: **Ask us anything**
 
 3/9
-: **Sec**{: .label .label-purple }**Software Engineering**
+: **Sec**{: .label .label-purple }**Conclusion**
 
 3/10
 : **Conclusion**
