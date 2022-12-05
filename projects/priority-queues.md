@@ -34,8 +34,6 @@ Satisfactory completion of the project requires a **video-recorded individual pr
 - Your presentation should not be much longer than **10 minutes** and should include your voiceover. (Your video is appreciated but not necessary.)
 - Your presentation should include some kind of visually-organizing structure, such as slides or a document.
 - After submitting to Canvas, add a submission comment linking to your slides or document.
-
-If you don't feel comfortable recording a presentation, reach out to the course staff to discuss options and alternatives. You do not need to tell us why you feel uncomfortable.
 </details>
 
 ## Priority queue interface

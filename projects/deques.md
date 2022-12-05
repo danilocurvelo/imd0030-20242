@@ -20,7 +20,7 @@ A **deque** (pronounced "deck") is an abstract data type representing a **d**oub
 
 But usefulness is not the only metric for determining the quality of a program. Imagine you're on a team engineering a [web browser](https://en.wikipedia.org/wiki/Web_browser), and you're working on addressing a performance problem that has been reported in the browser history feature. When a user visits a web page, the page visit is recorded in the browser history by adding the link and the date of visit to the end of an `ArrayList`. But users are reporting that the option to clear-out the history of pages that were visited over 3 months is unusually slow.
 
-In this project, we'll study this performance problem by designing and analyzing different approaches to implementing a deque. By the end of this project, students will be able to:
+In this project, we'll study this performance problem by designing and analyzing different approaches to implement a deque. By the end of this project, students will be able to:
 
 - **Design and implement** node-based and array-based data structures.
 - **Analyze and compare** runtimes using asymptotic and experimental analysis.
@@ -48,8 +48,6 @@ Your video presentation should meet the following requirements:
 - After submitting to Canvas, add a submission comment linking to your slides or document.
 
 We do not ask for your code. Given enough time and support, we're certain you would be able to write a fully-functional program that meets the specification. The goal of this course is to learn how to design program specifications in the first place. Although this doesn't requires fully-functional code, you'll often need to write programs that are close enough to the specification for it to provide a meaningful basis for further analysis and discussion.
-
-We also understand that not everyone is comfortable giving a voiceover presentation. If you don't feel comfortable recording a presentation (e.g. gender and voice dysphoria, limited access to resources, complicated living situations), we would be happy to work with you to find a better way to present your project. Reach out to the course staff to discuss options and alternatives. You do not need to tell us why you feel uncomfortable; our list above is an incomplete list of some things that we were thinking about in designing for equity and access.
 </details>
 
 ## Deque interface

@@ -86,10 +86,23 @@ Today, we know that there are more effective ways to learn science, engineering,
 
 Likewise, learning computer science requires **deliberate practice**: a learning cycle that starts with sustained motivation, then presents tasks that build on prior knowledge, and concludes with immediate, personalized feedback. Each week in the course will involve several different activities that are designed so that we can make the most of our class time together.
 
-1. On your own before class, prepare for learning by completing the **pre-class preparation**.
-1. In your team during class and quiz section, collaborate on the **in-class guided practice**.
-1. On your own after quiz section, complete the **assessment** and submit an explanation video.
-1. In your team throughout the module, apply your learning by collaborating on the **project**.
+On your own before class, prepare for learning by completing the pre-class preparation.
+: Lessons are designed to introduce all the concepts for the entire week's classes.
+: In Canvas, open the weekly **Lessons** and add an annotation or reply to an annotation.
+
+In your team during class and quiz section, collaborate on the in-class guided practice.
+: Class meetings are designed to deepen, complicate, and connect ideas across the course.
+: In Canvas, your section TAs will observe your learning and record your **Teamwork**.
+
+On your own at the end of each week, record a video showing what you learned this week.
+: Assessments are about not only problem solving skills, but also communication skills.
+: In Canvas, demonstrate your learning by explaining 2 solutions in each **Assessment**.
+
+In your team throughout the module, apply your learning by collaborating on the project.
+: Projects are designed to integrate and situate what you learned in real-world problems.
+: In Canvas, demonstrate your learning by assembling a **Project Presentation** video.
+
+Communicating your ideas and explaining your problem solving process is important in this course. We ask students to record their own screenshared and voiced videos because they provide rich information about your solution process and authenticate your assessment. But we know that visual or voiceover presentations are not accessible or equitable for everyone. If for any reason a voiceover presentation won't work for you, we would be happy to work with you to find a better way to communicate your ideas and explain your problem solving process. You do not need to disclose why you feel uncomfortable, but we were thinking about people with vision impairment, gender and voice dysphoria, limited access to resources, or complicated living situations when designing this policy.
 
 Expect to spend 4 hours in class and 8 hours outside of class working on this course. Some weeks may require more or less time than other weeks. If you find the workload is significantly exceeding this expectation, talk to your TA.
 
