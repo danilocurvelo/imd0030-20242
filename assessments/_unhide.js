@@ -1,8 +1,14 @@
 const email = document.getElementById("email");
+const container = document.getElementById("questions");
 const lessons = document.getElementsByTagName("dt");
 
 email.addEventListener("input", event => {
     const seed = event.target.value.trim().toLowerCase();
+    if (!seed.endsWith("@uw.edu")) {
+        container.classList.add("d-none");
+        return;
+    }
+    container.classList.remove("d-none");
     for (const dt of lessons) {
         const elements = dt.nextElementSibling.children;
         for (const element of elements) {
