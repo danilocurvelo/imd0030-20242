@@ -22,4 +22,14 @@ email.addEventListener("input", event => {
             };
         };
     };
+    document.title = document.title.replace("|", ` for ${seed} |`);
+    const url = new URL(window.location);
+    url.searchParams.set("email", seed);
+    window.history.pushState(null, "", url.toString());
+});
+
+(new URL(window.location)).searchParams.forEach((val, key) => {
+    const field = document.getElementById(key);
+    field.value = val;
+    field.dispatchEvent(new Event("input"));
 });
