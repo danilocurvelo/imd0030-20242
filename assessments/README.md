@@ -1,7 +1,7 @@
 ---
 layout: minimal
-title: Lessons
-description: &desc Learning materials and resources.
+title: Assessments
+description: &desc Evaluate and explain your learning.
 summary: *desc
 has_children: true
 has_toc: true

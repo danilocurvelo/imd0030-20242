@@ -3,7 +3,8 @@ layout: minimal
 title: Midterm
 description: &desc Individual interview questions.
 summary: *desc
-# parent: CSE 373
+parent: Assessments
+grand_parent: CSE 373
 chance: yes
 ---
 
