@@ -1,27 +1,21 @@
-Sorting Algorithms:
+Sorting Algorithms + Search Trees:
   - Asymptotic Analysis
   - Iterative Sorts
   - Merge Sort
-
-Search Trees:
   - Search Trees
   - 2-3 Trees
 
-Isomorphism:
+Isomorphism + Heaps and Hashing:
   - Left-Leaning Red-Black Trees
   - Quicksort
   - Counting Sorts
-
-Heaps and Hashing:
   - Binary Heaps
   - Hash Tables
   - Affordance Analysis
 
-Graphs:
+Graphs + Graph Algorithms:
   - Graph Data Type
   - Graph Traversals
   - Minimum Spanning Trees
-
-Graph Algorithms:
   - Shortest Paths Trees
   - Dynamic Programming

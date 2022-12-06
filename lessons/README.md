@@ -17,13 +17,13 @@ chance: yes
 
 <input id="email" type="email" size="15" placeholder="email@uw.edu" class="text-beta p-2" />
 
-{% for week in site.data.weekly %}
+{% for assessment in site.data.assessments %}
 {: .text-gamma }
-## {{ week[0] }}
+## {{ assessment[0] }}
 
-{% for lesson in week[1] %}
-{%- for objective in site.data.lessons[lesson]-%}
-- [ ] {{ objective }}
+{% for lesson in assessment[1] %}
+{%- for question in site.data.lessons[lesson]["Questions"] -%}
+- [ ] [{{ question[0] }}]({{ question[1] }})
 {% endfor %}
 {%- endfor -%}
 {% endfor %}
@@ -42,7 +42,7 @@ email.addEventListener("input", event => {
         if (seed.endsWith("@uw.edu")) {
             const chance = new Chance(heading.textContent + seed);
             const shuffled = chance.shuffle(ul.getElementsByTagName("input"));
-            for (const input of shuffled.slice(0, 2).sort((x, y) => x - y)) {
+            for (const input of shuffled.slice(0, 3).sort((x, y) => x - y)) {
                 input.setAttribute("checked", "checked");
             };
         };
