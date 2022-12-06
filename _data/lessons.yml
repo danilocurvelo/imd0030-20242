@@ -59,7 +59,6 @@ Quicksort:
     - Given the runtime of a partitioning algorithm, describe the runtime of quicksort.
     - Describe the search trees analogies for quicksort algorithms.
   Questions:
-    Q8a CS 61B 18sp Final: https://sp18.datastructur.es/materials/exam/cs61b-sp18-final.pdf#page=10
 
 Counting Sorts:
   Objectives:
@@ -68,6 +67,7 @@ Counting Sorts:
     - Explain how the subsort is used in MSD and LSD radix sort.
   Questions:
     Q10 CS 61B 16sp Final: https://tbp.berkeley.edu/exams/6521/download/#page=13
+    Q8a CS 61B 18sp Final: https://sp18.datastructur.es/materials/exam/cs61b-sp18-final.pdf#page=10
 
 Binary Heaps:
   Objectives:
