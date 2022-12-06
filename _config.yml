@@ -67,16 +67,6 @@ defaults:
     values:
       layout: redirect
   - scope:
-      path: 'lessons'
-      type: pages
-    values:
-      layout: minimal
-  - scope:
-      path: 'projects'
-      type: pages
-    values:
-      layout: minimal
-  - scope:
       path: ''
       type: staffers
     values:

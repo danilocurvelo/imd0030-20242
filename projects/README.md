@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Projects
 description: &desc Project instructions and specifications.
 summary: *desc

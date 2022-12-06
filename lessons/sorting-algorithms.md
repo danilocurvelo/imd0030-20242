@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Sorting Algorithms
 description: &desc Asymptotic analysis, iterative sorts, and merge sort.
 summary: *desc

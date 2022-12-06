@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Shortest Paths
 description: &desc Designing, analyzing, and critiquing shortest paths.
 summary: *desc

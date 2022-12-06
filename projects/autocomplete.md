@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Autocomplete
 description: &desc Designing, analyzing, and critiquing autocomplete.
 summary: *desc

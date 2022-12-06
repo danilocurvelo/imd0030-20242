@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Priority Queues
 description: &desc Designing, analyzing, and critiquing priority queues.
 summary: *desc

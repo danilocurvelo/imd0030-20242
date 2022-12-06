@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Deques
 description: &desc Designing and analyzing double-ended queues.
 summary: *desc

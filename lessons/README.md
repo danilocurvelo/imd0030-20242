@@ -1,4 +1,5 @@
 ---
+layout: minimal
 title: Lessons
 description: &desc Learning materials and resources.
 summary: *desc
