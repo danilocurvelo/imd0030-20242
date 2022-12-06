@@ -22,19 +22,24 @@ chance: yes
 ## {{ assessment[0] }}
 
 {% for lesson in assessment[1] %}
-{%- for question in site.data.lessons[lesson]["Questions"] -%}
+{% if site.data.lessons[lesson]["Questions"] %}
+{: .text-delta }
+### {{ lesson }}
+
+{% for question in site.data.lessons[lesson]["Questions"] %}
 - [ ] [{{ question[0] }}]({{ question[1] }})
-{% endfor %}
 {%- endfor -%}
+{% endif %}
+{% endfor %}
 {% endfor %}
 
 <script>
 const email = document.getElementById("email");
-const weeks = document.getElementsByClassName("text-gamma");
+const lessons = document.getElementsByClassName("text-delta");
 
 email.addEventListener("input", event => {
     const seed = event.target.value.trim().toLowerCase();
-    for (const heading of weeks) {
+    for (const heading of lessons) {
         const ul = heading.nextElementSibling;
         for (const input of ul.getElementsByTagName("input")) {
             input.removeAttribute("checked");
@@ -42,7 +47,7 @@ email.addEventListener("input", event => {
         if (seed.endsWith("@uw.edu")) {
             const chance = new Chance(heading.textContent + seed);
             const shuffled = chance.shuffle(ul.getElementsByTagName("input"));
-            for (const input of shuffled.slice(0, 3).sort((x, y) => x - y)) {
+            for (const input of shuffled.slice(0, 1).sort((x, y) => x - y)) {
                 input.setAttribute("checked", "checked");
             };
         };
