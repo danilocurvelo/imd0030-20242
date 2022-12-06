@@ -4,9 +4,13 @@ const lessons = document.getElementsByTagName("dt");
 
 email.addEventListener("input", event => {
     const seed = event.target.value.trim().toLowerCase();
-    if (!seed.endsWith("@uw.edu")) {
+    if (seed.endsWith("@uw.edu")) {
+        document.title = document.title.replace("|", ` for ${seed} |`);
+        const url = new URL(window.location);
+        url.searchParams.set("email", seed);
+        window.history.pushState(null, "", url.toString());
+    } else {
         container.classList.add("d-none");
-        return;
     }
     container.classList.remove("d-none");
     for (const dt of lessons) {
@@ -22,10 +26,6 @@ email.addEventListener("input", event => {
             };
         };
     };
-    document.title = document.title.replace("|", ` for ${seed} |`);
-    const url = new URL(window.location);
-    url.searchParams.set("email", seed);
-    window.history.pushState(null, "", url.toString());
 });
 
 (new URL(window.location)).searchParams.forEach((val, key) => {

@@ -113,6 +113,10 @@ const notes = document.getElementsByClassName("note");
 email.addEventListener("input", event => {
     const seed = event.target.value.trim().toLowerCase();
     if (seed.endsWith("@uw.edu")) {
+        document.title = document.title.replace("|", ` for ${seed} |`);
+        const url = new URL(window.location);
+        url.searchParams.set("email", seed);
+        window.history.pushState(null, "", url.toString());
         for (const note of notes) {
             note.classList.add("d-none");
         };
@@ -122,10 +126,6 @@ email.addEventListener("input", event => {
             note.classList.remove("d-none");
         };
     };
-    document.title = document.title.replace("|", ` for ${seed} |`);
-    const url = new URL(window.location);
-    url.searchParams.set("email", seed);
-    window.history.pushState(null, "", url.toString());
 });
 
 (new URL(window.location)).searchParams.forEach((val, key) => {
