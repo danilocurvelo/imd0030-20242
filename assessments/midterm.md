@@ -14,7 +14,7 @@ chance: yes
 {{ page.description }}
 {: .fs-6 .fw-300 }
 
-<input id="email" type="email" size="15" placeholder="email@uw.edu" class="text-beta p-2" />
+<input id="email" type="email" size="15" placeholder="email@uw.edu" class="text-beta p-2 mb-2" />
 
 {: .note .d-none }
 > Describe 3 approaches to design a data type that can:
