@@ -1,1 +1,9 @@
-<iframe src="{{ include.src }}" class="module full-width" style="aspect-ratio: {{ include.aspect_ratio }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="{{ include.src }}"
+        class="module full-width"
+        {% if include.aspect_ratio %}
+        style="aspect-ratio: {{ include.aspect_ratio }}"
+        {% endif %}
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+></iframe>

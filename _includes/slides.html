@@ -1,4 +1,15 @@
 {%- assign generated = include.id | prepend: "https://docs.google.com/presentation/d/" | append: "/embed" -%}
 <div class="module full-width">
-    <iframe src="{{ include.src | default: generated }}?rm=minimal" {%- if include.id -%}class="slide"{%- endif %} style="aspect-ratio: {{ include.aspect_ratio }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="{{ include.src | default: generated }}?rm=minimal"
+        {% if include.id %}
+        class="slide"
+        {% endif %}
+        {% if include.aspect_ratio %}
+        style="aspect-ratio: {{ include.aspect_ratio }}"
+        {% endif %}
+        frameborder="0"
+        allowfullscreen="true"
+        mozallowfullscreen="true"
+        webkitallowfullscreen="true"
+></iframe>
 </div>
