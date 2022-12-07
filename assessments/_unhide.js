@@ -5,6 +5,7 @@ const lessons = document.getElementsByTagName("dt");
 email.addEventListener("input", event => {
     const seed = event.target.value.trim().toLowerCase();
     if (seed.endsWith("@uw.edu")) {
+        container.classList.remove("d-none");
         document.title = document.title.replace("|", ` for ${seed} |`);
         const url = new URL(window.location);
         url.searchParams.set("email", seed);
@@ -12,7 +13,6 @@ email.addEventListener("input", event => {
     } else {
         container.classList.add("d-none");
     }
-    container.classList.remove("d-none");
     for (const dt of lessons) {
         const elements = dt.nextElementSibling.children;
         for (const element of elements) {
