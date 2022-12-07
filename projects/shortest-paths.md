@@ -140,7 +140,7 @@ A graph representation that implements `SeamFinder`. Similar to `AdjacencyListSe
 1. Adapt the ideas to implement `GenerativeSeamFinder.PixelGraph.Pixel.neighbors`, which should return the list of neighbors for a given `Pixel`. Create a new `Pixel` for each neighbor.
 1. Then, define the `source` and `sink` nodes.
 
-{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vQJZX1V5i182_XgPY7_pECFZF8xXEye7CNUDJitaO8Dbns7F7afBDf6GMvhplfs1OJnRXSSdIb-lJQ_/embed" aspect_ratio="16/9" %}
+{% include slides.html id="1B-faTKm7eIkpvoaetXutsyoSEk-heidbFpC0dJcjcZw" aspect_ratio="16/9" %}
 
 {: .deliverable }
 Explain the part of the `GenerativeSeamFinder` class that you're most proud of programming.
@@ -169,7 +169,7 @@ How does dynamic programming solve the seam finding problem? We need to first ge
 2. Fill out the leftmost column in the 2-d array with the energy for each pixel.
 3. For each pixel in each of the remaining columns, determine the lowest-energy predecessor to the pixel: the minimum of its _left-up_, _left-middle_, and _left-down_ neighbors. Compute the total energy cost to the current pixel by adding its energy to the total cost for the least-noticeable predecessor.
 
-{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vQ0bUHpPIaLvcqb4hCw0CIyfMlIdTjGQKN-rcH36159VoETWORvjrF25TyH4vgG_A/embed" aspect_ratio="16/9" %}
+{% include slides.html id="1W4XA1yPZaPIrNXGOkcXc6PhW31EiQJGJ9sxE9C12Qos" aspect_ratio="16/9" %}
 
 Once we've generated this table, we can use it to find the shortest path.
 

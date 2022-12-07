@@ -92,7 +92,7 @@ Unlike your prior programming courses, the focus of this course is not only to b
 
 An **array deque** is like an `ArrayList`, but different in that elements aren't necessarily stored starting at index 0. Instead, their start and end positions are determined by two fields called `front` and `back`.[^1]
 
-{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vShi1Nl3Nsi_6sZF2Bm3yUZ_S9ojRyaJoovidRWxSQVURMJ3BykmqPpCrY-Uqu26DtuxwsDXXwaNo0R/embed" aspect_ratio="16/9" %}
+{% include slides.html id="1c9RdR7fz-CyTH9bHzJ5bhlfmlUHgpC-EK9d3a8PMiuo" aspect_ratio="16/9" %}
 
 {: .hint }
 To step back in the slides, click on the slides and press the left arrow key or the backspace key.
@@ -147,7 +147,7 @@ Invariant
 Sentinel node
 : A sentinel node is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods. We recommend using two sentinel nodes to simplify your code, providing access to both the front and the back of the deque.[^2]
 
-{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vQtRcMfikTI7KxNrzAwXorzpHAKQWOuQ8m-i1gTEs9s17boY3OrNoZqtvRZIqw1bG8uDch9LvTp4TE-/embed" aspect_ratio="16/9" %}
+{% include slides.html id="1qNaYV6fq-ARyhMGnY5-HJXHG1srNf3R5uofhYiJ80Y0" aspect_ratio="16/9" %}
 
 [^2]: Josh Hug. 2019. [cs61b lec5 2019 lists3, dllists and arrays](https://docs.google.com/presentation/d/1nRGXdApMS7yVqs04MRGZ62dZ9SoZLzrxqvX462G2UbA/edit). In CS 61B: Data Structures, Spring 2019.
 

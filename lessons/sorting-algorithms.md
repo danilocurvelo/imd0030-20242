@@ -354,7 +354,7 @@ Both selection sort and insertion sort have worst case quadratic order of growth
 
 **Merge sort** represents a different approach to sorting based on the idea of recursion. Merge sort's name derives from the **merge** operation, which takes two _sorted arrays_ and returns a _sorted result_ containing all the items in both arrays.
 
-{% include slides.html src="https://docs.google.com/presentation/d/e/2PACX-1vSTbbKZWOb-ebm9ZjDJld6DsHH_eVsANjWn9RXKKlBdWKTu592cry09QMdq8WK6xDJiOVVdp7W_JBDp/embed" aspect_ratio="16/9" %}
+{% include slides.html id="1Q-73Edm7-DcTYJng_Tm_6Ed5j8clwKl30x0kEY9vY7E" aspect_ratio="16/9" %}
 
 Merge sort is a recursive sorting algorithm that can be described as follows.
 
