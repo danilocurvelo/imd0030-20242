@@ -3,7 +3,7 @@ name: Kevin Lin
 role: Instructor
 email: kevinl@cs.uw.edu
 website: https://kevinl.info
-photo: kevin-lin.jpg
+photo: kevin-lin.webp
 pronouns: he/him
 ---
 
