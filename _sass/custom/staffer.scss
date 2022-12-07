@@ -16,6 +16,8 @@
 
   .staffer-pronouns {
     @extend .label, .text-grey-dk-100, .bg-grey-lt-200;
+
+    user-select: none;
   }
 
   .staffer-meta {
