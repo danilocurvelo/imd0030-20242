@@ -3,9 +3,6 @@ Asymptotic Analysis:
     - Compare and contrast runtime analysis, asymptotic analysis, and case analysis.
     - Analyze the order of growth of a function as constant, linear, or quadratic.
     - Identify big-theta asymptotic notation for the order of growth of a function.
-  Questions:
-    Q4[ab] CSE 373 19au MT: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-midterm.pdf#page=4
-    Q3[de] CSE 373 19au Final: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-final.pdf#page=4
 
 Iterative Sorts:
   Objectives:
@@ -18,129 +15,81 @@ Merge Sort:
     - Analyze the runtime of a recursive algorithm using recurrences.
     - Trace the recursive execution of merge sort.
     - Identify a run of merge sort on an array.
-  Questions:
-    Q4[bc] CS 61BL 18su MT2: https://cs61bl.org/su18/assets/pdf/61bl-su18-mt2.pdf#page=3
-    Q4[cd] CSE 373 19au MT: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-midterm.pdf#page=4
-    Q3[ab] CSE 373 19au Final: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-final.pdf#page=3
 
 Search Trees:
   Objectives:
     - Identify a best/worst-case height BST insertion order for given elements.
     - Trace the search and insertion procedures in a BST and a TST.
     - Explain in plain English the TST collection or traversal algorithm.
-  Questions:
-    Q1a CS 61B 16sp MT2: https://sp16.datastructur.es/materials/exam/CS61B_Spring2016_MT2.pdf#page=2
-    Q4a CSE 373 19au Final: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-final.pdf#page=4
 
 2-3 Trees:
   Objectives:
     - Identify element promotions during the 2-3 tree insertion process.
     - Identify an insertion order that will increase the height of a 2-3 tree.
     - Analyze the best-case and worst-case height of a 2-3 tree.
-  Questions:
-    Q8b CS 61B 16sp MT2: https://sp16.datastructur.es/materials/exam/CS61B_Spring2016_MT2.pdf#page=9
-    Q1c CS 61B 18sp MT2: https://sp18.datastructur.es/materials/exam/cs61b-sp18-mt2.pdf#page=2
-    Q3a CSE 332 20wi MT: https://courses.cs.washington.edu/courses/cse332/20wi/files/cse332-20wi-midterm.pdf#page=3
 
 Left-Leaning Red-Black Trees:
   Objectives:
     - Given a 2-3 tree, identify itsa corresponding LLRB tree (and vice-versa).
     - Apply rotations and color flips for a single LLRB tree insertion.
     - Using 1-1 correspondence, give the LLRB tree for a series of insertions.
-  Questions:
-    Q4b CS 61B 15sp MT2: http://sp15.datastructur.es/materials/exams/midterm2.pdf#page=5
-    # Q1d CS 61B 18sp MT2: https://sp18.datastructur.es/materials/exam/cs61b-sp18-mt2.pdf#page=2
-    Q3[bc] CSE 373 19au MT: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-midterm.pdf#page=3
-    Q2d CSE 373 19au Final: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-final.pdf#page=2
 
 Quicksort:
   Objectives:
     - Compare comparison sorting algorithms on efficiency and stability.
     - Given the runtime of a partitioning algorithm, describe the runtime of quicksort.
     - Describe the search trees analogies for quicksort algorithms.
-  Questions:
 
 Counting Sorts:
   Objectives:
     - Explain the worst-case lower bound for comparison sorting.
     - Describe counting sort, MSD radix sort, and LSD radix sort.
     - Explain how the subsort is used in MSD and LSD radix sort.
-  Questions:
-    Q10 CS 61B 16sp Final: https://tbp.berkeley.edu/exams/6521/download/#page=13
-    Q8a CS 61B 18sp Final: https://sp18.datastructur.es/materials/exam/cs61b-sp18-final.pdf#page=10
 
 Binary Heaps:
   Objectives:
     - Apply sink/swim operations to trace heap element insertion and removal.
     - Identify possible binary heap indices for the n-th smallest value.
     - Given an array index, find the parent, left child, and right child indexes.
-  Questions:
-    # Q1b CS 61B 15sp MT2: http://sp15.datastructur.es/materials/exams/midterm2.pdf#page=2
-    # Q8a CS 61B 16sp MT2: https://sp16.datastructur.es/materials/exam/CS61B_Spring2016_MT2.pdf#page=9
-    Q6c CS 61B 18sp MT2: https://sp18.datastructur.es/materials/exam/cs61b-sp18-mt2.pdf#page=7
-    Q3e CSE 332 20wi MT: https://courses.cs.washington.edu/courses/cse332/20wi/files/cse332-20wi-midterm.pdf#page=3
 
 Hash Tables:
   Objectives:
     - Explain and trace hash table algorithms such as insertion and search.
     - Evaluate how a hash table will behave in response to a given data type.
     - Analyze the runtime of a hash table with a given bucket data structure.
-  Questions:
-    Q1b CS 61B 16sp MT2: https://sp16.datastructur.es/materials/exam/CS61B_Spring2016_MT2.pdf#page=2
-    Q2b CS 61B 17sp MT2: https://sp17.datastructur.es/materials/exam/CS61B_Spring2017_MT2.pdf#page=3
-    Q2a CS 61B 18sp MT2: https://sp18.datastructur.es/materials/exam/cs61b-sp18-mt2.pdf#page=3
-    # Q2 CSE 373 19au MT: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-midterm.pdf#page=2
 
 Affordance Analysis:
   Objectives:
     - Describe how abstractions can embody values and structure social relations.
     - Identify the affordances of a program abstraction such as a class or interface.
     - Evaluate affordances by applying the 3 value-sensitive design principles.
-  Questions:
 
 Graph Data Type:
   Objectives:
     - Identify the features and representation for an example graph or graph problem.
     - Analyze the runtime of a graph representation in terms of vertices and edges.
     - Analyze the affordances of a graph interface or method for a particular problem.
-  Questions:
 
 Graph Traversals:
   Objectives:
     - Trace and explain each data structure in BFS and DFS graph traversal.
     - Analyze the runtime of a graph algorithm in terms of vertices and edges.
     - Define an appropriate graph abstraction for a given image processing problem.
-  Questions:
-    Q1a CS 61B 17sp MT2: https://tbp.berkeley.edu/exams/5773/download/#page=2
-    Q8d CSE 373 19au Final: https://courses.cs.washington.edu/courses/cse373/19au/files/cse373-19au-final.pdf#page=7
-    Q5a CSE 332 20wi MT: https://courses.cs.washington.edu/courses/cse332/20wi/files/cse332-20wi-midterm.pdf#page=4
 
 Minimum Spanning Trees:
   Objectives:
     - Trace Prim's algorithm to find a minimum spanning tree in a graph.
     - Compare and contrast Prim's algorithm and breadth-first search.
     - Apply the super-source node pattern to simplify graph problems.
-  Questions:
-    Q1b CS 61B 15sp Final: https://tbp.berkeley.edu/exams/4911/download/#page=2
-    # Q1e CS 61B 18sp Final: https://sp18.datastructur.es/materials/exam/cs61b-sp18-final.pdf#page=3
-    Q3a CS 61B 19sp Final: https://tbp.berkeley.edu/exams/6675/download/#page=5
-    Q6[ab] CS 61B 20au Final: https://tbp.berkeley.edu/exams/7059/download/#page=10
 
 Shortest Paths Trees:
   Objectives:
     - Trace Dijkstra's and the topological sorting algorithm for shortest paths trees.
     - Explain why Dijkstra's algorithm might not work with negative edge weights.
     - Explain the runtime for Dijkstra's algorithm in terms of priority queue operations.
-  Questions:
-    # Q1f CS 61B 18sp Final: https://sp18.datastructur.es/materials/exam/cs61b-sp18-final.pdf#page=3
-    Q9 CS 61B 18sp Final: https://sp18.datastructur.es/materials/exam/cs61b-sp18-final.pdf#page=11
-    Q7 CS 61B 19sp MT2: https://tbp.berkeley.edu/exams/6470/download/#page=7
-    Q3[be] CS 61B 19sp Final: https://tbp.berkeley.edu/exams/6675/download/#page=5
-    Q9b CS 61B 20au Final: https://tbp.berkeley.edu/exams/7059/download/#page=14
 
 Dynamic Programming:
   Objectives:
     - Identify whether a recursive algorithm can be rewritten using DP.
     - Explain how unique paths can be counted using recursion and DP.
     - Explain how a min-cost seam can be found using recursion and DP.
-  Questions:
