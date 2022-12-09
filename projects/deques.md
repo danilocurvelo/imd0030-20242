@@ -17,6 +17,19 @@ grand_parent: CSE 373
 1. TOC
 {:toc}
 
+In Java, every variable has a **data type** like `int`, `boolean`, `String`, `List`, or the name of any interface or class defined by a programmer. Data types combine representation and functionality.
+
+Representation
+: The specific way that data is stored or represented within the computer.
+
+Functionality
+: The actions or operations that determine how we can use the data type.
+
+{: .hint }
+For example, we can have an `int x = 373` and a `String s = "373"`. Although they both hold similar content, their representation and functionality are very different. In Java, an `int` can only represent integer numbers within a certain range, whereas a `String` represents data as a sequence of characters. The functionality of the plus operator differs for `x + x` versus `s + s`.
+
+**Abstract data types** are data types that do not specify a single representation of data and only include a specification for the functionality of the data type. In Java, abstract data types are often represented using interfaces like `List`, `Set`, or `Map`. Java provides **implementations** or specific representations of each interface through classes like `ArrayList`, `TreeSet`, or `HashMap`.
+
 A **deque** (pronounced "deck") is an abstract data type representing a **d**ouble-**e**nded **que**ue. Deques are linear collections (like lists, stacks, and queues) optimized for accessing, adding, and removing items from both the front and the back. Deques differ from lists in that they do not allow items to be added or removed from anywhere except for the front or the back. This restriction might make it seem like deques are much less useful than lists. Indeed, any problem you can solve using a deque you can also solve using a list!
 
 But usefulness is not the only metric for determining the quality of a program. Imagine you're on a team engineering a [web browser](https://en.wikipedia.org/wiki/Web_browser), and you're working on addressing a performance problem that has been reported in the browser history feature. When a user visits a web page, the page visit is recorded in the browser history by adding the link and the date of visit to the end of an `ArrayList`. But users are reporting that the option to clear-out the history of pages that were visited over 3 months is unusually slow.
