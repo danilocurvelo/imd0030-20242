@@ -96,7 +96,7 @@ In your team during class and quiz section, collaborate on the in-class guided p
 
 On your own at the end of each week, record a video showing what you learned this week.
 : Assessments are about not only problem solving skills, but also communication skills.
-: In Canvas, demonstrate your learning by explaining 2 solutions in each **Assessment**.
+: In Canvas, demonstrate your learning by explaining your work for each **Assessment**.
 
 In your team throughout the module, apply your learning by collaborating on the project.
 : Projects are designed to integrate and situate what you learned in real-world problems.
