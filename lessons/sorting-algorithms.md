@@ -23,19 +23,16 @@ grand_parent: CSE 373
 
 In your previous programming experience, we focused on **correctness** and **maintainability**---code that produces the expected output given a particular input, and code that is easy to improve or extend in the future. But, as we'll see throughout this course, it's also important that we design programs with a focus on **efficiency** too.
 
-**Asymptotic runtime analysis** is the process of predicting the amount of time an algorithm will take to run on large inputs. The focus on program efficiency for large inputs (as the size of the input approaches infinity, or its _asymptote_) helps us compare different algorithms for solving the same problem. For example, the performance issue in `ArrayListDeque` only appears when a large number of web pages have been stored in browser history; `ArrayListDeque` is quite fast when only a few web pages have been stored. The differences in runtime become more appreciable when the number of items increases.
+**Experimental runtime analysis** is a method for empirically measuring how long a _program_ takes to run by recording exactly how long it takes to run on different inputs. Experimental analysis is particularly helpful for identifying and addressing performance issues by recording exactly which operations are contributing to high runtime. This data can be used to create graphs that can be used to plot the runtime as the input to the program grows larger and larger.
 
-The goal of asymptotic runtime analysis is to produce a (1) _predictive_ and (2) _easy-to-compare_ description of the running time of an algorithm.
+But what if we want to _predict_ the runtime of a program _before_ writing any code? What other methods can we use to help us design the specification to a program so that it meets our performance needs?
 
-<details markdown="block">
-<summary>Why not just record the time it takes for an algorithm to run?</summary>
+**Asymptotic runtime analysis** is the process of predicting the amount of time an _algorithm_ will take to run on large inputs. Asymptotic analysis focuses on analyzing **algorithms**, the concepts underlying how programs work. Compared to experimental analysis, which focuses on empirical measurement, asymptotic analysis focuses on reasoning and logic to analyze the runtime of an algorithm.
 
-This idea, called **experimental analysis**, has some drawbacks. For example, experimental analysis relies on having a program already written. What if you want to know which design is more efficient _before_ coding it? Asymptotic analysis can helps us _predict_ the runtime, not just measure it.
+{: .hint }
+Computer scientists specifically focus on large inputs (as the size of the input approaches infinity, or its _asymptote_) rather than small inputs because larger inputs more clearly demonstrate differences in efficiency. For example, the performance issue in `ArrayListDeque` only appears when a large number of web pages have been stored in browser history; `ArrayListDeque` is quite fast when only a few web pages have been stored. The differences in runtime become more appreciable when we're working with a very large number of items.
 
-It's also not easy to compare the results of an experimental analysis. We need to not only implement the algorithm, but we also have to make choices about what to measure, how to measure it, and infer results based on the data that we collected.
-</details>
-
-Consider the `indexOf` method, which returns the index of a `target` number in an `int[] A` or -1 if `target` is not in the array.
+The goal of asymptotic runtime analysis is to produce a (1) _predictive_ and (2) _easy-to-compare_ description of the running time of an algorithm. Consider the `indexOf` method, which returns the index of a `target` number in an `int[] A` or -1 if `target` is not in the array.
 
 ```java
 static int indexOf(int[] A, int target) {
