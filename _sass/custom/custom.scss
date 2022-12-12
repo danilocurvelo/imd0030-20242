@@ -82,7 +82,7 @@ summary {
   }
 
   .footnotes {
-    @extend .mt-5;
+    @extend .fs-3, .mt-5;
 
     &:before {
       @extend .text-delta;
@@ -92,6 +92,10 @@ summary {
 
     p {
       margin: 0;
+    }
+
+    ol > li::before {
+      top: 0;
     }
   }
 }
