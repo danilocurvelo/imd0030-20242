@@ -184,9 +184,11 @@ Explain the part of the `DynamicProgrammingSeamFinder` class that you're most pr
 
 ### Affordance analysis
 
-How does the choice of energy function affect the effectiveness of the seam carving algorithm? The `DualGradientEnergyFunction` defines the energy of a pixel as a function of red, green, and blue color differences in adjacent horizontal and vertical pixels. (The exact details of how the energy calculated isn't important for the purposes of your analysis.)
+How does the choice of energy function affect the effectiveness of the seam carving algorithm? The `DualGradientEnergyFunction` defines the energy of a pixel as a function of red, green, and blue color differences in adjacent horizontal and vertical pixels.[^1] (The exact details of how the energy calculated isn't important for the purposes of your analysis.)
 
-![A 3-by-4 image and the gradients of each pixel](https://www.cs.princeton.edu/courses/archive/spring22/cos226/assignments/seam/images/dual-gradient.png)
+[^1]: Josh Hug, Maia Ginsberg, and Kevin Wayne. 2015. "3x4.png" in [Programming Assignment 7: Seam Carving](https://www.cs.princeton.edu/courses/archive/spring15/cos226/assignments/seamCarving.html).
+
+![A 3-by-4 image and the gradients of each pixel]({{ site.baseurl }}{% link assets/images/dual-gradient.webp %})
 
 However, some images don't work well with seam carving for content-aware image resizing.
 
