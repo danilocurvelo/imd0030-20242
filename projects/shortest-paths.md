@@ -4,7 +4,7 @@ title: Shortest Paths
 description: &desc Designing, analyzing, and critiquing shortest paths.
 summary: *desc
 nav_order: 4
-# parent: Projects
+parent: Projects
 grand_parent: CSE 373
 ---
 
@@ -214,6 +214,7 @@ Compare the runtimes across all 5 approaches. Are certain algorithms faster than
 
 ## Critique and connect
 
+{: .deliverable }
 Synthesize an idea involving least one of the following 3 articles together with a couple additional sources. How do the articles relate to your understanding of the `SeamFinder` interface that we designed? How does the author's arguments relate the technology to the distribution of power, benefits, and harms across different people in society? What other questions should we ask about the design of our technology?
 
 Harvard professor Sarah Lewis writes for the NY Times about "[The Racial Bias Built Into Photography](https://www.nytimes.com/2019/04/25/lens/sarah-lewis-racial-bias-photography.html)".

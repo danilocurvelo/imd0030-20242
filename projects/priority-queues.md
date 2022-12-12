@@ -4,7 +4,7 @@ title: Priority Queues
 description: &desc Designing, analyzing, and critiquing priority queues.
 summary: *desc
 nav_order: 3
-# parent: Projects
+parent: Projects
 grand_parent: CSE 373
 ---
 
@@ -212,6 +212,7 @@ However, I want to encourage a broader view on content moderation as a practice 
 
 ![Building technology for society (and all of its complications and messy consequences): case study on automated content moderation](https://social.cs.washington.edu/slides/content_moderation/guestlecture_contentmoderation.001.jpeg)
 
+{: .deliverable }
 Synthesize an idea involving least one of the following 3 articles together with a couple additional sources. How do the articles relate to your understanding of the `MinPQ` interface that we designed? How does the author's arguments relate the technology to the distribution of power, benefits, and harms across different people in society? What other questions should we ask about the design of our technology?
 
 **[Custodians of the Internet](http://opentranscripts.org/transcript/custodians-of-the-internet/)**. What are platforms' legal obligations to the public interest? If platforms operate an attention economy, then "content moderation constitutes the platform."

@@ -4,7 +4,7 @@ title: Autocomplete
 description: &desc Designing, analyzing, and critiquing autocomplete.
 summary: *desc
 nav_order: 2
-# parent: Projects
+parent: Projects
 grand_parent: CSE 373
 ---
 
