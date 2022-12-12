@@ -80,6 +80,16 @@ summary {
     max-width: none;
     width: calc(100% + 2px);
   }
+
+  .footnotes {
+    @extend .mt-5;
+
+    &:before {
+      @extend .text-delta;
+
+      content: "References"
+    }
+  }
 }
 
 .search {

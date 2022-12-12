@@ -155,5 +155,3 @@ Grading in this course encourages learning through deliberate practice by emphas
 > : If you consent to participate in this study and are at least 18 years old, no action is needed.
 > : Participation in research is voluntary. You may withdraw at any time without penalty.
 > : If you decide to withdraw from the research, complete the [online opt-out form](https://docs.google.com/forms/d/e/1FAIpQLSdTOxgmb3JaOeAGqFljO5c6xmxxdniGGfjG352M2zlByka96Q/viewform?usp=sf_link).
-
-## References
