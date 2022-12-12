@@ -110,7 +110,7 @@ An **array deque** is like an `ArrayList`, but different in that elements aren't
 {: .hint }
 To step back in the slides, click on the slides and press the left arrow key or the backspace key.
 
-[^1]: Josh Hug. 2019. [cs61b sp19 proj1 slides](https://docs.google.com/presentation/d/1XBJOht0xWz1tEvLuvOL4lOIaY0NSfArXAvqgkrx0zpc/edit). In CS 61B: Data Structures, Spring 2019.
+[^1]: Josh Hug. 2019. [cs61b sp19 proj1 slides](https://docs.google.com/presentation/d/1XBJOht0xWz1tEvLuvOL4lOIaY0NSfArXAvqgkrx0zpc/edit).
 
 We've provided an `ArrayDeque` class that includes a bug, and a failing test case that causes the bug to emerge. Identify and fix the bug in the `ArrayDeque` class by **changing at least 2 lines of code**. Follow the debugging cycle to address the bug.
 
@@ -162,7 +162,7 @@ Sentinel node
 
 {% include slides.html id="1qNaYV6fq-ARyhMGnY5-HJXHG1srNf3R5uofhYiJ80Y0" aspect_ratio="16/9" %}
 
-[^2]: Josh Hug. 2019. [cs61b lec5 2019 lists3, dllists and arrays](https://docs.google.com/presentation/d/1nRGXdApMS7yVqs04MRGZ62dZ9SoZLzrxqvX462G2UbA/edit). In CS 61B: Data Structures, Spring 2019.
+[^2]: Josh Hug. 2019. [cs61b lec5 2019 lists3, dllists and arrays](https://docs.google.com/presentation/d/1nRGXdApMS7yVqs04MRGZ62dZ9SoZLzrxqvX462G2UbA/edit).
 
 A `LinkedDeque` should always maintain the following invariants before and after each method call:
 
