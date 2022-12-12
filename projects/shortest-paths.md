@@ -188,7 +188,9 @@ How does the choice of energy function affect the effectiveness of the seam carv
 
 ![A 3-by-4 image and the gradients of each pixel](https://www.cs.princeton.edu/courses/archive/spring22/cos226/assignments/seam/images/dual-gradient.png)
 
-However, this choice of energy function is not the only option. The video at [3:04](https://youtu.be/6NcIJXTlugc?t=184) mentions alternative energy functions, but fails to provide an affordance analysis of the differences.
+However, some images don't work well with seam carving for content-aware image resizing.
+
+![Cat picture mangled by seam carving]({{ site.baseurl }}{% link assets/images/meow.webp %})
 
 {: .deliverable }
 Identify affordances of dual-gradient energy seam carving. Then, evaluate the affordances by applying the three value-sensitive design principles. Describe (or select) some example images that we should be particularly concerned about when evaluating an pixel-based seam carving algorithm.
