@@ -270,7 +270,9 @@ Unlike selection sort, insertion sort is affected by the order of items. When th
 </details>
 
 {: .hint }
-To visualize sorting algorithms, open the VisuAlgo module on [Sorting](https://visualgo.net/en/sorting). Press `Esc` to exit the e-Lecture Mode, and choose either **SEL** or **INS** from the top navigation bar to switch to selection sort or insertion sort respectively.
+> Open the VisuAlgo module to visualize sorting algorithms. Press `Esc` to exit the e-Lecture Mode, and choose either **SEL** or **INS** from the top navigation bar to switch to selection sort or insertion sort respectively. Run the sorting algorithm using **Sort** from the bottom left menu.
+>
+> [Sorting](https://visualgo.net/en/sorting){: .btn .btn-purple target="_blank" }
 
 ## Merge sort
 
