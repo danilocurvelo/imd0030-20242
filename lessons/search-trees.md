@@ -144,6 +144,11 @@ This definition does not allow nodes that have just 1 non-null child. A 2-3 tree
 
 {% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/33Demo23Tree/index.html" aspect_ratio="16/9" %}
 
+{: .hint }
+> Open the Algorithm Visualizations module to visualize B-trees with max degree = 3. Insert words or numbers and predict how the data structure will change.
+>
+> [2-3 Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BTree.html){: .btn .btn-purple target="_blank" }
+
 ## Memory optimization
 
 At the start of this lesson, we introduced an efficient way to carry-out binary search by using a hierarchical node data structure called a binary search tree.
