@@ -149,7 +149,7 @@ This definition does not allow nodes that have just 1 non-null child. A 2-3 tree
 >
 > [2-3 Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BTree.html){: .btn .btn-purple target="_blank" }
 
-## Memory optimization
+## Memory Hierarchy
 
 At the start of this lesson, we introduced an efficient way to carry-out binary search by using a hierarchical node data structure called a binary search tree.
 
