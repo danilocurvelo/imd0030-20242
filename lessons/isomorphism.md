@@ -72,7 +72,7 @@ Converting from 2-3 trees to left-leaning BSTs is not too bad. But the opposite 
 
 {% include video.html src="https://www.youtube.com/embed/q7sfCkdrtEs?start=217" aspect_ratio="16/9" %}
 
-The **left-leaning red-black (LLRB) tree** data structure is exactly the same as left-leaning BSTs except "glue" edges (representing 3-nodes) are colored red. The red versus black edge coloring is only used to help us distinguish between 2-nodes and 3-nodes. Red edges help us immediately tell which nodes are part of a 3-node in the _corresponding 2-3 tree_.
+The **left-leaning red-black (LLRB) tree** data structure is exactly the same as left-leaning BSTs except "glue" edges connecting 3-nodes (in the corresponding 2-3 tree) are colored red. Red edges help us immediately tell which nodes are part of a 3-node in the _corresponding 2-3 tree_.
 
 1-1 correspondence
 : The idea that every 2-3 tree has a unique LLRB tree associated with it, and vice versa. We can convert back and forth between any 2-3 tree and its unique left-leaning red-black tree.
@@ -88,3 +88,10 @@ LLRB tree invariants follow entirely from 1-1 correspondence with 2-3 trees.
 The 1-1 correspondence property opens-up a powerful way of thinking about LLRB tree operations. In any situation, we can always ask: **What would a 2-3 tree do?**
 
 {% include video.html src="https://www.youtube.com/embed/GjTDBrB7QV4" aspect_ratio="16/9" %}
+
+The following slides visualize the procedure for adding several elements to a LLRB tree. Nodes are recursively added to the LLRB tree as new leaf nodes just like in a binary search tree. After reaching the recursive base case and creating the new leaf node, before returning, the program will perform rotations and color flips to [maintain LLRB tree invariants](https://github.com/kevin-wayne/algs4/blob/48ad6a3fa0e062941aa93c43860be331c2ad57a1/src/main/java/edu/princeton/cs/algs4/RedBlackBST.java#L183-L221).
+
+{: .hint }
+LLRB tree balance is maintained using only [3 lines of code](https://github.com/kevin-wayne/algs4/blob/48ad6a3fa0e062941aa93c43860be331c2ad57a1/src/main/java/edu/princeton/cs/algs4/RedBlackBST.java#L215-L217). But it's also possible to reason about the data structure by visualizing the corresponding 2-3 tree: try simulating the sequence of insertions from the slides below in the [2-3 Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BTree.html) and compare the results.
+
+{% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/33DemoRedBlackBST/index.html" aspect_ratio="16/9" %}
