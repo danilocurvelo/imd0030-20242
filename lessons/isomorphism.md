@@ -50,7 +50,7 @@ Given a particular node in a tree, we can either rotate it to the left or to the
 {: .hint }
 These two rotations are inverse operations: one operation undoes the other.
 
-### 1-1 correspondence
+### One-to-one correspondence
 
 Our goal is to develop a self-balancing binary search tree using the self-balancing property of 2-3 trees. Certain 2-3 trees are already valid binary search trees. 2-3 trees that only contain 2-nodes are already valid binary search trees. How might we represent 3-nodes in a binary search tree?
 
@@ -74,10 +74,10 @@ Converting from 2-3 trees to left-leaning BSTs is not too bad. But the opposite 
 
 The **left-leaning red-black (LLRB) tree** data structure is exactly the same as left-leaning BSTs except "glue" edges connecting 3-nodes (in the corresponding 2-3 tree) are colored red. Red edges help us immediately tell which nodes are part of a 3-node in the _corresponding 2-3 tree_.
 
-1-1 correspondence
+One-to-one correspondence
 : The idea that every 2-3 tree has a unique LLRB tree associated with it, and vice versa. We can convert back and forth between any 2-3 tree and its unique left-leaning red-black tree.
 
-LLRB tree invariants follow entirely from 1-1 correspondence with 2-3 trees.
+LLRB tree invariants follow entirely from one-to-one correspondence with 2-3 trees.
 
 - **Red edges lean left** because that's the convention we chose to represent 3-nodes.
 - **No node has two red edges connected to it** because 2-3 trees only allow 2-nodes and 3-nodes.
@@ -85,7 +85,7 @@ LLRB tree invariants follow entirely from 1-1 correspondence with 2-3 trees.
 
 ### What would a 2-3 tree do?
 
-The 1-1 correspondence property opens-up a powerful way of thinking about LLRB tree operations. In any situation, we can always ask: **What would a 2-3 tree do?**
+The one-to-one correspondence property opens-up a powerful way of thinking about LLRB tree operations. In any situation, we can always ask: **What would a 2-3 tree do?**
 
 {% include video.html src="https://www.youtube.com/embed/GjTDBrB7QV4" aspect_ratio="16/9" %}
 
