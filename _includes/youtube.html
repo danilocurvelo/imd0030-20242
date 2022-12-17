@@ -1,14 +1,13 @@
+{%- assign params = "modestbranding=1" -%}
+{%- if include.start -%}{%- assign params = params | append: "&start=" | append: include.start -%}{%- endif -%}
+{%- if include.end -%}{%- assign params = params | append: "&end=" | append: include.end -%}{%- endif -%}
 <lite-youtube
         class="module full-width"
-        style="aspect-ratio: {{ include.aspect_ratio }}"
         videoid="{{ include.id }}"
-        {% if include.title %}
-        videotitle="{{ include.title }}"
-        {% endif %}
-        {% if include.start %}
-        videoStartAt="{{ include.start }}"
-        {% endif %}
-        params="modestbranding=1{%- if include.end -%}&end={{ include.end }}{%- endif -%}"
-        nocookie
-        autoload
-></lite-youtube>
+        style="aspect-ratio: {{ include.aspect_ratio }}; background-image: url('https://i.ytimg.com/vi_webp/{{ include.id }}/hqdefault.webp')"
+        params="{{ params }}"
+>
+    <a href="https://youtube.com/watch?v={{ include.id }}" class="lyt-playbtn" title="Play Video">
+        <span class="lyt-visually-hidden">Play Video</span>
+    </a>
+</lite-youtube>
