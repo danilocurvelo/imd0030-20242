@@ -6,6 +6,7 @@ summary: *desc
 nav_order: 2
 parent: Lessons
 grand_parent: CSE 373
+youtube: yes
 ---
 
 # {{ page.title }}
@@ -65,7 +66,7 @@ The runtime of binary search tree methods depend on the **height** of the tree, 
 >
 > [Binary Search Tree Visualization](https://visualgo.net/en/bst){: .btn .btn-purple target="_blank" }
 
-{% include video.html src="https://www.youtube.com/embed/0SCtnf84QrI?start=15&end=461" aspect_ratio="16/9" %}
+{% include youtube.html id="0SCtnf84QrI" start="15" end="461" aspect_ratio="16/9" %}
 
 But our asymptotic analysis of binary search trees ignores one potentially important cost: the time it takes to compare two strings by calling `compareTo`. We've assumed that the time it takes to compare any two elements is always constant and not a factor in the asymptotic runtime analysis. In a computer, characters are represented as numbers: the character 'a' has the numeric value 97, for example. Computers can compare these the numeric values for each character using the `<`, `==`, and `>` operators in constant time.
 
@@ -118,13 +119,13 @@ Right child
 
 Binary search trees aimed to address the linear-time worst case for adding or removing items from a sorted array set. Yet we now know that binary search trees not only fail to improve on this worst case runtime, but can also degrade performance on methods like `contains` that were much faster when we performed a binary search on a sorted array.
 
-{% include video.html src="https://www.youtube.com/embed/yz850zzjrHQ?start=220" aspect_ratio="16/9" %}
+{% include youtube.html id="yz850zzjrHQ" start="220" aspect_ratio="16/9" %}
 
 To realize the promise of a more efficient tree data structure, we need stronger invariants that ensure the tree never becomes unbalanced. In inventors of the 2-3 tree hypothesized that unbalanced growth in a binary search tree occurs because adding an element requires creating a new leaf node that contributes to unevenly to the height of the tree. For example, when elements are added in ascending order to a binary search tree, the overall height of the tree increases because the height of only the right child increases.
 
 Given that creating new leaves can lead to unbalanced growth, 2-3 trees avoid creating new leaf nodes entirely. Instead, the nodes of a 2-3 tree can expand to fit more than one key so new elements can be added by fitting them into existing nodes rather than creating new leaves. If new leaf nodes are never created, the tree can never become unbalanced!
 
-{% include video.html src="https://www.youtube.com/embed/-ECGVvUHA5c?start=12&end=418" aspect_ratio="16/9" %}
+{% include youtube.html id="-ECGVvUHA5c" start="12" end="418" aspect_ratio="16/9" %}
 
 The **2-3 search tree** (often shortened to just "2-3 tree") is a _self-balancing_ search tree designed to ensure a logarithmic-height tree no matter the order that elements are added to the data structure. Each node in a binary search tree could only contain a single key per node, the nodes of a 2-3 tree can be either:
 
@@ -153,11 +154,11 @@ This definition does not allow nodes that have just 1 non-null child. A 2-3 tree
 
 At the start of this lesson, we introduced an efficient way to carry-out binary search by using a hierarchical node data structure called a binary search tree.
 
-{% include video.html src="https://www.youtube.com/embed/rhSySpkKD9I?start=652" aspect_ratio="16/9" %}
+{% include youtube.html id="rhSySpkKD9I" start="652" aspect_ratio="16/9" %}
 
 One limitation of asymptotic analysis is that it doesn't help us understand how computer hardware actually runs a program. In asymptotic analysis, we assume that each individual operation takes about the same time. Although each operation in a real computer might take constant time, there can still be some dramatic differences when running a program on real computer hardware.
 
-{% include video.html src="https://www.youtube.com/embed/QmUYOVuxtWo" aspect_ratio="16/9" %}
+{% include youtube.html id="QmUYOVuxtWo" aspect_ratio="16/9" %}
 
 There are 3 key components to take away from the memory hierarchy.
 

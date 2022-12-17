@@ -6,6 +6,7 @@ summary: *desc
 nav_order: 1
 parent: Projects
 grand_parent: CSE 373
+youtube: yes
 ---
 
 # {{ page.title }}
@@ -127,7 +128,7 @@ It's easy to lose track of time and get stuck in a deep hole when debugging. Com
 
 To develop a hypothesis, we can use the debugger to pause the program at any point in time. [Watch this video](https://youtu.be/e7K8CNr3j2w) by one of our TAs, Iris Zhou, to learn more about how to debug your deques in IntelliJ. At each step, compare your thinking to the state of the debugger. If it's a bit hard to understand the state of the debugger, try switching over to the **jGRASP** tab while debugging the program.
 
-{% include video.html src="https://www.youtube.com/embed/e7K8CNr3j2w" aspect_ratio="1280/777" %}
+{% include youtube.html id="e7K8CNr3j2w" aspect_ratio="1280/777" %}
 
 After you implement a fix that resolves the bug in the `confusingTest`, make sure that it also works with this alternative sequence of tricky removes. Edit the `confusingTest` and swap out the final two code segments for the following code.
 

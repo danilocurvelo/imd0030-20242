@@ -6,6 +6,7 @@ summary: *desc
 nav_order: 3
 parent: Lessons
 grand_parent: CSE 373
+youtube: yes
 ---
 
 # {{ page.title }}
@@ -29,7 +30,7 @@ In Java, `TreeSet` is the standard implementation of a set that uses a self-bala
 
 Before we introduce red-black trees formally, we'll first need a way to reorganize elements in a binary search tree. Depending on the order items are inserted into the tree, there are many different ways to construct a binary search tree containing the same set of items. But insertion order is not the only way to build different configurations of the same set of items. We can change the structure of a binary tree through **rotation**.
 
-{% include video.html src="https://www.youtube.com/embed/kkd8d0QhiQ0?start=202" aspect_ratio="16/9" %}
+{% include youtube.html id="kkd8d0QhiQ0" start="202" aspect_ratio="16/9" %}
 
 Each rotation makes a local adjustment to the tree. Sometimes, this local adjustment increases the height of the tree; other times, it decreases the height of the tree. However, rotations always respect the binary search tree invariant. Items that are ordered between **B** and **D** in the example below stay ordered after a rotation.
 
@@ -70,7 +71,7 @@ We now have a complete binary search tree representation for any 2-3 tree. The s
 
 Converting from 2-3 trees to left-leaning BSTs is not too bad. But the opposite is not so easy! In the slides above, it's hard to tell that **d** and **f** are the two nodes that are glued together in the 2-3 tree. This is even harder to do in code, so today's topic of left-leaning red-black trees introduces a little bit of extra information in the form of a colorful "glue" edge.
 
-{% include video.html src="https://www.youtube.com/embed/q7sfCkdrtEs?start=217" aspect_ratio="16/9" %}
+{% include youtube.html id="q7sfCkdrtEs" start="217" aspect_ratio="16/9" %}
 
 The **left-leaning red-black (LLRB) tree** data structure is exactly the same as left-leaning BSTs except "glue" edges connecting 3-nodes (in the corresponding 2-3 tree) are colored red. Red edges help us immediately tell which nodes are part of a 3-node in the _corresponding 2-3 tree_.
 
@@ -87,7 +88,7 @@ LLRB tree invariants follow entirely from one-to-one correspondence with 2-3 tre
 
 The one-to-one correspondence property opens-up a powerful way of thinking about LLRB tree operations. In any situation, we can always ask: **What would a 2-3 tree do?**
 
-{% include video.html src="https://www.youtube.com/embed/GjTDBrB7QV4" aspect_ratio="16/9" %}
+{% include youtube.html id="GjTDBrB7QV4" aspect_ratio="16/9" %}
 
 The following slides visualize the procedure for adding several elements to a LLRB tree. Nodes are recursively added to the LLRB tree as new leaf nodes just like in a binary search tree. After reaching the recursive base case and creating the new leaf node, before returning, the program will perform rotations and color flips to [maintain LLRB tree invariants](https://github.com/kevin-wayne/algs4/blob/48ad6a3fa0e062941aa93c43860be331c2ad57a1/src/main/java/edu/princeton/cs/algs4/RedBlackBST.java#L183-L221).
 

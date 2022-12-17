@@ -6,6 +6,7 @@ summary: *desc
 nav_order: 1
 parent: Lessons
 grand_parent: CSE 373
+youtube: yes
 ---
 
 # {{ page.title }}
@@ -120,7 +121,7 @@ Orders of growth help us compare runtime in terms of words like _constant_, _lin
 
 Asymptotic notation provides precise, mathematical shorthand for orders of growth.
 
-{% include video.html src="https://www.youtube.com/embed/CGdubALgQw4?start=4&end=240" aspect_ratio="16/9" %}
+{% include youtube.html id="CGdubALgQw4" start="4" end="240" aspect_ratio="16/9" %}
 
 Consider this graph that depicts three functions of _N_.
 
@@ -200,7 +201,7 @@ However, if our array is _sorted_, then returning whether there are duplicates i
 
 But data doesn't always come to us in a pre-sorted form. How do we sort---rearrange into order---an array of elements?
 
-{% include video.html src="https://www.youtube.com/embed/i2bdV3WfulE?start=618&end=1099" aspect_ratio="16/9" %}
+{% include youtube.html id="i2bdV3WfulE" start="618" end="1099" aspect_ratio="16/9" %}
 
 ### Sorting definitions
 
@@ -243,7 +244,7 @@ A sort is **stable** if it preserves the original order of equivalent keys. Stab
 
 So how do we sort an array? In this lesson, we'll introduce two iterative sorting algorithms: selection sort and insertion sort.
 
-{% include video.html src="https://www.youtube.com/embed/NLZHTAXcfpM" aspect_ratio="16/9" %}
+{% include youtube.html id="NLZHTAXcfpM" aspect_ratio="16/9" %}
 
 ### Selection sort
 
@@ -294,7 +295,7 @@ Imagine how differently we would interact with technologies if search results to
 
 **Binary search** returns the index of an item in a _sorted array_ in worst case logarithmic time by using the sorted order to discard half the remaining items after each comparison. Instead of checking each item one-by-one from left-to-right in the array, binary search instead starts at the middle of the current problem and compares to the middle item to decide whether the proceed left or right.
 
-{% include video.html src="https://www.youtube.com/embed/RfoP3xULk70?start=11&end=641" aspect_ratio="16/9" %}
+{% include youtube.html id="RfoP3xULk70" start="11" end="641" aspect_ratio="16/9" %}
 
 ```java
 public static int binarySearch(int[] sorted, int target) {
@@ -366,7 +367,7 @@ Merge sort is a recursive sorting algorithm that can be described as follows.
 1. Recursively merge sort the right half.
 1. Merge the two sorted halves.
 
-{% include video.html src="https://www.youtube.com/embed/Ns7tGNbtvV4?start=78&end=519" aspect_ratio="16/9" %}
+{% include youtube.html id="Ns7tGNbtvV4" start="78" end="519" aspect_ratio="16/9" %}
 
 The recurrence relation for the runtime of merge sort can be given as T(N) = T(N / 2) + T(N / 2) + N + 1. The first recursive call to T(N / 2) represents the time it takes to merge sort the left half while the second call represents the time it takes to merge sort the right half. But we could also state it more simply as just T(N) = 2T(N / 2) + N because the runtime is the same regardless of which half we're discussing.
 

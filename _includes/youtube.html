@@ -1,0 +1,14 @@
+<lite-youtube
+        class="module full-width"
+        style="aspect-ratio: {{ include.aspect_ratio }}"
+        videoid="{{ include.id }}"
+        {% if include.title %}
+        videotitle="{{ include.title }}"
+        {% endif %}
+        {% if include.start %}
+        videoStartAt="{{ include.start }}"
+        {% endif %}
+        params="modestbranding=1{%- if include.end -%}&end={{ include.end }}{%- endif -%}"
+        nocookie
+        autoload
+></lite-youtube>

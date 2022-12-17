@@ -6,6 +6,7 @@ summary: *desc
 nav_order: 4
 parent: Projects
 grand_parent: CSE 373
+youtube: yes
 ---
 
 # {{ page.title }}
@@ -19,7 +20,7 @@ grand_parent: CSE 373
 
 Shortest paths is not only essential for navigation directions in Husky Maps, but also essential for image processing. **Seam carving** is a technique for _image resizing_ where the size of an image is reduced by one pixel in height (by removing a horizontal seam) or width (by removing a vertical seam) at a time. Rather cropping pixels from the edges or scaling the entire image, seam carving is considered _content-aware_ because it attempts to identify and preserve the most important content in an image.
 
-{% include video.html src="https://www.youtube.com/embed/6NcIJXTlugc" aspect_ratio="4/3" %}
+{% include youtube.html id="6NcIJXTlugc" aspect_ratio="4/3" %}
 
 In this project, we will compare 2 graph representations, 2 graph algorithms, and 1 dynamic programming algorithm for seam carving. By the end of this project, students will be able to:
 
