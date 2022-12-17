@@ -18,20 +18,33 @@ timeline:
   - '4:00 PM'
   - '4:30 PM'
   - '5:00 PM'
-  - '5:30 PM'
-  - '6:00 PM'
-  - '6:30 PM'
-  - '7:00 PM'
 schedule:
   - name: Monday
     events:
+      - name: Office Hours
+        start: 1:30 PM
+        end: 3:30 PM
+        location: CSE 5F Breakout
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
         location: ARC 147
   - name: Tuesday
+    events:
+      - name: Office Hours
+        start: 9:30 AM
+        end: 11:30 AM
+        location: CSE 5F Breakout
+      - name: Office Hours
+        start: 1:30 PM
+        end: 5:30 PM
+        location: CSE 5F Breakout
   - name: Wednesday
     events:
+      - name: Office Hours
+        start: 11:30 AM
+        end: 3:30 PM
+        location: CSE 5F Breakout
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
@@ -41,10 +54,24 @@ schedule:
       - name: Sections
         start: 8:30 AM
         end: 4:30 PM
+      - name: Office Hours
+        start: 3:30 PM
+        end: 5:30 PM
+        location: CSE 5F Breakout
   - name: Friday
     events:
+      - name: Office Hours
+        start: 1:30 PM
+        end: 3:30 PM
+        location: CSE 5F Breakout
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
         location: ARC 147
+  - name: Saturday
+    events:
+      - name: Office Hours
+        start: 1:30 PM
+        end: 3:30 PM
+        location: Zoom
 ---
