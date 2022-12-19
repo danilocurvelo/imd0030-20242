@@ -54,7 +54,6 @@ The behavior of the `indexOf` algorithm depends on the input values.
 
 ### Model the number of steps
 
-{: .note }
 **How many steps (or operations) are needed to run the algorithm?** Operations include assignments, boolean evaluations, arithmetic operations, method calls, etc.
 
 Let's take a look at these two assignment statements to illustrate how to count steps.
@@ -69,12 +68,7 @@ int b = 9 * (a - 24) / (8 - 7);
 
 In total, these two lines of code take **7 steps** for the computer to run. The first goal of runtime analysis was to produce a _predictive_ description of the runtime of an algorithm, but in this example, there's not much to predict: the two assignment statements always take precisely 7 steps.
 
-`indexOf` is different: it has a loop and an `if` statement that depends on the values in the `A` compared to the `target`.
-
-{: .note }
-**How do we model the number of steps it takes to run an algorithm _in general_?**
-
-How do we define the runtime _in general_? Here are some factors that can affect the number of steps to compute `indexOf`.
+`indexOf` is different: it has a loop and an `if` statement that depends on the values in the `A` compared to the `target`. **How do we model the number of steps it takes to run an algorithm _in general_?** Here are two factors that can affect the number of steps to compute `indexOf`.
 
 1. The length of the `A`.
 1. The values of each `int` in the `A` compared to the value of the `target`.
@@ -84,7 +78,7 @@ The runtime of many algorithms is greatly affected by the size of the input. A s
 **Asymptotic analysis** is a way of evaluating the efficiency of an algorithm on large inputs. The choice for the "large input" is called the **asymptotic variable**. For `indexOf`, the length of the `A` can be the asymptotic variable.
 
 {: .hint }
-In this course, we'll usually tell you the asymptotic variable using the phrases, "with respect to" or "in terms of". Asymptotic analysis is defined in terms of the asymptotic variable, so make sure to confirm the asymptotic variable before proceeding to analyze a program.
+In this course, we'll usually tell you the asymptotic variable using the phrases, "with respect to" or "in terms of". Asymptotic analysis is defined in terms of the asymptotic variable, so make sure to confirm the asymptotic variable before analyzing a program.
 
 But we also know that the runtime depends on other factors such as the relationship between the `target` and the numbers in the `A`. **Case analysis** is a way to account for variation in the model based on interactions between other factors besides the asymptotic variable.
 
@@ -101,7 +95,6 @@ We now have a predictive model for the number of steps (a proxy for the time) it
 
 ### Formalize the runtime model
 
-{: .note }
 **How do we express our model to others so that we can communicate results?**
 
 The **order of growth** relates the size of the input to the time that it takes to run the algorithm on that input. Often, we'll use a mathematical variable like _N_ to refer to the asymptotic variable.
@@ -117,7 +110,7 @@ When the order of growth is constant, we don't specify "with respect to _N_" bec
 
 Orders of growth help us compare runtime in terms of words like _constant_, _linear_, and _quadratic_. In practice, though, you'll rarely see computer scientists writing out the full orders of growth sentence. Instead, computer scientists communicate orders of growth using asymptotic notation.
 
-### Apply asymptotic notation
+### Asymptotic notation
 
 Asymptotic notation provides precise, mathematical shorthand for orders of growth.
 
