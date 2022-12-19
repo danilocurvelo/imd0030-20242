@@ -30,7 +30,7 @@ Search Trees:
 
 Left-Leaning Red-Black Trees:
   Objectives:
-    - Given a 2-3 tree, identify itsa corresponding LLRB tree (and vice-versa).
+    - Given a 2-3 tree, identify its corresponding LLRB tree (and vice-versa).
     - Apply rotations and color flips for a single LLRB tree insertion.
     - Using 1-1 correspondence, give the LLRB tree for a series of insertions.
 
