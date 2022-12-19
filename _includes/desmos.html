@@ -1,0 +1,8 @@
+<iframe src="https://www.desmos.com/calculator/{{ include.id }}?embed"
+        class="full-width"
+        {% if include.aspect_ratio %}
+        style="aspect-ratio: {{ include.aspect_ratio }}"
+        {% endif %}
+        loading="lazy"
+        frameborder="0"
+></iframe>

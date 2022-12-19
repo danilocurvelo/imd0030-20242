@@ -118,8 +118,7 @@ Asymptotic notation provides precise, mathematical shorthand for orders of growt
 
 Consider this graph that depicts three functions of _N_.
 
-{: .full-width style="aspect-ratio: 2" }
-<iframe src="https://www.desmos.com/calculator/apxggji6kz?embed" frameborder=0></iframe>
+{% include desmos.html id="apxggji6kz" aspect_ratio="2" %}
 
 <details markdown="block">
 <summary>What do the x-axis and the y-axis represent in the graph?</summary>
