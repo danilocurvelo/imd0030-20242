@@ -51,7 +51,7 @@ Given a particular node in a tree, we can either rotate it to the left or to the
 {: .hint }
 These two rotations are inverse operations: one operation undoes the other.
 
-### One-to-one correspondence
+### One-to-one correspondence and isomorphism
 
 Our goal is to develop a self-balancing binary search tree using the self-balancing property of 2-3 trees. Certain 2-3 trees are already valid binary search trees. 2-3 trees that only contain 2-nodes are already valid binary search trees. How might we represent 3-nodes in a binary search tree?
 
@@ -75,18 +75,23 @@ Converting from 2-3 trees to left-leaning BSTs is not too bad. But the opposite 
 
 The **left-leaning red-black (LLRB) tree** data structure is exactly the same as left-leaning BSTs except "glue" edges connecting 3-nodes (in the corresponding 2-3 tree) are colored red. Red edges help us immediately tell which nodes are part of a 3-node in the _corresponding 2-3 tree_.
 
-One-to-one correspondence
-: The idea that every 2-3 tree has a unique LLRB tree associated with it, and vice versa. We can convert back and forth between any 2-3 tree and its unique left-leaning red-black tree.
+One-to-one correspondence (bijection)
+: A mapping between two types of elements where elements of each type are paired with exactly one other element of the other type. One-to-one correspondence between 2-3 trees and LLRB trees implies that every 2-3 tree has a unique corresponding LLRB tree associated with it, and vice versa.
 
-LLRB tree invariants follow entirely from one-to-one correspondence with 2-3 trees.
+Algorithmic isomorphism
+: A structure-preserving mapping between two types of algorithms, which extends one-to-one correspondence by preserving structure. Isomorphism between 2-3 trees and LLRB trees implies that changing a 2-3 tree produces a proportional change in the isomorphic LLRB tree, and vice versa.
+
+LLRB tree invariants follow entirely from isomorphism with 2-3 trees.
 
 - **Red edges lean left** because that's the convention we chose to represent 3-nodes.
 - **No node has two red edges connected to it** because 2-3 trees only allow 2-nodes and 3-nodes.
 - **Every root-to-null path has the same number of black edges** because all 2-3 tree leaf nodes are the same depth from the root.
 
+We'll often use "corresponding" and "isomorphic" interchangeably, but isomorphism is a stronger and more descriptive term because it implies the structure-preserving property. Isomorphism allows us to switch between thinking about a 2-3 tree as an LLRB tree or vice versa at any point in time.
+
 ### What would a 2-3 tree do?
 
-The one-to-one correspondence property opens-up a powerful way of thinking about LLRB tree operations. In any situation, we can always ask: **What would a 2-3 tree do?**
+Isomorphism enables a powerful way of thinking about LLRB tree operations. In any situation, we can always ask: **What would a 2-3 tree do?**
 
 {% include youtube.html id="GjTDBrB7QV4" aspect_ratio="16/9" %}
 
