@@ -16,10 +16,7 @@ email.addEventListener("input", event => {
         };
         if (seed.endsWith("@uw.edu")) {
             const chance = new Chance(`${div.id}-${seed}`);
-            const shuffled = chance.shuffle(elements);
-            for (const element of shuffled.slice(0, 1).sort((x, y) => x - y)) {
-                element.classList.remove("d-none");
-            };
+            chance.pickone(elements).classList.remove("d-none");
         };
     };
 });
