@@ -15,7 +15,7 @@ cache:
 before_script:
   - export PATH="$(pwd)/_gems/bin:$PATH"
   - export GEM_HOME="$(pwd)/_gems/"
-  - gem install bundler
+  - gem install bundler -v 2.3.26
   - bundle config set path '_vendor'
   - bundle install
 
