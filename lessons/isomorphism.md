@@ -79,7 +79,7 @@ One-to-one correspondence (bijection)
 : A mapping between two types of elements where elements of each type are paired with exactly one other element of the other type. One-to-one correspondence between 2-3 trees and LLRB trees implies that every 2-3 tree has a unique corresponding LLRB tree associated with it, and vice versa.
 
 Algorithmic isomorphism
-: A structure-preserving mapping between two types of algorithms, which extends one-to-one correspondence by preserving structure. Isomorphism between 2-3 trees and LLRB trees implies that changing a 2-3 tree produces a proportional change in the isomorphic LLRB tree, and vice versa.
+: A one-to-one correspondence between two types of data structures or algorithms that also preserves structure. Isomorphism between 2-3 trees and LLRB trees implies that a change in a 2-3 tree produces a proportional change in the isomorphic LLRB tree, and vice versa.
 
 LLRB tree invariants follow entirely from isomorphism with 2-3 trees.
 
