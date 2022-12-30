@@ -22,7 +22,7 @@ youtube: yes
 
 {% include learning_objectives.md lesson="Search Trees" %}
 
-A sorted array enables logarithmic-time algorithms like binary search. To determine if a certain item is in a sorted array containing 100,000,000 items, binary search only needed log<sub>2</sub> 100,000,000, or about 27 comparisons! The combination of **sorting algorithms** and **searching algorithms** can enable efficient features like autocomplete that shape how people make sense of the world.
+A sorted array enables logarithmic-time algorithms like binary search. To determine if a certain element is in a sorted array containing 100,000,000 elements, binary search only needed log<sub>2</sub> 100,000,000, or about 27 comparisons! The combination of **sorting algorithms** and **searching algorithms** can enable efficient features like autocomplete that shape how people make sense of the world.
 
 Let's say we wanted to implement the autocomplete feature in Husky Maps. One approach is to implement a `BinarySearchAutocomplete` data type.
 
@@ -30,10 +30,10 @@ Representation
 : Potential search results are stored in a sorted array. In Husky Maps, this contains the names of all the places near the UW Seattle campus.
 
 Functionality
-: The `addAll` method adds new items to the data type. After the items are added, the entire array is re-sorted to maintain the sorted representation.
-: The `allMatches` method returns all the items that start with the given prefix. Since the terms are stored in a sorted array, we can use binary search to find find the first term that starts with the prefix in the sorted array and then iterate to the right to collect the all the remaining prefix-matching terms.
+: The `addAll` method adds new elements to the data type. After the elements are added, the entire array is re-sorted to maintain the sorted representation.
+: The `allMatches` method returns all the elements that start with the given prefix. Since the terms are stored in a sorted array, we can use binary search to find find the first term that starts with the prefix in the sorted array and then iterate to the right to collect the all the remaining prefix-matching terms.
 
-`BinarySearchAutocomplete` provides a very efficient `allMatches`, but needs to spend a lot of time sorting all the items in the data type after each call to `addAll`. Even if we add only one item, putting that item in the right place in the sorted array takes at least linear time. If `addAll` is called infrequently, this might not be a problem. But, in real-world mapping applications, we might need to respond to new information about the world. How might we design a more robust data type that can not only find elements efficiently, but also add or remove elements efficiently too?
+`BinarySearchAutocomplete` provides a very efficient `allMatches`, but needs to spend a lot of time sorting all the elements in the data type after each call to `addAll`. Even if we add only one element, putting that element in the right place in the sorted array takes at least linear time. If `addAll` is called infrequently, this might not be a problem. But, in real-world mapping applications, we might need to respond to new information about the world. How might we design a more robust data type that can not only find elements efficiently, but also add or remove elements efficiently too?
 
 When designing data structure representations, computer scientists often compare arrays and nodes.
 
@@ -41,7 +41,7 @@ Arrays
 : Enable efficient access to elements by index because each array access takes constant time no matter where the element is located inside the array. For the same reason, it's also efficient to change a single element in an array if we have its index.
 
 Nodes
-: Almost the opposite of arrays in runtime. Nodes are inefficient at accessing elements by index, but efficient at adding or removing items without having to shift over all other elements so long as there's a reference to the node that needs to change.
+: Almost the opposite of arrays in runtime. Nodes are inefficient at accessing elements by index, but efficient at adding or removing elements without having to shift over all other elements so long as there's a reference to the node that needs to change.
 
 How might we efficiently perform binary search on nodes?
 
@@ -50,7 +50,7 @@ How might we efficiently perform binary search on nodes?
 The **binary search tree** (BST) is a hierarchical node-based data structure designed for efficient binary search. Each node in a binary search tree has a left and right child node, where all the elements to the left are less than the current element and all the elements to the right are greater than the current element. Binary search trees are commonly used to implement sets or maps.
 
 Set abstract data type
-: A collection of unique elements or "keys". Unlike lists and deques, sets do not maintain indices for each item, which enables more effcieint data structure implementations.
+: A collection of unique elements or "keys". Unlike lists and deques, sets do not maintain indices for each element, which enables more effcieint data structure implementations.
 
 Map abstract data type
 : A collection that associates each unique key with a value. Maps are like sets except each key can have a (not necessarily unique) value.
@@ -117,7 +117,7 @@ Right child
 
 {% include learning_objectives.md lesson="2-3 Trees" %}
 
-Binary search trees aimed to address the linear-time worst case for adding or removing items from a sorted array set. Yet we now know that binary search trees not only fail to improve on this worst case runtime, but can also degrade performance on methods like `contains` that were much faster when we performed a binary search on a sorted array.
+Binary search trees aimed to address the linear-time worst case for adding or removing elements from a sorted array set. Yet we now know that binary search trees not only fail to improve on this worst case runtime, but can also degrade performance on methods like `contains` that were much faster when we performed a binary search on a sorted array.
 
 {% include youtube.html id="yz850zzjrHQ" start="220" aspect_ratio="16/9" %}
 
@@ -138,7 +138,7 @@ The **2-3 search tree** (often shortened to just "2-3 tree") is a _self-balancin
 <details markdown="block">
 <summary>If we allowed 4-nodes, how many keys and non-null children would they have?</summary>
 
-A 2-3 tree doesn't contain 4-nodes. But if it did, it could have exactly 3 keys and 4 non-null children. The number of non-null children in each node is always one greater than the number of keys because the keys serve as dividers in the search process. For example, in binary search, the middle item exactly splits the left part from the right part. If we have 2 keys, then we have 3 parts. If we have 3 keys, then we have 4 parts.
+A 2-3 tree doesn't contain 4-nodes. But if it did, it could have exactly 3 keys and 4 non-null children. The number of non-null children in each node is always one greater than the number of keys because the keys serve as dividers in the search process. For example, in binary search, the middle element exactly splits the left part from the right part. If we have 2 keys, then we have 3 parts. If we have 3 keys, then we have 4 parts.
 </details>
 
 This definition does not allow nodes that have just 1 non-null child. A 2-3 tree ensures that all nodes have either 2 or 3 non-null children so that the height will always be between about log<sub>2</sub> _N_ and log<sub>3</sub> _N_. Furthermore, because height is added evenly to all children, all leaf nodes in a 2-3 tree are the same distance from the overall root.

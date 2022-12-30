@@ -28,11 +28,11 @@ In Java, `TreeSet` is the standard implementation of a set that uses a self-bala
 
 ### Rotation
 
-Before we introduce red-black trees formally, we'll first need a way to reorganize elements in a binary search tree. Depending on the order items are inserted into the tree, there are many different ways to construct a binary search tree containing the same set of items. But insertion order is not the only way to build different configurations of the same set of items. We can change the structure of a binary tree through **rotation**.
+Before we introduce red-black trees formally, we'll first need a way to reorganize elements in a binary search tree. Depending on the order elements are inserted into the tree, there are many different ways to construct a binary search tree containing the same set of elements. But insertion order is not the only way to build different configurations of the same set of elements. We can change the structure of a binary tree through **rotation**.
 
 {% include youtube.html id="kkd8d0QhiQ0" start="202" aspect_ratio="16/9" %}
 
-Each rotation makes a local adjustment to the tree. Sometimes, this local adjustment increases the height of the tree; other times, it decreases the height of the tree. However, rotations always respect the binary search tree invariant. Items that are ordered between **B** and **D** in the example below stay ordered after a rotation.
+Each rotation makes a local adjustment to the tree. Sometimes, this local adjustment increases the height of the tree; other times, it decreases the height of the tree. However, rotations always respect the binary search tree invariant. Elements that are ordered between **B** and **D** in the example below stay ordered after a rotation.
 
 ![Rotations respect the binary search tree invariant]({{ site.baseurl }}{% link assets/images/rotation-invariants.svg %})
 
@@ -112,7 +112,7 @@ Stable system sort
 : When sorting an array of objects (like emails), Java uses a sorting algorithm called **Timsort**, which is based on merge sort and has the same linearithmic worst-case runtime as merge sort.
 
 {: .note }
-> Timsort is a _hybrid sort_ that combines ideas from merge sort with insertion sort. Experimental analysis reveals that the fastest sorting algorithm for small arrays is often insertion sort. Instead of merge sort's base case of 1 element, Java Timsort uses a base case of 32 elements which are then insertion sorted. Insertion sort can be further sped up by using binary search to find the insertion point for the next unsorted item.
+> Timsort is a _hybrid sort_ that combines ideas from merge sort with insertion sort. Experimental analysis reveals that the fastest sorting algorithm for small arrays is often insertion sort. Instead of merge sort's base case of 1 element, Java Timsort uses a base case of 32 elements which are then insertion sorted. Insertion sort can be further sped up by using binary search to find the insertion point for the next unsorted element.
 >
 > Timsort is also an _adaptive sort_ that changes behavior depending on the input array. Many real-world arrays are not truly random. They often contain _natural runs_, or sorted subsequences of elements that could be efficiently merged. Rather than recursively dividing top-down, Timsort works bottom-up by identifying natural runs in the input array and combining them from left to right.
 

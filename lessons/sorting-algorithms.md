@@ -31,7 +31,7 @@ But what if we want to _predict_ the runtime of a program _before_ writing any c
 **Asymptotic runtime analysis** is the process of predicting the amount of time an _algorithm_ will take to run on large inputs. Asymptotic analysis focuses on analyzing **algorithms**, the concepts underlying how programs work. Compared to experimental analysis, which focuses on empirical measurement, asymptotic analysis focuses on reasoning and logic to analyze the runtime of an algorithm.
 
 {: .hint }
-Computer scientists specifically focus on large inputs (as the size of the input approaches infinity, or its _asymptote_) rather than small inputs because larger inputs more clearly demonstrate differences in efficiency. For example, the performance issue in `ArrayListDeque` only appears when a large number of web pages have been stored in browser history; `ArrayListDeque` is quite fast when only a few web pages have been stored. The differences in runtime become more appreciable when we're working with a very large number of items.
+Computer scientists specifically focus on large inputs (as the size of the input approaches infinity, or its _asymptote_) rather than small inputs because larger inputs more clearly demonstrate differences in efficiency. For example, the performance issue in `ArrayListDeque` only appears when a large number of web pages have been stored in browser history; `ArrayListDeque` is quite fast when only a few web pages have been stored. The differences in runtime become more appreciable when we're working with a very large number of elements.
 
 The goal of asymptotic runtime analysis is to produce a (1) _predictive_ and (2) _easy-to-compare_ description of the running time of an algorithm. Consider the `indexOf` method, which returns the index of a `target` number in an `int[] A` or -1 if `target` is not in the array.
 
@@ -159,7 +159,7 @@ Model the number of steps
 : <details markdown="block">
   <summary>Describe a best case situation for the runtime.</summary>
 
-  A very long array where the first pair of items `A[0]` and `A[1]` are duplicates!
+  A very long array where the first pair of elements `A[0]` and `A[1]` are duplicates!
   </details>
 
   Suppose your teammate answer the above question:
@@ -189,7 +189,7 @@ Apply asymptotic notation
 
 There are different ways to find duplicates in an array. `dup1` represents one way to solve the problem: exhaustively check all possible pairs of elements and return whether a duplicate exists among them. In the worst case, `dup1` required quadratic time to return an answer.
 
-However, if our array is _sorted_, then returning whether there are duplicates in the array takes much less time in the worst case. In a sorted array, all duplicate items must be stored right beside each other. It turns out that a significant number of problems in computer science get a lot easier and a lot more efficient to solve if we can first sort our data. Without sorting, many of the systems and software that we have today would not be possible purely because things (like duplicate finding) would take far too long to run.
+However, if our array is _sorted_, then returning whether there are duplicates in the array takes much less time in the worst case. In a sorted array, all duplicate elements must be stored right beside each other. It turns out that a significant number of problems in computer science get a lot easier and a lot more efficient to solve if we can first sort our data. Without sorting, many of the systems and software that we have today would not be possible purely because things (like duplicate finding) would take far too long to run.
 
 But data doesn't always come to us in a pre-sorted form. How do we sort---rearrange into order---an array of elements?
 
@@ -232,7 +232,7 @@ For objects, the implementer of the class is responsible for defining the orderi
 The `compareTo` method for the `Email` class is defined inside the `Email` class by the people who wrote the class. When we talk about sorting algorithms, the author of the sorting algorithm has no idea the exact objects that they're sorting or the ordering relation. A sorting algorithm just calls `compareTo` to determine whether an object shoulud appear before or after another object. Sorting involves repeatedly asking, "Is this object less-than, equal-to, or greater-than this other object?" by repeatedly calling the `compareTo` method.
 </details>
 
-A sort is **stable** if it preserves the original order of equivalent keys. Stability can affect the final sorting output when there are two or more items considered equal according to the ordering relation. For basic data types like numbers, stability doesn't matter: any two numbers that share the same numeric value are just the same either way. But for objects like emails, stability can make a big difference. Imagine sorting emails by sender name: you'll often receive many emails from the same sender, so a stable sort for emails will sort by sender name _and_, for each sender name, maintain the relative order of emails in the original order. An unstable sort doesn't guarantee the original order of emails for each person.
+A sort is **stable** if it preserves the original order of equivalent keys. Stability can affect the final sorting output when there are two or more elements considered equal according to the ordering relation. For basic data types like numbers, stability doesn't matter: any two numbers that share the same numeric value are just the same either way. But for objects like emails, stability can make a big difference. Imagine sorting emails by sender name: you'll often receive many emails from the same sender, so a stable sort for emails will sort by sender name _and_, for each sender name, maintain the relative order of emails in the original order. An unstable sort doesn't guarantee the original order of emails for each person.
 
 So how do we sort an array? In this lesson, we'll introduce two iterative sorting algorithms: selection sort and insertion sort.
 
@@ -240,30 +240,30 @@ So how do we sort an array? In this lesson, we'll introduce two iterative sortin
 
 ### Selection sort
 
-In each iteration, **selection sort** selects the _smallest unsorted item_ and swaps it into its sorted place.
+In each iteration, **selection sort** selects the _smallest unsorted element and swaps it into its sorted place.
 
-Selection sort has an important invariant that was introduced called **iterative improvement**. We keep track of a _sorted items_ portion at the front of the array and gradually grow the number of _sorted items_. Once the _sorted items_ portion reaches the full length of the array, we're done sorting the array!
+Selection sort has an important invariant that was introduced called **iterative improvement**. We keep track of a _sorted elements_ portion at the front of the array and gradually grow the number of _sorted elements_. Once the _sorted elements_ portion reaches the full length of the array, we're done sorting the array!
 
 {% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/21DemoSelectionSort/index.html" aspect_ratio="16/9" %}
 
 <details markdown="block">
-<summary>Give an asymptotic runtime analysis of selection sort with respect to the number of items.</summary>
+<summary>Give an asymptotic runtime analysis of selection sort with respect to the number of elements.</summary>
 
-First, consider if there are any other factors besides number of items (the asymptotic variable) that could require further case analysis. In selection sort, there are no other factors that affect the runtime because we always need to scan across the entire _unsorted items_ portion of the array to find the _smallest unsorted item_.
+First, consider if there are any other factors besides number of elements (the asymptotic variable) that could require further case analysis. In selection sort, there are no other factors that affect the runtime because we always need to scan across the entire _unsorted elements_ portion of the array to find the _smallest unsorted element_.
 
 The runtime for selection sort is similar to the runtime for `dup1`, which we described using the summation (_N_ - 1) + (_N_ - 2) + ... + 3 + 2 + 1, which we determined to have a quadratic order of growth. In other words, we can say that selection sort is in Θ(_N_<sup>2</sup>).
 </details>
 
 ### Insertion sort
 
-In each iteration, **insertion sort** inserts the _next unsorted item_ into the _sorted items_ portion at the front of the array by swapping it left one index at a time until it is in its correct position. Like selection sort, insertion sort is also an iterative improvement sorting algorithm.
+In each iteration, **insertion sort** inserts the _next unsorted element_ into the _sorted elements_ portion at the front of the array by swapping it left one index at a time until it is in its correct position. Like selection sort, insertion sort is also an iterative improvement sorting algorithm.
 
 {% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/21DemoInsertionSort/index.html" aspect_ratio="16/9" %}
 
 <details markdown="block">
-<summary>Give an asymptotic runtime analysis of insertion sort with respect to the number of items.</summary>
+<summary>Give an asymptotic runtime analysis of insertion sort with respect to the number of elements.</summary>
 
-Unlike selection sort, insertion sort is affected by the order of items. When the input is _already sorted_, insertion sort has a linear order of growth because there are no items that need to be swapped to the left. On the other hand, given a reverse-sorted input, insertion sort needs to perform a very large number of swaps to move each _next unsorted item_ into its correct position. The summation is exactly the same as `dup1` and selection sort, which we determined to have a quadratic order of growth.
+Unlike selection sort, insertion sort is affected by the order of elements. When the input is _already sorted_, insertion sort has a linear order of growth because there are no elements that need to be swapped to the left. On the other hand, given a reverse-sorted input, insertion sort needs to perform a very large number of swaps to move each _next unsorted element_ into its correct position. The summation is exactly the same as `dup1` and selection sort, which we determined to have a quadratic order of growth.
 </details>
 
 {: .hint }
@@ -275,7 +275,7 @@ Unlike selection sort, insertion sort is affected by the order of items. When th
 
 {% include learning_objectives.md lesson="Merge Sort" %}
 
-**Sequential search** returns the index of an item in an array in worst case linear time by scanning across the array and comparing each item to the target. Although linear time algorithms are much more efficient than quadratic time algorithms, there are many situations where we need to make a large number of searches on a large amount of data.
+**Sequential search** returns the index of an element in an array in worst case linear time by scanning across the array and comparing each element to the target. Although linear time algorithms are much more efficient than quadratic time algorithms, there are many situations where we need to make a large number of searches on a large amount of data.
 
 A **linear time algorithm** like worst case sequential search might have the following real-world runtimes.
 
@@ -283,9 +283,9 @@ A **linear time algorithm** like worst case sequential search might have the fol
 - When _N_ = 10 million, about 10 seconds.
 - When _N_ = 100 million, about 100 seconds.
 
-Imagine how differently we would interact with technologies if search results took 100 or more seconds to process. Sorting items is one way to enable more efficient searching.
+Imagine how differently we would interact with technologies if search results took 100 or more seconds to process. Sorting elements is one way to enable more efficient searching.
 
-**Binary search** returns the index of an item in a _sorted array_ in worst case logarithmic time by using the sorted order to discard half the remaining items after each comparison. Instead of checking each item one-by-one from left-to-right in the array, binary search instead starts at the middle of the current problem and compares to the middle item to decide whether the proceed left or right.
+**Binary search** returns the index of an element in a _sorted array_ in worst case logarithmic time by using the sorted order to discard half the remaining elements after each comparison. Instead of checking each element one-by-one from left-to-right in the array, binary search instead starts at the middle of the current problem and compares to the middle element to decide whether the proceed left or right.
 
 {% include youtube.html id="RfoP3xULk70" start="11" end="641" aspect_ratio="16/9" %}
 
@@ -313,10 +313,10 @@ private static int binarySearch(int[] sorted, int target, int low, int high) {
 <details markdown="block">
 <summary>When does the best case runtime occur for binary search?</summary>
 
-In the best case, the `target` is the exact middle item in the `sorted` array, which can be found in constant time.
+In the best case, the `target` is the exact middle element in the `sorted` array, which can be found in constant time.
 </details>
 
-The worst case order of growth for the runtime for `binarySearch` is **logarithmic** with respect to _N_, the `sorted.length`. In each recursive call of the loop, half the remaining items under consideration can be ignored. In other words, the number of recursive calls is given by the answer to the question:
+The worst case order of growth for the runtime for `binarySearch` is **logarithmic** with respect to _N_, the `sorted.length`. In each recursive call of the loop, half the remaining elements under consideration can be ignored. In other words, the number of recursive calls is given by the answer to the question:
 
 > How many times do we need to divide _N_ by 2 until only 1 element remains?
 
@@ -346,9 +346,9 @@ Earlier, we introduced an important sum that frequently appears when analyzing i
 
 ### Recursive merge sort
 
-Both selection sort and insertion sort have worst case quadratic order of growth, and relied on iterative improvement where a _sorted items_ portion was maintained at the front of the sequence at all times. If recursion was able to speed-up searching, perhaps it can also speed up sorting too.
+Both selection sort and insertion sort have worst case quadratic order of growth, and relied on iterative improvement where a _sorted elements_ portion was maintained at the front of the sequence at all times. If recursion was able to speed-up searching, perhaps it can also speed up sorting too.
 
-**Merge sort** represents a different approach to sorting based on the idea of recursion. Merge sort's name derives from the **merge** operation, which takes two _sorted arrays_ and returns a _sorted result_ containing all the items in both arrays.
+**Merge sort** represents a different approach to sorting based on the idea of recursion. Merge sort's name derives from the **merge** operation, which takes two _sorted arrays_ and returns a _sorted result_ containing all the elements in both arrays.
 
 {% include slides.html id="1Q-73Edm7-DcTYJng_Tm_6Ed5j8clwKl30x0kEY9vY7E" aspect_ratio="16/9" %}
 
@@ -369,9 +369,9 @@ Unrolling this equation ends up producing a mess of parentheses and brackets, so
 
 Here's an example of a recurrence diagram for merge sort on a 64-element array.
 
-- The top layer takes about 64 units of time merging 2 sorted halves of 32 items each.
-- The second layer also takes about 64 units of time merging 4 sorted halves of 16 items each.
-- The third layer also takes about 64 units of time merging 8 sorted halves of 8 items each.
+- The top layer takes about 64 units of time merging 2 sorted halves of 32 elements each.
+- The second layer also takes about 64 units of time merging 4 sorted halves of 16 elements each.
+- The third layer also takes about 64 units of time merging 8 sorted halves of 8 elements each.
 - And on and on until the algorithm reaches its base case.
 
 ![Merge sort recurrence diagram]({{ site.baseurl }}{% link assets/images/merge-sort-recurrence.svg %})
