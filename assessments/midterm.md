@@ -73,9 +73,9 @@ chance: yes
 {: .note .d-none }
 > Describe 3 approaches to design a data type that can:
 >
-> 1. Add an item to the front (index 0), which increases the index of every other item.
-> 1. Return the item at index _i_.
-> 1. Promote the item at index _i_ to index 0.
+> 1. Add an element to the front (index 0), which increases the index of every other element.
+> 1. Return the element at index _i_.
+> 1. Promote the element at index _i_ to index 0.
 >
 > Give a worst-case asymptotic analysis for all methods where _N_ is the size of the data type.
 
