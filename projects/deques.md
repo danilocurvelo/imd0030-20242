@@ -31,7 +31,7 @@ For example, we can have an `int x = 373` and a `String s = "373"`. Although the
 
 **Abstract data types** are data types that do not specify a single representation of data and only include a specification for the functionality of the data type. In Java, abstract data types are often represented using interfaces like `List`, `Set`, or `Map`. Java provides **implementations** or specific representations of each interface through classes like `ArrayList`, `TreeSet`, or `HashMap`.
 
-A **deque** (pronounced "deck") is an abstract data type representing a **d**ouble-**e**nded **que**ue. Deques are linear collections (like lists, stacks, and queues) optimized for accessing, adding, and removing items from both the front and the back. Deques differ from lists in that they do not allow items to be added or removed from anywhere except for the front or the back. This restriction might make it seem like deques are much less useful than lists. Indeed, any problem you can solve using a deque you can also solve using a list!
+A **deque** (pronounced "deck") is an abstract data type representing a **d**ouble-**e**nded **que**ue. Deques are linear collections (like lists, stacks, and queues) optimized for accessing, adding, and removing elements from both the front and the back. Deques differ from lists in that they do not allow elements to be added or removed from anywhere except for the front or the back. This restriction might make it seem like deques are much less useful than lists. Indeed, any problem you can solve using a deque you can also solve using a list!
 
 But usefulness is not the only metric for determining the quality of a program. Imagine you're on a team engineering a [web browser](https://en.wikipedia.org/wiki/Web_browser), and you're working on addressing a performance problem that has been reported in the browser history feature. When a user visits a web page, the page visit is recorded in the browser history by adding the link and the date of visit to the end of an `ArrayList`. But users are reporting that the option to clear-out the history of pages that were visited over 3 months is unusually slow.
 
@@ -67,36 +67,36 @@ We do not ask for your code. Given enough time and support, we're certain you wo
 
 ## Deque interface
 
-Interfaces are a useful way to indicate common methods that will be provided by different implementations (Java classes). For example, `List` is an interface with implementations such as `ArrayList` and `LinkedList`. Deques are like lists but without the capability to add, remove, or get items from anywhere except for the front or the back. For testing purposes, we included a method to get any element by its index in the deque.
+Interfaces are a useful way to indicate common methods that will be provided by different implementations (Java classes). For example, `List` is an interface with implementations such as `ArrayList` and `LinkedList`. Deques are like lists but without the capability to add, remove, or get elements from anywhere except for the front or the back. For testing purposes, we included a method to get any element by its index in the deque.
 
 Implementations of `Deque` must provide the following methods:
 
-`void addFirst(T item)`
-: Adds an item of type `T` to the front of the deque.
+`void addFirst(E element)`
+: Adds an element of type `E` to the front of the deque.
 
-`void addLast(T item)`
-: Adds an item of type `T` to the back of the deque.
+`void addLast(E element)`
+: Adds an element of type `E` to the back of the deque.
 
-`T get(int index)`
-: Gets the item at the given index, where 0 is the front, 1 is the next item, etc.
+`E get(int index)`
+: Gets the element at the given index, where 0 is the front, 1 is the next element, etc.
 
 `boolean isEmpty()`
 : Returns true if deque is empty, false otherwise.
 
-`T removeFirst()`
-: Removes and returns the item at the front of the deque.
+`E removeFirst()`
+: Removes and returns the element at the front of the deque.
 
-`T removeLast()`
-: Removes and returns the item at the back of the deque.
+`E removeLast()`
+: Removes and returns the element at the back of the deque.
 
 `int size()`
-: Returns the number of items in the deque.
+: Returns the number of elements in the deque.
 
 The interface defines a **default method** `isEmpty` that returns `size() == 0`.
 
 ### Reference implementation
 
-We've provided a reference implementation that will help us evaluate the performance problem with `ArrayList`. The `ArrayListDeque` class implements `Deque` using an `ArrayList`. The class maintains a single field called `list` that stores all the items in the deque, where the _i_-th item in the deque is always stored at `list[i]`.
+We've provided a reference implementation that will help us evaluate the performance problem with `ArrayList`. The `ArrayListDeque` class implements `Deque` using an `ArrayList`. The class maintains a single field called `list` that stores all the elements in the deque, where the _i_-th element in the deque is always stored at `list[i]`.
 
 ## Design and implement
 
@@ -152,11 +152,11 @@ Explain your hypothesis for the bug in the `ArrayDeque` class and the lines of c
 Implement the `LinkedDeque` class with the following additional requirements:
 
 1. The methods `addFirst`, `addLast`, `removeFirst`, and `removeLast` must run in constant time with respect to the size of the deque. To achieve this, don't use any iteration or recursion.
-1. The amount of memory used by the deque must always be proportional to its size. If a client adds 10,000 items and then removes 9,999 items, the resulting deque should use about the same amount of memory as a deque where we only ever added 1 item. To achieve this, remove references to items that are no longer in the deque.
+1. The amount of memory used by the deque must always be proportional to its size. If a client adds 10,000 elements and then removes 9,999 elements, the resulting deque should use about the same amount of memory as a deque where we only ever added 1 element. To achieve this, remove references to elements that are no longer in the deque.
 1. The class is implemented with the help of **sentinel nodes** according to the following invariants. Use the doubly-linked `Node` class defined at the bottom of the `LinkedDeque.java` file.
 
 Invariant
-: An property of an implementation that must be true before and after any methods. For example, in an `ArrayList`, the _i_-th item in the list is always stored at `elementData[i]`.
+: An property of an implementation that must be true before and after any methods. For example, in an `ArrayList`, the _i_-th element in the list is always stored at `elementData[i]`.
 
 Sentinel node
 : A sentinel node is a special node in a linked data structure that doesn't contain any meaningful data and is always present in the data structure, even when it's empty. Because we no longer need to check if the current node is null before accessing it, we can simplify the number of conditions that are needed to implement `LinkedDeque` methods. We recommend using two sentinel nodes to simplify your code, providing access to both the front and the back of the deque.[^2]

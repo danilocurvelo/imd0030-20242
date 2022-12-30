@@ -39,31 +39,31 @@ Satisfactory completion of the project requires a **video-recorded individual pr
 
 ## Priority queue interface
 
-The `MinPQ` interface represents a priority queue that affords access to minimum-priority items. Priority values are extrinsic to each item: rather than relying on a `compareTo` method, priority values are specified as arguments to the `add` and `changePriority` methods.
+The `MinPQ` interface represents a priority queue that affords access to minimum-priority elements. Priority values are extrinsic to each element: rather than relying on a `compareTo` method, priority values are specified as arguments to the `add` and `changePriority` methods.
 
-`void add(T item, double priority)`
-: Adds an item with the given priority value if the item is not already in this priority queue.
+`void add(T element, double priority)`
+: Adds an element with the given priority value if the element is not already in this priority queue.
 
-`boolean contains(T item)`
-: Returns true if the given item is in this priority queue.
+`boolean contains(T element)`
+: Returns true if the given element is in this priority queue.
 
 `T peekMin()`
-: Returns the item with the minimum priority value.
+: Returns the element with the minimum priority value.
 
 `T removeMin()`
-: Returns and removes an item with the minimum priority value.
+: Returns and removes an element with the minimum priority value.
 
-`void changePriority(T item, double priority)`
-: Updates the given item's associated priority value.
+`void changePriority(T element, double priority)`
+: Updates the given element's associated priority value.
 
 `int size()`
-: Returns the number of items in this priority queue.
+: Returns the number of elements in this priority queue.
 
 `boolean isEmpty()`
-: Returns true if this priority queue contains no items. This is a **default method** that works by calling the `size` method, so implementations do not need to define it.
+: Returns true if this priority queue contains no elements. This is a **default method** that works by calling the `size` method, so implementations do not need to define it.
 
 {: .hint }
-A `MinPQ` cannot contain duplicate items. However, different items can have the same priority value. `peekMin` and `removeMin` may return any item with the minimum priority value.
+A `MinPQ` cannot contain duplicate elements. However, different elements can have the same priority value. `peekMin` and `removeMin` may return any element with the minimum priority value.
 
 Here's a small example showing how to use the `MinPQ` interface with the `DoubleMapMinPQ` class included in the project. Try it out for yourself by creating a new class in IntelliJ with the following code in the `main` method.
 
@@ -101,26 +101,26 @@ The `java.util` standard library includes a binary heap [`PriorityQueue`](https:
 
 ### PriorityNode
 
-Java collections typically only specify a single data type as in `ArrayList<String>`. But a `MinPQ` needs to keep track of each item as well as its associated priority value. We could do this by creating two lists: an `ArrayList<T>` for items and an `ArrayList<Double>` for each item's priority value. However, this approach requires us to ensure the state of both lists are always the same, which introduces additional complexity that makes the code harder to maintain and more brittle or susceptible to future bugs.
+Java collections typically only specify a single data type as in `ArrayList<String>`. But a `MinPQ` needs to keep track of each element as well as its associated priority value. We could do this by creating two lists: an `ArrayList<T>` for elements and an `ArrayList<Double>` for each element's priority value. However, this approach requires us to ensure the state of both lists are always the same, which introduces additional complexity that makes the code harder to maintain and more brittle or susceptible to future bugs.
 
-The `PriorityNode` class includes two fields representing an `item` together with its `priority` value so that it can be used in a Java collection.
+The `PriorityNode` class includes two fields representing an `element` together with its `priority` value so that it can be used in a Java collection.
 
 ```java
-List<PriorityNode<String>> items = new ArrayList<>();
-items.add(new PriorityNode<>("example", 0));
+List<PriorityNode<String>> elements = new ArrayList<>();
+elements.add(new PriorityNode<>("example", 0));
 ```
 
 {: .hint }
-Two `PriorityNode` objects are considered equal if and only if their items are equal. Priority values are not checked for equality.
+Two `PriorityNode` objects are considered equal if and only if their elements are equal. Priority values are not checked for equality.
 
 <details markdown="block">
 <summary>How will this property of PriorityNode equality help you implement MinPQ?</summary>
 
-`MinPQ` does not allow duplicate items, but does allow duplicate priority values. When using Java collections such as a `List`, methods like `List.contains` or `List.remove` will call `equalsTo` to check for equality. The following `contains` call will return `true`, and the `remove` call will successfully remove the priority node even though their priority values are different.
+`MinPQ` does not allow duplicate elements, but does allow duplicate priority values. When using Java collections such as a `List`, methods like `List.contains` or `List.remove` will call `equalsTo` to check for equality. The following `contains` call will return `true`, and the `remove` call will successfully remove the priority node even though their priority values are different.
 
 ```java
-items.contains(new PriorityNode<>("example", 1));
-items.remove(new PriorityNode<>("example", 2));
+elements.contains(new PriorityNode<>("example", 1));
+elements.remove(new PriorityNode<>("example", 2));
 ```
 </details>
 
@@ -129,10 +129,10 @@ items.remove(new PriorityNode<>("example", 2));
 The project code includes a working `DoubleMapMinPQ`. This implementation is called "double map" because it combines the runtime benefits of two maps to solve the problem efficiently. The two maps work together to help achieve **sublinear** (logarithmic or better) runtime for every operation.
 
 `TreeMap`
-: Associates each unique priority value to all the items with that priority value. Returning a minimum-priority item involves finding the set of minimum-priority items and picking any item from that set.
+: Associates each unique priority value to all the elements with that priority value. Returning a minimum-priority element involves finding the set of minimum-priority elements and picking any element from that set.
 
 `HashMap`
-: Associates each item with its priority value in order to speed-up `contains` and `changePriority`.
+: Associates each element with its priority value in order to speed-up `contains` and `changePriority`.
 
 The state of both maps is synchronized across all methods. Any change to one data structure also requires a change to the other data structure.
 
@@ -145,7 +145,7 @@ All team members must work together and fully understand each implementation. Do
 
 ### UnsortedArrayMinPQ
 
-Items are added to an `ArrayList` in any order. Most operations may need to scan over the entire list.
+Elements are added to an `ArrayList` in any order. Most operations may need to scan over the entire list.
 
 ### HeapMinPQ
 
@@ -156,11 +156,11 @@ Explain the part of the `HeapMinPQ` class that you're most proud of programming.
 
 ### OptimizedHeapMinPQ
 
-A optimized binary heap priority queue supported by a `HashMap` that associates each item with its array index to speed-up `contains` and `changePriority`. Use the [`MinPQ`](https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/MinPQ.java) class as a reference.
+A optimized binary heap priority queue supported by a `HashMap` that associates each element with its array index to speed-up `contains` and `changePriority`. Use the [`MinPQ`](https://github.com/kevin-wayne/algs4/blob/master/src/main/java/edu/princeton/cs/algs4/MinPQ.java) class as a reference.
 
 1. Identify methods in the reference class that are most similar to our interface.
 1. Adapt the code to implement our interface. Make sure all tests pass before optimizing the code.
-1. Optimize the code by adding a `HashMap` synchronized to the state of the items in the array.
+1. Optimize the code by adding a `HashMap` synchronized to the state of the elements in the array.
 
 {: .deliverable }
 Explain the part of the `OptimizedHeapMinPQ` class that you're most proud of programming.
@@ -169,7 +169,7 @@ Explain the part of the `OptimizedHeapMinPQ` class that you're most proud of pro
 
 ### Affordance analysis
 
-Sorting presumes that data can be ordered on a line. Priority queues rely on the same presumption, except that items are ordered according to their priority values. In the provided `Moderator` class, messages are entered into an `MinPQ` with "toxicity" scores provided by the [Perspective API](https://perspectiveapi.com/), a machine learning algorithm designed to reduce toxicity online.
+Sorting presumes that data can be ordered on a line. Priority queues rely on the same presumption, except that elements are ordered according to their priority values. In the provided `Moderator` class, messages are entered into an `MinPQ` with "toxicity" scores provided by the [Perspective API](https://perspectiveapi.com/), a machine learning algorithm designed to reduce toxicity online.
 
 [Toxicity scores represent probabilities between 0 and 1](https://developers.perspectiveapi.com/s/about-the-api-training-data) for the predicted likelihood that a human would perceive the comment as "rude, disrespectful, unreasonable, or otherwise somewhat likely to make the user leave a discussion or give up on sharing their perspective."
 

@@ -103,14 +103,14 @@ If everything works, you should see `[do, dodgy, dog]` in the run tool window.
 The project code includes a fully functional `TreeSetAutocomplete` implementation that stores all the terms in a `TreeSet`. The class contains a single field for storing the underlying `TreeSet` of terms. Rather than declare the field as a `Set`, we've chosen to use the more specialized subtype `NavigableSet` because it includes helpful methods that can be used to find the first term that matches the prefix.
 
 ```java
-private final NavigableSet<CharSequence> items;
+private final NavigableSet<CharSequence> elements;
 ```
 
 The constructor assigns a new `TreeSet` collection to this field. In Java, `TreeSet` is implemented using a red–black tree, a type of balanced search tree where access to individual elements are worst-case logarithmic time with respect to the size of the set. `CharSequence::compare` tells the `TreeSet` to use the natural dictionary order when comparing any two elements.
 
 ```java
 public TreeSetAutocomplete() {
-    items = new TreeSet<>(CharSequence::compare);
+    elements = new TreeSet<>(CharSequence::compare);
 }
 ```
 
@@ -122,7 +122,7 @@ The `addAll` method calls [`TreeSet.addAll`](https://docs.oracle.com/en/java/jav
 ```java
 @Override
 public void addAll(Collection<? extends CharSequence> terms) {
-    items.addAll(terms);
+    elements.addAll(terms);
 }
 ```
 
@@ -140,11 +140,11 @@ public List<CharSequence> allMatches(CharSequence prefix) {
     if (prefix == null || prefix.length() == 0) {
         return result;
     }
-    CharSequence start = items.ceiling(prefix);
+    CharSequence start = elements.ceiling(prefix);
     if (start == null) {
         return result;
     }
-    for (CharSequence term : items.tailSet(start)) {
+    for (CharSequence term : elements.tailSet(start)) {
         if (Autocomplete.isPrefixOf(prefix, term)) {
             result.add(term);
         } else {
@@ -162,7 +162,7 @@ public List<CharSequence> allMatches(CharSequence prefix) {
 > public List<E> subList(int fromIndex, int toIndex)
 > ```
 >
-> `subList` returns another `List`. But instead of constructing a new `ArrayList` and copying over all the items from the `fromIndex` to the `toIndex`, the Java developers defined a `SubList` class that provides a slice of the data structure using the following fields (some details omitted).
+> `subList` returns another `List`. But instead of constructing a new `ArrayList` and copying over all the elements from the `fromIndex` to the `toIndex`, the Java developers defined a `SubList` class that provides a slice of the data structure using the following fields (some details omitted).
 >
 > ```java
 > private static class SubList<E> implements List<E> {
@@ -192,26 +192,26 @@ All team members must work together and fully understand each implementation. Do
 
 ### SequentialSearchAutocomplete
 
-Terms are added to an `ArrayList` in any order. Because there items are not stored in any sorted order, the `allMatches` method must scan across the entire list and check every term to see if it matches the `prefix`.
+Terms are added to an `ArrayList` in any order. Because there elements are not stored in any sorted order, the `allMatches` method must scan across the entire list and check every term to see if it matches the `prefix`.
 
 ### BinarySearchAutocomplete
 
 Terms are added to a sorted `ArrayList`. When additional terms are added, the entire list is re-sorted using [`Collections.sort`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collections.html#sort(java.util.List,java.util.Comparator)). Since the terms are in a list sorted according to natural dictionary order, all matches must be located in a contiguous sublist. [`Collections.binarySearch`](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collections.html#binarySearch(java.util.List,T,java.util.Comparator)) can find the start index for the first match. After the first match is found, we can collect all remaining matching terms by iterating to the right until it no longer matches the prefix.
 
 ```java
-List<CharSequence> items = new ArrayList<>();
-items.add("alpha");
-items.add("delta");
-items.add("do");
-items.add("cats");
+List<CharSequence> elements = new ArrayList<>();
+elements.add("alpha");
+elements.add("delta");
+elements.add("do");
+elements.add("cats");
 
-System.out.println("before: " + items);
-Collections.sort(items, CharSequence::compare);
-System.out.println(" after: " + items);
+System.out.println("before: " + elements);
+Collections.sort(elements, CharSequence::compare);
+System.out.println(" after: " + elements);
 
 CharSequence prefix = "bay";
 System.out.println("prefix: " + prefix);
-int i = Collections.binarySearch(items, prefix, CharSequence::compare);
+int i = Collections.binarySearch(elements, prefix, CharSequence::compare);
 System.out.println("     i: " + i);
 ```
 
