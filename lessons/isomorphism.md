@@ -164,3 +164,89 @@ Partitioning an array around 2 pivot elements, _p_<sub>1</sub> and _p_<sub>2</su
 - All elements greater than _p_<sub>2</sub>.
 
 Dual-pivot quicksort is a relatively new algorithm published in 2009. Experimental analysis revealed that dual-pivot quicksort is significantly faster than single-pivot quicksort on modern computers. Computer scientists attribute the performance improvement due to advances in CPU caching and memory hierarchy since the 1960s and 1970s when single-pivot quicksort was first introduced.
+
+## Counting Sorts
+
+{% include learning_objectives.md lesson="Counting Sorts" %}
+
+In practice, Java's system sorts like Timsort and dual-pivot quicksort have a linearithmic order of growth. Is it possible to sort in faster than worst case Θ(N log N) time? In the best case, we know that sorting algorithms like insertion sort can tell that an already-sorted array is indeed sorted in linear time. But can we design an algorithm that sorts an array of N elements in linear time in the worst case?
+
+### Sorting decision tree
+
+We can start by asking, "How many comparisons do we need to make in order to know how to sort an array?" We've actually already asked this question before: in merge sort, we relied on knowing that a single element subarray is already sorted with respect to itself. In other words:
+
+- Sorting an array with 1 element requires 0 comparisons.
+- Sorting an array with 2 elements requires 1 comparison.
+- Sorting an array with 3 elements requires either 2 or 3 comparisons depending on the questions.
+
+We can draw a sorting decision tree to see exactly what questions we need to ask to determine the sorted order for 3 elements. Each leaf in the decision tree represents a possible sorted order for the elements, and each branch represents a choice of answering either "Yes" or "No" to each comparison question.
+
+![Sorting decision tree for 3 elements]({{ site.baseurl }}{% link assets/images/sorting-decision-tree.svg %})
+
+This decision tree is not only a conceptual visualization, but it can also be implemented as a program consisting of a hierarchy of nested `if` conditional statements. This decision tree represents the **optimal comparison sorting algorithm**: a comparison sort that requires the absolute least number of comparisons to sort a given input array.
+
+```java
+if (a < b)
+    if      (b < c) return {a, b, c};
+    else if (a < c) return {a, c, b};
+    else            return {c, a, b};
+else
+    if      (a < c) return {b, a, c};
+    else if (b < c) return {b, c, a};
+    else            return {c, b, a};
+```
+
+<details markdown="block">
+<summary>If 3 elements have 6 permutations, how many permutations are there for 4 elements?</summary>
+
+For each of the 6 permutations in a, b, c, we can insert the fourth element d before, in-between, or after each element. For example, if we consider the permutation `{a, b, c}`, we can insert d in 4 different places: `{d, a, b, c}`, `{a, d, b, c}`, `{a, b, d, c}`, and `{a, b, c, d}`. Ultimately, we take the 6 permutations we had for 3 elements and multiply by 4 to get 24 total permutations for 4 elements. More generally, the number of permutations can be described using the factorial function: 4! = 4 ∙ 3 ∙ 2 ∙ 1.
+</details>
+
+If N elements have N! factorial potential permutations, and each potential permutation is a leaf in a balanced sorting decision tree, then the optimal comparison sorting algorithm in the worst case needs about log<sub>2</sub> N! comparisons to determine the correct sorting of the elements. [Stirling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation) can be used to show that log<sub>2</sub> N! ∈ Θ(N log N).
+
+In other words, the optimal comparison sorting algorithm requires Θ(N log N) comparisons in the worst case. It's not possible to design a comparison sorting algorithm that takes linear time in the worst case.
+
+### Counting sorts and enumeration
+
+The worst case lower bound on comparison sorting algorithms only apply to comparison sorts that use operations like `<`, `>`, or `compareTo` to determine the order of elements. A **counting sort** sorts an array of elements by relying on _enumeration_ instead of _comparison_. Elements are considered comparable if they can be compared with one another. Elements are considered enumerable if they can be listed-out in a sequence from first to last.
+
+Counting sort
+: 1. Create a count array that will be used to store the number of times each element occurs in the input array.
+  1. Iterate over the input array, updating the count array to reflect the occurrence of each element.
+  1. Iterate over the count array, unraveling the number of times each element occurs back into the input array.
+
+{: .hint }
+> Open the VisuAlgo module to visualize sorting algorithms. Press `Esc` to exit the e-Lecture Mode, and choose **COU** from the top navigation bar to switch to counting sort. Run the sorting algorithm using **Sort** from the bottom left menu.
+>
+> [Sorting Visualization](https://visualgo.net/en/sorting){: .btn .btn-purple target="_blank" }
+
+{% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/51DemoKeyIndexedCounting/index.html" aspect_ratio="16/9" %}
+
+### Radix sorts and tries
+
+Counting sorts work great with small integer values when we know the range between the smallest integer and the largest integer. But many other data types, like strings, are more difficult to enumerate because we can always make a more complicated string. For example, suppose we have a string "a" and we decide to put it at index 0 in the count array. Where would the string "b" belong in the count array? We know it comes after "a", but how far after "a"? We might run into strings like "aa", "aaa", "aaaa", etc. and not know how many spaces to reserve for these elements.
+
+To address this issue, we can take inspiration from tries. Just as tries divided a string into its constituent letters and processed each letter individually, we can do the same and apply counting sort on each letter. **Radix sorts** represent a category of counting sorts that divide strings (or string-like objects) into individual subunits that can be separately counting-sorted.
+
+Most-Significant Digit (MSD) radix sort
+: Starts from the leftmost (in English, the most significant) character and proceeds to the right.
+: Recursively counting sorts the characters separately, proceeding to the next index into the strings.
+
+Least-Significant Digit (LSD) radix sort
+: Starts from the rightmost (in English, the least significant) character and proceeds to the left.
+: For each index into the strings, iteratively counting sorts all the elements again on the current index.
+
+
+{: .hint }
+> Open the VisuAlgo module to visualize sorting algorithms. Press `Esc` to exit the e-Lecture Mode, and choose **RAD** from the top navigation bar to switch to an LSD radix sort. Run the sorting algorithm using **Sort** from the bottom left menu.
+>
+> [Sorting Visualization](https://visualgo.net/en/sorting){: .btn .btn-purple target="_blank" }
+
+### 3-way radix quicksort and TSTs
+
+Is there a sorting algorithm analogy for ternary search trees? It exists, and it combines the ideas of radix sort with quicksort just like how ternary search trees represent a midpoint between tries and binary search trees.
+
+3-way radix quicksort
+: Select a pivot element for the current index into the strings.
+: Partition the array into elements less than, equal to, and greater than the pivot element.
+: Recursively sort each of the less than, equal to, and greater than subarrays.
