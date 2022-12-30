@@ -101,3 +101,66 @@ The following slides visualize the procedure for adding several elements to a LL
 LLRB tree balance is maintained using only [3 lines of code](https://github.com/kevin-wayne/algs4/blob/48ad6a3fa0e062941aa93c43860be331c2ad57a1/src/main/java/edu/princeton/cs/algs4/RedBlackBST.java#L215-L217). But it's also possible to reason about the data structure by visualizing the corresponding 2-3 tree: try simulating the sequence of insertions from the slides below in the [2-3 Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/BTree.html) and compare the results.
 
 {% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/33DemoRedBlackBST/index.html" aspect_ratio="16/9" %}
+
+## Quicksort
+
+{% include learning_objectives.md lesson="Quicksort" %}
+
+Isomorphism not only inspires new ideas for data structures, but also new ideas for algorithms too. In our study of sorting algorithms, we learned that a sorting algorithm is considered **stable** if it preserves the original order of equivalent keys. Which sorting algorithms does Java use when you call `Arrays.sort`? It depends on whether we need stability.
+
+Stable system sort
+: When sorting an array of objects (like emails), Java uses a sorting algorithm called **Timsort**, which is based on merge sort and has the same linearithmic worst-case runtime as merge sort.
+
+{: .note }
+> Timsort is a _hybrid sort_ that combines ideas from merge sort with insertion sort. Experimental analysis reveals that the fastest sorting algorithm for small arrays is often insertion sort. Instead of merge sort's base case of 1 element, Java Timsort uses a base case of 32 elements which are then insertion sorted. Insertion sort can be further sped up by using binary search to find the insertion point for the next unsorted item.
+>
+> Timsort is also an _adaptive sort_ that changes behavior depending on the input array. Many real-world arrays are not truly random. They often contain _natural runs_, or sorted subsequences of elements that could be efficiently merged. Rather than recursively dividing top-down, Timsort works bottom-up by identifying natural runs in the input array and combining them from left to right.
+
+Unstable system sort
+: When sorting an array of numbers or booleans, Java uses a sorting algorithm called **quicksort**. Quicksort has many variants, each of which are isomorphic to a different type of search tree such as a binary search tree and a 2-3 search tree.
+
+### Single-pivot quicksort and binary search trees
+
+Quicksort relies on the idea of recursively **partitioning** an array around a pivot element, `data[i]`. A partitioning of an array rearranges its elements in a weaker way than sorting by requiring elements in the order:
+
+- All elements to the left of the pivot are less than or equal to the pivot element.
+- The **pivot element**, `data[i]`, moves to position `j`. (The pivot might not need to move.)
+- All elements to the right of the pivot are greater than or equal to the pivot element.
+
+Consider partitioning the array [5, 550, 330, 10, 4, 10, 9] around the pivot element `data[3]` (the first 10).
+
+<details markdown="block">
+<summary>Is [5, 9, 10, 4, 10, 550, 330] a valid partitioning?</summary>
+
+The answer to this question is not simply yes or no because it depends whether the index of the pivot. If the pivot index `j = 2`, then this is not a valid partitioning because the element 4 is to the right of the pivot. If the pivot index `j = 4`, then this is a valid partitioning because all requirements are satisfied.
+</details>
+
+Partitioning an array around a pivot element in quicksort is like selecting a root element in a binary search tree. All the elements in the left subtree will be less than the root element, and all the elements in the right subtree will be greater than the root element.
+
+![Quicksort isomorphism to binary search trees]({{ site.baseurl }}{% link assets/images/quicksort-bst.svg %})
+
+The quicksort on the left always chooses the leftmost element as the pivot element and uses an ideal partitioning that maintains the relative order of the remaining elements. The binary search tree on the right shows the result of inserting each element in the left-to-right input order given by the array.
+
+{: .hint }
+> Open the VisuAlgo module to visualize sorting algorithms. Press `Esc` to exit the e-Lecture Mode, and choose **QUI** from the top navigation bar to switch to quicksort. Run the sorting algorithm using **Sort** from the bottom left menu.
+>
+> [Sorting Visualization](https://visualgo.net/en/sorting){: .btn .btn-purple target="_blank" }
+>
+> Note that the visualization does not use an ideal partitioning algorithm for quicksort.
+
+### Dual-pivot quicksort and 2-3 search trees
+
+If choosing 1 pivot element is like choosing 1 root element in a binary node, then choosing 2 pivot elements is like choosing 2 root elements in a 3-child node. Dual-pivot quicksort chooses 2 pivots on each level, just like how 3-child nodes in 2-3 trees maintain 2 keys and 3 children.
+
+{: .hint }
+Strictly speaking, dual-pivot quicksort is not isomorphic to 2-3 trees because there does not exist a one-to-one correspondence. Consider 2-3 trees that only contain 2-child nodes: the corresponding quicksort is single-pivot quicksort, not dual-pivot quicksort.
+
+Partitioning an array around 2 pivot elements, _p_<sub>1</sub> and _p_<sub>2</sub> where _p_<sub>1</sub> ≤ _p_<sub>2</sub>, rearranges its elements by requiring elements in the order:
+
+- All elements less than _p_<sub>1</sub>.
+- The pivot element _p_<sub>1</sub>.
+- All elements _x_ where _p_<sub>1</sub> ≤ _x_ ≤ _p_<sub>2</sub>.
+- The pivot element _p_<sub>2</sub>.
+- All elements greater than _p_<sub>2</sub>.
+
+Dual-pivot quicksort is a relatively new algorithm published in 2009. Experimental analysis revealed that dual-pivot quicksort is significantly faster than single-pivot quicksort on modern computers. Computer scientists attribute the performance improvement due to advances in CPU caching and memory hierarchy since the 1960s and 1970s when single-pivot quicksort was first introduced.
