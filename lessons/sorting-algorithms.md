@@ -18,7 +18,7 @@ youtube: yes
 1. TOC
 {:toc}
 
-## Asymptotic analysis
+## Asymptotic Analysis
 
 {% include learning_objectives.md lesson="Asymptotic Analysis" %}
 
@@ -183,7 +183,7 @@ Apply asymptotic notation
 : In the best case, the runtime of `dup1` is in Θ(1).
 : In the worst case, the runtime of `dup1` is in Θ(_N_<sup>2</sup>) with respect to _N_, the length of `A`.
 
-## Iterative sorts
+## Iterative Sorts
 
 {% include learning_objectives.md lesson="Iterative Sorts" %}
 
@@ -271,7 +271,7 @@ Unlike selection sort, insertion sort is affected by the order of items. When th
 >
 > [Sorting Visualization](https://visualgo.net/en/sorting){: .btn .btn-purple target="_blank" }
 
-## Merge sort
+## Merge Sort
 
 {% include learning_objectives.md lesson="Merge Sort" %}
 
