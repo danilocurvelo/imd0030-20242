@@ -51,19 +51,21 @@ Now that you've installed IntelliJ, select **Customize** from the sidebar and th
 
 ### Obtain and run project code
 
-From the **Welcome to IntelliJ IDEA** screen, select **Projects** from the sidebar and then **Get from VCS**. Paste the following URL.
+From the **Welcome to IntelliJ IDEA** screen, select **Projects** from the sidebar and then **Get from VCS**. Paste the following URL, choose a place to enter, and clone the project code repository.
 
 {: .note }
 <https://github.com/kevinlin1/deques.git>
 
-This will download the project code to a directory of your choice. The first time you open the project, IntelliJ will ask you whether to [trust the project](https://www.jetbrains.com/help/idea/project-security.html). Choose **Trust Project** so that IntelliJ has your permission to run code.
+The first time you open the project, IntelliJ will ask you whether to [trust the project](https://www.jetbrains.com/help/idea/project-security.html). Choose **Trust Project** so that IntelliJ has your permission to run code.
 
-After a few seconds, IntelliJ will open the main editor screen. As you learned in the onboarding tour, IntelliJ will optimize things in the background when you start a new project. Let's try running a class in IntelliJ:
+After a few seconds, IntelliJ will open the main editor screen. Let's try running a class in IntelliJ:
+
+<video controls muted class="module full-width" style="aspect-ratio: 16/10"><source src="{{ site.baseurl }}{% link assets/videos/run-browserhistory.webm %}" type="video/webm"></video>
 
 1. Look at the left side of the screen for the **Project** tool window that shows all the files in the project.
-2. In the project tool window, double-click to open the **src** folder, then the **deques** folder, and finally the **browser** folder.
-3. In the browser folder, **right-click** the `BrowserHistory` class. You'll notice that it has a 🇨 icon to its left indicating that it's a Java class. The tiny green play ▶️ in the bottom right corner of the icon indicates the class defines a runnable `main` method.
-4. In the new dropdown that appears, select the option to **Run 'BrowserHistory.main()'**.
+1. In the project tool window, double-click to open the **src** folder.
+1. In the open folder, double-click the **© BrowserHistory** class. The © icon to its left indicates that it's a Java class.
+1. In the new tab for the `BrowserHistory` class, click the green play ▶️ in the gutter. In the dropdown, select the option to **Run 'BrowserHistory.main()'**.
 
 If you see the following output in the run tool window, you're all set!
 
@@ -71,6 +73,8 @@ If you see the following output in the run tool window, you're all set!
 uw.edu my.uw.edu cs.uw.edu canvas.uw.edu
 cs.uw.edu notify.uw.edu
 ```
+
+Most of the project design and implementation work will happen in the **deques** folder nested within the **src** folder, so try opening the `ArrayDeque` class to get started.
 
 <details markdown="block">
 <summary>My computer doesn't display the expected output!</summary>
