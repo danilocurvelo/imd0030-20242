@@ -188,7 +188,7 @@ Explain the part of the `LinkedDeque` class that you're most proud of programmin
 In computer science, simpler solutions are typically preferred over more complicated solutions because they're less likely to contain subtle bugs. `ArrayListDeque` provided a simple solution to implementing a deque, but exhibited significantly degraded performance on some methods. How does `ArrayDeque` compare to `ArrayListDeque`?
 
 {: .deliverable }
-Give a best-case and worst-case asymptotic runtime analysis for each of `addFirst`, `addLast`, `removeFirst`, and `removeLast` in both `ArrayDeque` and `ArrayListDeque`. Explain the runtime of each implementation in a couple sentences while referencing the code. Summarize your results by explaining why experienced software engineers prefer `ArrayDeque` over `ArrayListDeque` for implementing browser history.
+Give a best case and worst case asymptotic runtime analysis for each of `addFirst`, `addLast`, `removeFirst`, and `removeLast` in both `ArrayDeque` and `ArrayListDeque`. Explain the runtime of each implementation in a couple sentences.
 
 ### Experimental analysis
 
