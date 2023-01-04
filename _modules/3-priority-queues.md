@@ -5,11 +5,11 @@ title: Priority Queues
 #### Heaps and Hashing
 
 1/30
-: **Binary Heaps**
+: [**Binary Heaps**]({{ site.baseurl }}{% link lessons/heaps-and-hashing.md %}#binary-heaps)
 : {% include learning_objectives.md lesson="Binary Heaps" %}
 
 2/1
-: **Hash Tables**
+: [**Hash Tables**]({{ site.baseurl }}{% link lessons/heaps-and-hashing.md %}#hash-tables)
 : {% include learning_objectives.md lesson="Hash Tables" %}
 : **Prj**{: .label .label-yellow }[**Priority Queues**]({{ site.baseurl }}{% link projects/priority-queues.md %})
 
@@ -17,13 +17,13 @@ title: Priority Queues
 : **Sec**{: .label .label-purple }**Heaps and Hashing**
 
 2/3
-: **Affordance Analysis**
+: [**Affordance Analysis**]({{ site.baseurl }}{% link lessons/heaps-and-hashing.md %}#affordance-analysis)
 : {% include learning_objectives.md lesson="Affordance Analysis" %}
 
 #### Midterm Interview
 
 2/6
-: **Midterm Interview**
+: [**Midterm Interview**]({{ site.baseurl }}{% link assessments/midterm.md %})
 : **ASM**{: .label .label-green }[**Assessment 2**]({{ site.baseurl }}{% link assessments/2.md %})
 
 2/8
@@ -38,16 +38,16 @@ title: Priority Queues
 #### Graphs
 
 2/13
-: **Graph Data Type**
+: [**Graph Data Type**]({{ site.baseurl }}{% link lessons/graphs.md %}#graph-data-type)
 : {% include learning_objectives.md lesson="Graph Data Type" %}
 
 2/15
-: **Graph Traversals**
+: [**Graph Traversals**]({{ site.baseurl }}{% link lessons/graphs.md %}#graph-traversals)
 : {% include learning_objectives.md lesson="Graph Traversals" %}
 
 2/16
 : **Sec**{: .label .label-purple }**Graphs**
 
 2/17
-: **Minimum Spanning Trees**
+: [**Minimum Spanning Trees**]({{ site.baseurl }}{% link lessons/graphs.md %}#minimum-spanning-trees)
 : {% include learning_objectives.md lesson="Minimum Spanning Trees" %}

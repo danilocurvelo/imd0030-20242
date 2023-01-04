@@ -8,7 +8,7 @@ title: Shortest Paths
 : *Holiday*
 
 2/22
-: **Shortest Paths Trees**
+: [**Shortest Paths Trees**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#shortest-paths-trees)
 : {% include learning_objectives.md lesson="Shortest Paths Trees" %}
 : **Prj**{: .label .label-yellow }[**Shortest Paths**]({{ site.baseurl }}{% link projects/shortest-paths.md %})
 
@@ -16,7 +16,7 @@ title: Shortest Paths
 : **Sec**{: .label .label-purple }**Graph Algorithms**
 
 2/24
-: **Dynamic Programming**
+: [**Dynamic Programming**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#dynamic-programming)
 : {% include learning_objectives.md lesson="Dynamic Programming" %}
 
 #### Graph Applications
