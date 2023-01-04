@@ -28,7 +28,7 @@ schedule:
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
-        location: ARC 147
+        location: GUG 220
   - name: Tuesday
     events:
       - name: Office Hours
@@ -48,7 +48,7 @@ schedule:
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
-        location: ARC 147
+        location: GUG 220
   - name: Thursday
     events:
       - name: Sections
@@ -67,7 +67,7 @@ schedule:
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
-        location: ARC 147
+        location: GUG 220
   - name: Saturday
     events:
       - name: Office Hours
