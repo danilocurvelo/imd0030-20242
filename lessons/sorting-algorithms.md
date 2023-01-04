@@ -168,7 +168,7 @@ Model the number of steps
   > The best case occurs when `A.length` is 2, so we only need to compare `A[0]` to `A[1]`.
 
   <details markdown="block">
-  <summary>Explain why your teammate's answer is not an asymptotic analysis.</summary>
+  <summary>Explain why this answer is not an asymptotic analysis.</summary>
 
   Although your teammate makes a good observation about the runtime of the program, asymptotic analysis focuses on large inputs. We can't use an empty, 1-element, or 2-element array as an example.
   </details>
