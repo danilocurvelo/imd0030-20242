@@ -19,12 +19,12 @@ title: Priority Queues
 2/3
 : [**Affordance Analysis**]({{ site.baseurl }}{% link lessons/heaps-and-hashing.md %}#affordance-analysis)
 : {% include learning_objectives.md lesson="Affordance Analysis" %}
+: **Asm**{: .label .label-green }[**Assessment 2**]({{ site.baseurl }}{% link assessments/2.md %})
 
 #### Midterm Interview
 
 2/6
 : [**Midterm Interview**]({{ site.baseurl }}{% link assessments/midterm.md %})
-: **ASM**{: .label .label-green }[**Assessment 2**]({{ site.baseurl }}{% link assessments/2.md %})
 
 2/8
 : *Ex Machina*

@@ -13,13 +13,13 @@ title: Deques
 
 1/6
 : [**Array Deques**]({{ site.baseurl }}{% link projects/deques.md %})
+: **Self-Introduction Video**
 
 #### Sorting Algorithms
 
 1/9
 : [**Asymptotic Analysis**]({{ site.baseurl }}{% link lessons/sorting-algorithms.md %}#asymptotic-analysis)
 : {% include learning_objectives.md lesson="Asymptotic Analysis" %}
-: **Self-Introduction Video**
 
 1/11
 : [**Iterative Sorts**]({{ site.baseurl }}{% link lessons/sorting-algorithms.md %}#iterative-sorts)

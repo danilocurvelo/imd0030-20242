@@ -18,12 +18,12 @@ title: Shortest Paths
 2/24
 : [**Dynamic Programming**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#dynamic-programming)
 : {% include learning_objectives.md lesson="Dynamic Programming" %}
+: **Asm**{: .label .label-green }[**Assessment 3**]({{ site.baseurl }}{% link assessments/3.md %})
 
 #### Graph Applications
 
 2/27
 : **Disjoint Sets**
-: **ASM**{: .label .label-green }[**Assessment 3**]({{ site.baseurl }}{% link assessments/3.md %})
 
 3/1
 : **Reduction Algorithms**

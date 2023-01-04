@@ -18,13 +18,13 @@ title: Autocomplete
 1/20
 : [**2-3 Trees**]({{ site.baseurl }}{% link lessons/search-trees.md %}#2-3-trees)
 : {% include learning_objectives.md lesson="2-3 Trees" %}
+: **Asm**{: .label .label-green }[**Assessment 1**]({{ site.baseurl }}{% link assessments/1.md %})
 
 #### Isomorphism
 
 1/23
 : [**Left-Leaning Red-Black Trees**]({{ site.baseurl }}{% link lessons/isomorphism.md %}#left-leaning-red-black-trees)
 : {% include learning_objectives.md lesson="Left-Leaning Red-Black Trees" %}
-: **ASM**{: .label .label-green }[**Assessment 1**]({{ site.baseurl }}{% link assessments/1.md %})
 
 1/25
 : [**Quicksort**]({{ site.baseurl }}{% link lessons/isomorphism.md %}#quicksort)
