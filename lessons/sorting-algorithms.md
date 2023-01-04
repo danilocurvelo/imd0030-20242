@@ -340,7 +340,7 @@ One way to solve a recurrence is by **unrolling the recurrence**, an approach th
 1. T(N) = [[T(N / 8) + 1] + 1] + 1
 1. T(N) = [[[T(N / 16) + 1] + 1] + 1] + 1
 
-We can start to see a pattern emerge. The recursive work will eventually go down to T(1) when it eventually calls the base case. Along the way to the base case, a lot of 1's are added together. How many times are we comparing `sorted[mid]` to the `target`? Put another way, we can ask: How many times do we need to divide _N_ by 2 in order to reduce it to the number 1? This is the base-2 logarithm again!
+We can start to see a pattern emerge. The recursive work will eventually go down to T(1) when it calls the base case. Along the way to the base case, a lot of 1's are added together. How many times are we comparing `sorted[mid]` to the `target`? Put another way, we can ask: How many times do we need to divide _N_ by 2 in order to reduce it to the number 1? This is the base-2 logarithm again!
 
 {: .hint }
 Earlier, we introduced an important sum that frequently appears when analyzing iterative algorithms: [1 + 2 + 3 + ... + N](https://en.wikipedia.org/wiki/1_%2B_2_%2B_3_%2B_4_%2B_%E2%8B%AF) is about _N_<sup>2</sup> / 2, which is quadratic. For recursive algorithms, we'll need to consider how the problem is subdivided into smaller subproblems. In binary search, the subproblem is divided in half each time. The sum of the series [1 + 2 + 4 + 8 + ... + N](https://en.wikipedia.org/wiki/1_%2B_2_%2B_4_%2B_8_%2B_%E2%8B%AF) is about 2_N_, which is linear.
