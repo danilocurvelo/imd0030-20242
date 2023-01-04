@@ -6,6 +6,7 @@ title: Deques
 
 1/4
 : **Welcome**
+: **Prj**{: .label .label-yellow }[**Deques**]({{ site.baseurl }}{% link projects/deques.md %})
 
 1/5
 : **Sec**{: .label .label-purple }**Data Structures**
@@ -18,6 +19,7 @@ title: Deques
 1/9
 : **Asymptotic Analysis**
 : {% include learning_objectives.md lesson="Asymptotic Analysis" %}
+: **Self-Introduction Video**
 
 1/11
 : **Iterative Sorts**

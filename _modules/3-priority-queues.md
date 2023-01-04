@@ -11,6 +11,7 @@ title: Priority Queues
 2/1
 : **Hash Tables**
 : {% include learning_objectives.md lesson="Hash Tables" %}
+: **Prj**{: .label .label-yellow }[**Priority Queues**]({{ site.baseurl }}{% link projects/priority-queues.md %})
 
 2/2
 : **Sec**{: .label .label-purple }**Heaps and Hashing**
@@ -23,6 +24,7 @@ title: Priority Queues
 
 2/6
 : **Midterm Interview**
+: **ASM**{: .label .label-green }[**Assessment 2**]({{ site.baseurl }}{% link assessments/2.md %})
 
 2/8
 : *Ex Machina*

@@ -10,6 +10,7 @@ title: Autocomplete
 1/18
 : **Search Trees**
 : {% include learning_objectives.md lesson="Search Trees" %}
+: **Prj**{: .label .label-yellow }[**Autocomplete**]({{ site.baseurl }}{% link projects/autocomplete.md %})
 
 1/19
 : **Sec**{: .label .label-purple }**Search Trees**
@@ -23,6 +24,7 @@ title: Autocomplete
 1/23
 : **Left-Leaning Red-Black Trees**
 : {% include learning_objectives.md lesson="Left-Leaning Red-Black Trees" %}
+: **ASM**{: .label .label-green }[**Assessment 1**]({{ site.baseurl }}{% link assessments/1.md %})
 
 1/25
 : **Quicksort**

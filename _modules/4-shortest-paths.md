@@ -10,6 +10,7 @@ title: Shortest Paths
 2/22
 : **Shortest Paths Trees**
 : {% include learning_objectives.md lesson="Shortest Paths Trees" %}
+: **Prj**{: .label .label-yellow }[**Shortest Paths**]({{ site.baseurl }}{% link projects/shortest-paths.md %})
 
 2/23
 : **Sec**{: .label .label-purple }**Graph Algorithms**
@@ -22,6 +23,7 @@ title: Shortest Paths
 
 2/27
 : **Disjoint Sets**
+: **ASM**{: .label .label-green }[**Assessment 3**]({{ site.baseurl }}{% link assessments/3.md %})
 
 3/1
 : **Reduction Algorithms**
