@@ -84,7 +84,7 @@ Today, we know that there are more effective ways to learn science, engineering,
 
 [^5]: Scott Freeman, Sarah L. Eddy, Miles McDonough, Michelle K. Smith, Nnadozie Okoroafor, Hannah Jordt, and Mary Pat Wenderoth. 2014. [Active learning increases student performance in science, engineering, and mathematics](https://doi.org/10.1073/pnas.1319030111).
 
-Likewise, learning computer science requires **deliberate practice**: a learning cycle that starts with sustained motivation, then presents tasks that build on prior knowledge, and concludes with immediate, personalized feedback. Each week in the course will involve several different activities that are designed so that we can make the most of our class time together.
+Likewise, learning computer science requires **deliberate practice**: a learning cycle that starts with sustained motivation, then presents tasks that build on prior knowledge, and concludes with immediate, personalized feedback. Each module in the course will involve several different activities that are designed so that we can make the most of our class time together.
 
 On your own before class, prepare for learning by completing the pre-class preparation.
 : Lessons are designed to introduce all the concepts for the entire week's classes.
@@ -94,8 +94,8 @@ In your team during class and quiz section, collaborate on the in-class guided p
 : Class meetings are designed to deepen, complicate, and connect ideas across the course.
 : In Canvas, your section TAs will observe your learning and record your **Teamwork**.
 
-On your own at the end of each week, record a video showing what you learned this week.
-: Assessments are about not only problem solving skills, but also communication skills.
+On your own after class, record a video showing what you learned in the past two weeks.
+: Your videos emphasize not only problem solving skills, but also communication skills.
 : In Canvas, demonstrate your learning by explaining your work for each **Assessment**.
 
 In your team throughout the module, apply your learning by collaborating on the project.
