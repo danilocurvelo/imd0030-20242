@@ -131,7 +131,8 @@ The three functions depicted in the graph are:
 1. The top blue function depicts 5_N_<sup>2</sup>.
 1. The middle red function depicts 40 sin(_N_) + 4_N_<sup>2</sup>.
 1. The bottom green function depicts 3_N_<sup>2</sup>.
-1. The shaded area represents the range between the top and bottom functions.
+
+The shaded area represents the range between the top and bottom functions.
 
 This graph provides a visual demonstration of the big-theta definition. We can say that the function 40 sin(_N_) + 4_N_<sup>2</sup> _is in_ Θ(_N_<sup>2</sup>) because because it is bounded below by the green function 3_N_<sup>2</sup> (_k_<sub>1</sub> = 3) and bounded above by the blue function 5_N_<sup>2</sup> (_k_<sub>2</sub> = 5).
 
