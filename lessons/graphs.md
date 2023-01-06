@@ -353,3 +353,117 @@ public class BreadthFirstSearch<V> {
 The `solution` method begins at `goal` and uses `edgeTo` to trace the path back to `start`.
 
 There are hundreds of problems and algorithms for solving them. The field of [graph theory](https://en.wikipedia.org/wiki/Graph_theory) investigates these graph problems and graph algorithms.
+
+## Minimum Spanning Trees
+
+{% include learning_objectives.md lesson="Minimum Spanning Trees" %}
+
+The **minimum spanning tree** (MST) problem is about finding a spanning tree of minimum total weight in a _connected and weighted undirected graph_.
+
+Spanning tree
+: A tree that connects all the vertices in an undirected graph.
+
+Tree (graph theory)
+: A selection of vertices and edges in an undirected graph where there is only a single path between any two vertices.
+
+{% include youtube.html id="czV7-J9x4wc" aspect_ratio="16/9" %}
+
+### Prim's algorithm
+
+**Prim's algorithm** for finding an MST builds on the foundation of breadth-first search. Just like BFS, Prim's algorithm starts from a given vertex and gradually builds the tree structure on each iteration of the `while` loop. But there are 3 major differences:
+
+1. BFS doesn't consider edge weights. Prim's algorithm is all about edge weights.
+2. Whereas BFS explores the `perimeter` level-by-level using a `Queue`, Prim's algorithm picks the next-smallest edge on the `perimeter` using a `PriorityQueue`.
+3. The first edge that we use to discover a vertex might not be the smallest or best edge to include in the MST. We might find a better (smaller weight) edge in the future.
+
+In short, Prim's algorithm builds a MST by repeatedly choosing the next-smallest edge to an unvisited vertex. The algorithm is finished once all the reachable vertices are visited.
+
+{% include youtube.html id="cplfcGZmX7I" start="28" end="116" aspect_ratio="16/9" %}
+
+Review the comments in this code snippet to identify how each difference appears in Prim's algorithm.
+
+```java
+public class PrimMST<V> implements MSTSolver<V> {
+    // Same edgeTo map as in BFS for shortest paths trees.
+    private final Map<V, Edge<V>> edgeTo;
+    // Diff 1. Maps each vertex to the double weight of the edge used to reach it.
+    private final Map<V, Double> distTo;
+
+    public PrimMST(Graph<V> graph) {
+        edgeTo = new HashMap<>();
+        distTo = new HashMap<>();
+
+        // The MST problem does not specify a start vertex.
+        // But, like BFS, Prim's algorithm requires a start vertex, so pick any vertex.
+        V start = graph.randomVertex();
+
+        // Diff 2. Unvisited vertices are considered in order of edge weight.
+        ExtrinsicMinPQ<V> perimeter = new DoubleMapMinPQ<>();
+        perimeter.add(start, 0.0);
+
+        Set<V> visited = new HashSet<>();
+
+        while (!perimeter.isEmpty()) {
+            // Diff 2. Remove the next-smallest weight vertex from the perimeter.
+            V from = perimeter.removeMin();
+            System.out.println(from);
+            // Diff 3. Mark a vertex as visited only after it's removed from the perimeter.
+            // Unlike BFS that pre-emptively marks neighbors as visited upon the perimeter.
+            visited.add(from);
+
+            for (Edge<V> edge : graph.neighbors(from)) {
+                V to = edge.to;
+                double bestKnownWeight = distTo.getOrDefault(to, Double.POSITIVE_INFINITY);
+                // Diff 3. Check that we haven't added the vertex to the MST already...
+                // AND this edge is better than the previous best edge to this vertex
+                //     (infinity if this vertex has not been encountered before).
+                if (!visited.contains(to) && edge.weight < bestKnownWeight) {
+                    edgeTo.put(to, edge);
+                    // Diff 1. Store the edge weight rather than distance from start.
+                    distTo.put(to, edge.weight);
+
+                    if (perimeter.contains(to)) {
+                        perimeter.changePriority(to, edge.weight);
+                    } else {
+                        perimeter.add(to, edge.weight);
+                    }
+                }
+                // This entire if block is called "relaxing" an edge.
+            }
+        }
+    }
+
+    /** Returns a collection of edges representing a minimum spanning tree in the graph. */
+    public Collection<Edge<V>> mst() {
+        return edgeTo.values();
+    }
+}
+```
+
+### Cut property
+
+**How do we know Prim's algorithm works?**
+
+- In BFS, the `perimeter` stores all the next vertices to visit, all of which are at the current distance (or "level") from the `start` vertex---or at most 1 level further. In each iteration of the `while` loop, BFS grows the SPT-in-progress by 1 vertex.
+- Prim's algorithm stores all the next potential vertices to visit sorted by lowest-cost edge weight. In each iteration of the `while` loop, Prim's algorithm grows the MST-in-progress by 1 vertex.
+
+When Prim's algorithm "grows the MST-in-progress" by selecting the lowest-cost edge to an unvisited vertex, it's actually applying the **cut property**.
+
+{% include youtube.html id="wHlOA6cfFh4" end="337" aspect_ratio="16/9" %}
+
+There are three key terms to define about the cut property.
+
+Cut
+: A partitioning of the vertices of a graph into two non-empty sets.
+
+Crossing edge
+: An edge that has one endpoint in each set of a cut.
+
+Cut property
+: The idea that, for any cut, a minimum-weight crossing edge must be in an MST.
+
+Prim's algorithm can be understood as a repeated application of the cut property.
+
+1. Start with a single vertex in one set and every other unvisited vertex in the other set.
+2. On each iteration of the `while` loop, apply the cut property to choose the minimum-weight crossing edge. This expands the visited set by taking 1 vertex from the unvisited vertices.
+3. Once the `while` loop is done and all reachable vertices have been visited, return the MST.
