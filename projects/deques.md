@@ -109,7 +109,7 @@ An **array deque** is like an `ArrayList`, but different in that elements aren't
 {% include slides.html id="1c9RdR7fz-CyTH9bHzJ5bhlfmlUHgpC-EK9d3a8PMiuo" aspect_ratio="16/9" %}
 
 {: .hint }
-To step back in the slides, click on the slides and press the left arrow key or the backspace key.
+To step back in the slides, click on the slides and press the left arrow key or the backspace key. On touchscreens, swipe left to advance and swipe right to step back.
 
 [^1]: Josh Hug. 2019. [cs61b sp19 proj1 slides](https://docs.google.com/presentation/d/1XBJOht0xWz1tEvLuvOL4lOIaY0NSfArXAvqgkrx0zpc/edit).
 
