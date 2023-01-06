@@ -97,7 +97,7 @@ Directed edges
 
 An **undirected graph** (or simply "graph" without any qualifiers) is an abstract data type that contains zero or more vertices and zero or more _undirected edges_ between pairs of vertices. The following slide[^1] describes some undirected graph terminology.
 
-[^1]: Robert Sedgewick and Kevin Wayne. 2020. [**Graphs and Digraphs**](https://www.cs.princeton.edu/courses/archive/spring22/cos226/lectures/4GraphsDigraphsI.pdf). In COS 226 Spring 2022.
+[^1]: Robert Sedgewick and Kevin Wayne. 2020. [Graphs and Digraphs](https://www.cs.princeton.edu/courses/archive/fall20/cos226/lectures/4GraphsDigraphsI.pdf).
 
 ![Undirected graph terminology]({{ site.baseurl }}{% link assets/images/undirected-graph.webp %})
 
