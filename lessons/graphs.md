@@ -161,7 +161,7 @@ public interface DirectedGraph<V> {
 
 ### Adjacency lists data structure
 
-The adjacency lists is a type of data structure for implementing both undirected graphs and directed graphs.
+Adjacency lists is a data structure for implementing both undirected graphs and directed graphs.
 
 Adjacency lists
 : A graph data structure that associates each vertex with a list of edges.
