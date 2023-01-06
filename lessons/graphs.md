@@ -6,6 +6,7 @@ summary: *desc
 nav_order: 5
 parent: Lessons
 grand_parent: CSE 373
+youtube: yes
 ---
 
 # {{ page.title }}
