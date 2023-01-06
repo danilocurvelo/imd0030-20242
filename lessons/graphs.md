@@ -208,3 +208,145 @@ Adjacency lists aren't the only way to implement graphs. Two other common approa
 > Adjacency lists are generally faster than adjacency matrices in algorithms in which the key operation performed per node is "iterate over all the nodes adjacent to this node." That can be done in time O(deg(v)) time for an adjacency list, where deg(v) is the degree of node v, while it takes time Θ(n) in an adjacency matrix. Similarly, adjacency lists make it fast to iterate over all of the edges in a graph---it takes time O(m + n) to do so, compared with time Θ(n<sup>2</sup>) for adjacency matrices.
 >
 > Some of the most-commonly-used graph algorithms (BFS, DFS, Dijkstra's algorithm, A* search, Kruskal's algorithm, Prim's algorithm, Bellman-Ford, Karger's algorithm, etc.) require fast iteration over all edges or the edges incident to particular nodes, so they work best with adjacency lists.
+
+## Graph Traversals
+
+{% include learning_objectives.md lesson="Graph Traversals" %}
+
+How do we _use_ a graph to solve problems like computing navigation directions? Before we can discuss _graph algorithms_, we'll need a way to **traverse** a graph or explore all of its data. To traverse a tree, we can start from the overall root and recursively work our way down. To traverse a hash table, we can start from bucket index 0 and iterate over all the separate chains. But for a graph, where do we start the traversal?
+
+{% include youtube.html id="k8R1piQ0h7g" aspect_ratio="16/9" %}
+
+By applying the recursive tree traversal idea, we discovered a graph algorithm called depth-first search (DFS). Depth-first search isn't the only graph traversal algorithm, and it's often compared to another graph traversal algorithm called breadth-first search (BFS). BFS will be the template for many of the graph algorithms that we'll learn in the coming lessons.
+
+{% include youtube.html id="7YPx8WZAZgA" end="593" aspect_ratio="16/9" %}
+
+Breadth-first search (BFS)
+: An iterative graph traversal algorithm that expands outward, level-by-level, from a given `start` vertex.
+: ```java
+  void bfs(Graph<V> graph, V start) {
+      Queue<V> perimeter = new ArrayDeque<>();
+      Set<V> visited = new HashSet<>();
+
+      perimeter.add(start);
+      visited.add(start);
+
+      while (!perimeter.isEmpty()) {
+          V from = perimeter.remove();
+          // Process the current vertex by printing it out
+          System.out.println(from);
+
+          for (Edge<V> edge : graph.neighbors(from)) {
+              V to = edge.to;
+              if (!visited.contains(to)) {
+                  perimeter.add(to);
+                  visited.add(to);
+              }
+          }
+      }
+  }
+  ```
+
+Depth-first search (DFS)
+: A recursive graph traversal algorithm that explores as far as possible from a given `start` vertex until it reaches a base case and needs to backtrack.
+: ```java
+  void dfs(Graph<V> graph, V start) {
+      dfs(graph, start, new HashSet<>());
+  }
+
+  dfs(Graph<V> graph, V from, Set<V> visited) {
+      // Process the current vertex by printing it out
+      System.out.println(from);
+      visited.add(from);
+
+      for (Edge<V> edge : graph.neighbors(from)) {
+          V to = edge.to;
+          if (!visited.contains(to)) {
+              dfs(graph, to);
+          }
+      }
+  }
+  ```
+
+BFS and DFS represent two ways of traversing over all the data in a graph by visiting all the vertices and checking all the edges. BFS and DFS are like the `for` loops of graphs: on their own, they don't solve a specific problem, but they are an important building block for graph algorithms.
+
+{% include youtube.html id="bNZhTWOVYK8" end="693" aspect_ratio="16/9" %}
+
+BFS provides a lot more utility than DFS in this context because it can be used to find the shortest paths in a unweighted graph with the help of two extra data structures called `edgeTo` and `distTo`.
+
+- `Map<V, Edge<V>> edgeTo` maps each vertex to the edge used to reach it in the BFS traversal.
+- `Map<V, Integer> distTo` maps each vertex to the number of edges from the `start` vertex.
+
+We'll study these two maps in greater detail over the following lessons.
+
+### Problems and solutions
+
+Whereas sets, maps, and priority queues emphasize efficient access to elements, graphs emphasize not only elements (vertices) but also the relationships between elements (edges). The efficiency of a graph data structure depends on the underlying data structures used to represent its vertices and edges. But there's another way to understand graphs through the lens of computational problems and algorithmic solutions.
+
+Computational problem
+: An abstract problem that can be represented, formalized, and/or solved using algorithms.
+: In Java, we often represent problems using interfaces describing expected functionality.
+
+**Sorting** is the problem of rearranging elements according to an ordering relation (via comparison). **Sets** are an example of an *abstract data type* that represents a collection of unique elements. **Graph traversal** is the problem of visiting/checking/processing each vertex in a graph.
+
+Algorithmic solution
+: A a sequence of steps or description of process that can be used to solve computational problems.
+: In Java, we often represent solutions using classes detailing how to implement functionality.
+
+**Insertion sort**, **selection sort**, and **merge sort** are algorithms for sorting. **Search trees** and **hash tables** are algorithms for implementing sets. **BFS** and **DFS** are algorithms for graph traversal.
+
+This relationships suggests that problems like graph search can be represented using interfaces, which are then implemented by solutions that are represented using classes. In Husky Maps, the `graphs.shortestpaths` package includes interfaces and classes for finding the shortest paths in a directed graph.
+
+```java
+public interface ShortestPathSolver<V>
+public class DijkstraSolver<V> implements ShortestPathSolver<V>
+public class BellmanFordSolver<V> implements ShortestPathSolver<V>
+public class ToposortDAGSolver<V> implements ShortestPathSolver<V>
+```
+
+Each of these graph algorithms---Dijkstra's algorithm, Bellman-Ford algorithm, and the toposort-DAG algorithm---do most of their work in the class constructor. If we wanted to add a BFS algorithm to this list, it would take the `bfs` method defined above and do most of the work inside of the constructor.
+
+```java
+public class BreadthFirstSearch<V> {
+    private final Map<V, Edge<V>> edgeTo;
+    private final Map<V, Integer> distTo;
+
+    public BreadthFirstSearch(Graph<V> graph, V start) {
+        edgeTo = new HashMap<>();
+        distTo = new HashMap<>();
+        Queue<V> perimeter = new ArrayDeque<>();
+        perimeter.add(start);
+        edgeTo.put(start, null);
+        distTo.put(start, 0);
+        while (!perimeter.isEmpty()) {
+            V from = perimeter.remove();
+            for (Edge<V> edge : graph.neighbors(from)) {
+                V to = edge.to;
+                if (!edgeTo.containsKey(to)) {
+                    edgeTo.put(to, edge);
+                    distTo.put(to, distTo.get(from) + 1);
+                    perimeter.add(to);
+                }
+            }
+        }
+    }
+
+    /** Returns the unweighted shortest path from the start to the goal. */
+    public List<V> solution(V goal) {
+        List<V> path = new ArrayList<>();
+        V curr = goal;
+        path.add(curr);
+        while (edgeTo.get(curr) != null) {
+            curr = edgeTo.get(curr).from;
+            path.add(curr);
+        }
+        Collections.reverse(path);
+        return path;
+    }
+}
+```
+
+{: .hint }
+The `solution` method begins at `goal` and uses `edgeTo` to trace the path back to `start`.
+
+There are hundreds of problems and algorithms for solving them. The field of [graph theory](https://en.wikipedia.org/wiki/Graph_theory) investigates these graph problems and graph algorithms.
