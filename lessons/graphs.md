@@ -315,17 +315,20 @@ public class BreadthFirstSearch<V> {
         edgeTo = new HashMap<>();
         distTo = new HashMap<>();
         Queue<V> perimeter = new ArrayDeque<>();
+        Set<V> visited = new HashSet<>();
         perimeter.add(start);
+        visited.add(start);
         edgeTo.put(start, null);
         distTo.put(start, 0);
         while (!perimeter.isEmpty()) {
             V from = perimeter.remove();
             for (Edge<V> edge : graph.neighbors(from)) {
                 V to = edge.to;
-                if (!edgeTo.containsKey(to)) {
+                if (!visited.contains(to)) {
                     edgeTo.put(to, edge);
                     distTo.put(to, distTo.get(from) + 1);
                     perimeter.add(to);
+                    visited.add(to);
                 }
             }
         }
