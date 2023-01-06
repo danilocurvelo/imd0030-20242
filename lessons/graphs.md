@@ -159,14 +159,14 @@ public interface DirectedGraph<V> {
 ```
 
 
-### Adjacency list data structure
+### Adjacency lists data structure
 
-The adjacency list is a type of data structure for implementing both undirected graphs and directed graphs.
+The adjacency lists is a type of data structure for implementing both undirected graphs and directed graphs.
 
-Adjacency list
+Adjacency lists
 : A graph data structure that associates each vertex with a list of edges.
 
-`MapGraph` uses an adjacency list data structure: the `neighbors` map associates each `Point` with a `List<Edge<Point>>`. The adjacency list provides a very direct implementation of the `DirectedGraph` interface methods like `addEdge` and `neighbors`.
+`MapGraph` uses an adjacency lists data structure: the `neighbors` map associates each `Point` with a `List<Edge<Point>>`. The adjacency lists provides a very direct implementation of the `DirectedGraph` interface methods like `addEdge` and `neighbors`.
 
 ```java
 public class MapGraph implements DirectedGraph<Point> {
