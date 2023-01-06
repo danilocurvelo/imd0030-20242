@@ -398,7 +398,7 @@ public class PrimMST<V> implements MSTSolver<V> {
         V start = graph.randomVertex();
 
         // Diff 2. Unvisited vertices are considered in order of edge weight.
-        ExtrinsicMinPQ<V> perimeter = new DoubleMapMinPQ<>();
+        MinPQ<V> perimeter = new DoubleMapMinPQ<>();
         perimeter.add(start, 0.0);
 
         Set<V> visited = new HashSet<>();
