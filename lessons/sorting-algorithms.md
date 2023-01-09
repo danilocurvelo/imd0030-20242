@@ -241,7 +241,7 @@ So how do we sort an array? In this lesson, we'll introduce two iterative sortin
 
 ### Selection sort
 
-In each iteration, **selection sort** selects the _smallest unsorted element and swaps it into its sorted place.
+In each iteration, **selection sort** selects the _smallest unsorted element_ and swaps it into its sorted place.
 
 Selection sort has an important invariant that was introduced called **iterative improvement**. We keep track of a _sorted elements_ portion at the front of the array and gradually grow the number of _sorted elements_. Once the _sorted elements_ portion reaches the full length of the array, we're done sorting the array!
 
