@@ -190,6 +190,33 @@ Apply asymptotic notation
 
 There are different ways to find duplicates in an array. `dup1` represents one way to solve the problem: exhaustively check all possible pairs of elements and return whether a duplicate exists among them. In the worst case, `dup1` required quadratic time to return an answer.
 
+{: .note }
+> How long might a quadratic time algorithm need to run?
+>
+> - When _N_ = 10, less than 1 second.
+> - When _N_ = 100, less than 1 second.
+> - When _N_ = 1,000, about 1 second.
+> - When _N_ = 10,000, **about 2 minutes**.
+> - When _N_ = 100,000, **about 3 hours**.
+> - When _N_ = 1,000,000, **about 12 days**.
+>
+> <details markdown="block">
+> <summary>How long might a linear time algorithm need to run?</summary>
+>
+> - When _N_ = 10, less than 1 second.
+> - When _N_ = 100, less than 1 second.
+> - When _N_ = 1,000, less than 1 second.
+> - When _N_ = 10,000, **less than 1 second**.
+> - When _N_ = 100,000, **less than 1 second**.
+> - When _N_ = 1,000,000, **about 1 second**.
+> </details>
+>
+> **Many algorithms (including most algorithms in this class) are fast on tiny inputs, e.g. when _N_ < 1000**. While there may be situations where we care about the efficiency of algorithms processing tiny inputs, these differences are often unnoticeable. When they are noticeable, they may be caused by unanticipated changes in your computer's workload.
+>
+> **Differences become more appreciable when _inefficient algorithms_ run on inputs of size _N_ > 1000**. Whether the runtime is tolerable depends on the problem. An inefficient algorithm may be acceptable if we only need to run it infrequently, the size of the input is not particularly big, or the amount of processing power can make up for the time.
+>
+> **Conversely, efficient algorithms can frequently process massive amounts of data even as _N_ > 1 million**.
+
 However, if our array is _sorted_, then returning whether there are duplicates in the array takes much less time in the worst case. In a sorted array, all duplicate elements must be stored right beside each other. It turns out that a significant number of problems in computer science get a lot easier and a lot more efficient to solve if we can first sort our data. Without sorting, many of the systems and software that we have today would not be possible purely because things (like duplicate finding) would take far too long to run.
 
 But data doesn't always come to us in a pre-sorted form. How do we sort---rearrange into order---an array of elements?
