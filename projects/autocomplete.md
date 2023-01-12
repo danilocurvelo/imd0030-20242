@@ -1,7 +1,7 @@
 ---
 layout: minimal
 title: Autocomplete
-description: &desc Designing, analyzing, and critiquing autocomplete.
+description: &desc Designing and analyzing autocomplete.
 summary: *desc
 nav_order: 2
 parent: Projects
@@ -25,7 +25,6 @@ In this project, we will compare 4 implementations (described later) and 2 appli
 
 - **Design and implement** tree-based and array-based search data structures.
 - **Analyze and compare** runtimes using asymptotic and experimental analysis.
-- **Critique and connect** real-world issues around search engines or social genomics.
 
 <details markdown="block">
 <summary>How are we collaborating on this project?</summary>
@@ -40,7 +39,7 @@ We require teams because this course is predicated on communication. Success in 
 
 Satisfactory completion of the project requires a **video-recorded individual presentation that addresses all the green callouts** meeting the following requirements:
 
-- Your presentation should not be much longer than **10 minutes** and should include your voiceover. (Your video is appreciated but not necessary.)
+- Your presentation should not be much longer than **8 minutes** and should include your voiceover. (Your video is appreciated but not necessary.)
 - Your presentation should include some kind of visually-organizing structure, such as slides or a document.
 - After submitting to Canvas, add a submission comment linking to your slides or document.
 </details>
@@ -283,24 +282,3 @@ Run the provided `RuntimeExperiments` to compare the real-world runtime of each 
 - The third column denotes the average runtime for `allMatches` in seconds.
 
 Copy-paste the text into plotting software such as [Desmos](https://www.desmos.com/calculator). Plot the runtimes of all 4 implementations on `addAll` and `allMatches`.
-
-## Critique and connect
-
-{: .deliverable }
-Synthesize an idea involving at least one of the following 4 articles together with a couple additional sources. How do the articles relate to your understanding of the `Autocomplete` interface that we designed? How does the author's arguments relate the technology to the distribution of power, benefits, and harms across different people in society? What other questions should we ask about the design of our technology?
-
-### "How search engines disseminate information about COVID-19 and why they should do better"
-
-One of the drawbacks of this autocomplete definition is that it leaves unspecified the order of the results. How many times have you looked beyond the first page of a search query? The value of a search engine or suggestion system is not just to sort and search, but also to prioritize information to present to the user.
-
-**[How search engines disseminate information about COVID-19 and why they should do better](https://misinforeview.hks.harvard.edu/article/how-search-engines-disseminate-information-about-covid-19-and-why-they-should-do-better/)**. What values do search engines and suggestion systems prioritize? Given that private companies dominate the western internet, what is their responsibility in shaping public discourse and meaning-making?
-
-**[Algorithms of Oppression: How Search Engines Reinforce Racism](https://youtu.be/7AHv6vUouU8)**. How do search engines reinforce racism? How do the design of our autocomplete systems and other programs we develop using our programming skills fit into the broader landscape of machine learning and data analytic systems?
-
-### "Social genomics can combat inequality or be used to justify it"
-
-Efficient DNA indexing and search is key component of the infrastructure that makes DNA databases possible. How are DNA databases used in real life, and what are the implications of designing a fast DNA indexing system that powers these databases?
-
-[**Social genomics can combat inequality or be used to justify it**](https://aeon.co/essays/social-genomics-can-combat-inequality-or-be-used-to-justify-it). How is social genomics research used to justify political agendas? How are scientific agendas, in turn, shaped by the scientists who determine which research questions to study?
-
-[**DNA Databases and Human Rights**](http://dnapolicyinitiative.org/resources/dna-databases-and-human-rights/). What is the role of DNA in the criminal justice system? How do DNA searches produce false matches? How do DNA databases encode social bias?

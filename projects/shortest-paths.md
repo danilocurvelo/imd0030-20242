@@ -1,7 +1,7 @@
 ---
 layout: minimal
 title: Shortest Paths
-description: &desc Designing, analyzing, and critiquing shortest paths.
+description: &desc Designing and analyzing shortest paths.
 summary: *desc
 nav_order: 4
 parent: Projects
@@ -33,7 +33,7 @@ In this project, we will compare 2 graph representations, 2 graph algorithms, an
 
 Satisfactory completion of the project requires a **video-recorded individual presentation that addresses all the green callouts** meeting the following requirements:
 
-- Your presentation should not be much longer than **10 minutes** and should include your voiceover. (Your video is appreciated but not necessary.)
+- Your presentation should not be much longer than 8 minutes and should include your voiceover. (Your video is appreciated but not necessary.)
 - Your presentation should include some kind of visually-organizing structure, such as slides or a document.
 - After submitting to Canvas, add a submission comment linking to your slides or document.
 </details>
@@ -212,20 +212,3 @@ Copy-paste the text into plotting software such as [Desmos](https://www.desmos.c
 
 {: .deliverable }
 Compare the runtimes across all 5 approaches. Are certain algorithms faster than others? What might explain the differences? How does the choice of `SeamFinder` and the choice of `ShortestPathSolver` affect the runtime? Briefly speculate possible implications for algorithm design.
-
-## Critique and connect
-
-{: .deliverable }
-Synthesize an idea involving least one of the following 3 articles together with a couple additional sources. How do the articles relate to your understanding of the `SeamFinder` interface that we designed? How does the author's arguments relate the technology to the distribution of power, benefits, and harms across different people in society? What other questions should we ask about the design of our technology?
-
-Harvard professor Sarah Lewis writes for the NY Times about "[The Racial Bias Built Into Photography](https://www.nytimes.com/2019/04/25/lens/sarah-lewis-racial-bias-photography.html)".
-
-> Photography is not just a system of calibrating light, but a technology of subjective decisions. Light skin became the chemical baseline for film technology, fulfilling the needs of its target dominant market. For example, developing color-film technology initially required what was called a Shirley card. When you sent off your film to get developed, lab technicians would use the image of a white woman with brown hair named Shirley as the measuring stick against which they calibrated the colors. Quality control meant ensuring that Shirley's face looked good. It has translated into the color-balancing of digital technology. In the mid-1990s, Kodak created a multiracial Shirley Card with three women, one black, one white, and one Asian, and later included a [Latina](https://www.nytimes.com/2019/04/25/lens/sarah-lewis-racial-bias-photography.html#:~:text=and%20later%20included%20a-,Latina,-model%2C%20in%20an) model, in an attempt intended to help camera operators calibrate skin tones. These were not adopted by everyone since they coincided with the rise of digital photography. The result was film emulsion technology that still carried over the social bias of earlier photographic conventions.
-
-Though the ubiquity of AI-augmented smartphone camera systems has improved photo quality, inherited bias remains a modern issue for camera designers as "[Google is trying to make its image processing more inclusive](https://www.theverge.com/2021/5/18/22442515/google-camera-app-inclusive-image-equity-skintones)", The Verge reports. The history of digital photography raises not only social questions about the chemistry and physics behind photography, but also the people we include (or exclude) in the design process.
-
-**[Gender Shades](http://gendershades.org/) ([Research Paper](http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf))**. How well do facial recognition services guess the gender of a face? "We evaluate 3 commercial gender classification systems using our dataset and show that darker-skinned females are the most misclassified group (with error rates of up to 34.7%). The maximum error rate for lighter-skinned males is 0.8%."
-
-[**The Efforts to Make Text-Based AI Less Racist and Terrible**](http://the%20efforts%20to%20make%20text-based%20ai%20less%20racist%20and%20terrible/) and [**DALL**](https://openai.com/blog/dall-e/)-[**E**](https://openai.com/blog/dall-e/). "Language models like GPT-3 can write poetry, but they often amplify negative stereotypes." If a GPT-3 model is then asked to generate images corresponding to text prompts (DALL-E), what kinds of machine bias may result?
-
-**[Everybody Can Make Deepfakes Now!](https://youtu.be/mUfJOQKdtAk) and [This AI Makes "Audio Deepfakes"](https://youtu.be/VQgYPv8tb6A)**. [Deepfakes](https://en.wikipedia.org/wiki/Deepfake) are algorithm-generated images, video, and audio designed to resemble real people. "It is important that everyone knows about the fact that we can both perform joint video and audio synthesis for a target subject."

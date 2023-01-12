@@ -1,7 +1,7 @@
 ---
 layout: minimal
 title: Priority Queues
-description: &desc Designing, analyzing, and critiquing priority queues.
+description: &desc Designing and analyzing priority queues.
 summary: *desc
 nav_order: 3
 parent: Projects
@@ -32,7 +32,7 @@ In the next project, we'll also use your priority queues as a building block for
 
 Satisfactory completion of the project requires a **video-recorded individual presentation that addresses all the green callouts** meeting the following requirements:
 
-- Your presentation should not be much longer than **10 minutes** and should include your voiceover. (Your video is appreciated but not necessary.)
+- Your presentation should not be much longer than 8 minutes and should include your voiceover. (Your video is appreciated but not necessary.)
 - Your presentation should include some kind of visually-organizing structure, such as slides or a document.
 - After submitting to Canvas, add a submission comment linking to your slides or document.
 </details>
@@ -199,24 +199,3 @@ Tree bucket optimization
 
 {: .deliverable }
 Explain the impact of tree bucket optimization assuming an even distribution of elements across the underlying array. Does the tree bucket optimization help, hurt, or not affect the asymptotic analysis given our assumptions?
-
-## Critique and connect
-
-Unlike traditional news media publications, online platforms are protected under Section 230(c) from civil liability for user-generated content. The [Electronic Frontier Foundation](https://www.eff.org/issues/cda230), a nonprofit organization for digital civil liberties, writes:
-
-> Section 230 says that **"No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider"** ([47 U.S.C. § 230](http://www.law.cornell.edu/uscode/text/47/230)). In other words, online intermediaries that host or republish speech are protected against a range of laws that might otherwise be used to hold them legally responsible for what others say and do.
-
-Furthermore, paragraph 2 of the legislation provides platforms protection from liability for their moderation decisions, so platforms are free to do as much or as little moderation as they so choose. Many internet historians agree that Section 230, codified in 1996 at the dawn of the internet age, was a key piece of legislation that enabled the social internet as we know it today. Section 230 made headlines over the 2020 US presidential elections with new [lawsuits](https://arstechnica.com/tech-policy/2021/07/trump-sues-twitter-facebook-and-youtube-in-preposterous-bid-for-reinstatement/) and [antitrust plans](https://arstechnica.com/tech-policy/2021/07/gops-big-tech-plan-ignores-consumers-targets-censorship-of-republicans-instead/), Ars reports.
-
-However, I want to encourage a broader view on content moderation as a practice that defines the social media platform and its relationships to the people that use it. The critique should feel distinct from the affordance analysis in that it "zooms out" even farther to examine the structures of society that led us down the path of needing a content moderation system in the first place. Through critique, we might be able to imagine different foundations for social media platforms. To scaffold your critique, start by skimming UW CSE professor Amy Zhang's talk, [Building technology for society (and all of its complications and messy consequences): case study on automated content moderation](https://social.cs.washington.edu/slides_content_moderation.html). Spend some time pausing and thinking about the questions raised in the "zooming out" yellow-color slides.
-
-![Building technology for society (and all of its complications and messy consequences): case study on automated content moderation](https://social.cs.washington.edu/slides/content_moderation/guestlecture_contentmoderation.001.jpeg)
-
-{: .deliverable }
-Synthesize an idea involving least one of the following 3 articles together with a couple additional sources. How do the articles relate to your understanding of the `MinPQ` interface that we designed? How does the author's arguments relate the technology to the distribution of power, benefits, and harms across different people in society? What other questions should we ask about the design of our technology?
-
-**[Custodians of the Internet](http://opentranscripts.org/transcript/custodians-of-the-internet/)**. What are platforms' legal obligations to the public interest? If platforms operate an attention economy, then "content moderation constitutes the platform."
-
-**[To Apply Machine Learning Responsibly, We Use It in Moderation](https://open.nytimes.com/to-apply-machine-learning-responsibly-we-use-it-in-moderation-d001f49e0644)**. Concerns over implicit bias in machine-learning software raised important questions about how New York Times comment moderators can leverage this powerful tool, while also mitigating the risks. What new risks are raised?
-
-**[Who Moderates the Social Media Giants? A Call to End Outsourcing](https://bhr.stern.nyu.edu/tech-content-moderation-june-2020)**. Without content moderation, "platforms would be inundated by harmful content." What are the consequences of outsourcing content moderation to third-party vendors?
