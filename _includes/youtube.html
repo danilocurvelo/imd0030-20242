@@ -1,9 +1,11 @@
 {%- assign params = "modestbranding=1&rel=0" -%}
 {%- if include.start -%}{%- assign params = params | append: "&start=" | append: include.start -%}{%- endif -%}
 {%- if include.end -%}{%- assign params = params | append: "&end=" | append: include.end -%}{%- endif -%}
+{%- assign extension = include.thumbnail | split: "." | last -%}
+{%- if extension == "jpg" -%}{%- assign basepath = "vi" -%}{%- else -%}{%- assign basepath = "vi_webp" -%}{%- endif -%}
 <lite-youtube
         class="module full-width"
         videoid="{{ include.id }}"
-        style="aspect-ratio: {{ include.aspect_ratio }}; background-image: url('https://i.ytimg.com/vi_webp/{{ include.id }}/sddefault.webp')"
+        style="aspect-ratio: {{ include.aspect_ratio }}; background-image: url('https://i.ytimg.com/{{ basepath }}/{{ include.id }}/{{ include.thumbnail | default: "sddefault.webp" }}')"
         params="{{ params }}"
 ></lite-youtube>
