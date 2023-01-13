@@ -24,7 +24,7 @@ schedule:
       - name: Office Hours
         start: 1:30 PM
         end: 3:30 PM
-        location: CSE 5F Breakout
+        location: SIG 228
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
@@ -34,17 +34,17 @@ schedule:
       - name: Office Hours
         start: 9:30 AM
         end: 11:30 AM
-        location: CSE 5F Breakout
+        location: CSE 560
       - name: Office Hours
         start: 1:30 PM
         end: 5:30 PM
-        location: CSE 5F Breakout
+        location: CSE 560
   - name: Wednesday
     events:
       - name: Office Hours
         start: 11:30 AM
         end: 3:30 PM
-        location: CSE 5F Breakout
+        location: SIG 228
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
@@ -57,13 +57,13 @@ schedule:
       - name: Office Hours
         start: 3:30 PM
         end: 5:30 PM
-        location: CSE 5F Breakout
+        location: CSE 560
   - name: Friday
     events:
       - name: Office Hours
         start: 1:30 PM
         end: 3:30 PM
-        location: CSE 5F Breakout
+        location: SIG 228
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
