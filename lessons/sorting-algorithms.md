@@ -350,6 +350,12 @@ The worst case order of growth for the runtime for `binarySearch` is **logarithm
 
 This is the definition of the **base-2 logarithm**, often written as either log<sub>2</sub> or the shorthand lg.
 
+How long would a logarithmic time algorithm take to process large amounts of data? Let's compute the base-2 logarithm for big data.
+
+- When _N_ = 1 million, log<sub>2</sub> 1 million is about 20.
+- When _N_ = 10 million, log<sub>2</sub> 10 million is about 23.
+- When _N_ = 100 million, log<sub>2</sub> 100 million is about 27.
+
 ### Recurrences
 
 The runtime of a recursive program like binary search can be more effectively modeled using recurrence relations. **Recurrence relations** (aka recurrences) are recursive equations that represent the order of growth for a function in two parts: (1) non-recursive work and (2) recursive work. A recurrence relation describing the worst-case asymptotic runtime for binary search is T(N) = T(N / 2) + 1.
