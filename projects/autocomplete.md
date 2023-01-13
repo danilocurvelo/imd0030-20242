@@ -105,7 +105,7 @@ The project code includes a fully functional `TreeSetAutocomplete` implementatio
 private final NavigableSet<CharSequence> elements;
 ```
 
-The constructor assigns a new `TreeSet` collection to this field. In Java, `TreeSet` is implemented using a red–black tree, a type of balanced search tree where access to individual elements are worst-case logarithmic time with respect to the size of the set. `CharSequence::compare` tells the `TreeSet` to use the natural dictionary order when comparing any two elements.
+The constructor assigns a new `TreeSet` collection to this field. In Java, `TreeSet` is implemented using a red-black tree, a type of balanced search tree where access to individual elements are worst-case logarithmic time with respect to the size of the set. `CharSequence::compare` tells the `TreeSet` to use the natural dictionary order when comparing any two elements.
 
 ```java
 public TreeSetAutocomplete() {
