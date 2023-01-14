@@ -37,11 +37,12 @@ We require teams because this course is predicated on communication. Success in 
 <details markdown="block">
 <summary>What am I submitting at the end of this project?</summary>
 
-Satisfactory completion of the project requires a **video-recorded individual presentation that addresses all the green callouts** meeting the following requirements:
+Satisfactory completion of the project requires a **video-recorded team presentation that addresses all the green callouts** meeting the following requirements:
 
-- Your presentation should not be much longer than **8 minutes** and should include your voiceover. (Your video is appreciated but not necessary.)
-- Your presentation should include some kind of visually-organizing structure, such as slides or a document.
-- After submitting to Canvas, add a submission comment linking to your slides or document.
+- **Each team member needs to present** part of the presentation in order to receive credit for the assignment.
+- Your presentation should not be much longer than **7 minutes** and should **include your voiceover**. (Your video is appreciated but not necessary.)
+- Your presentation should include some kind of **visually-organizing structure**, such as slides or a document.
+- After submitting to Canvas, **add a submission comment** linking to your slides or document.
 </details>
 
 ## Autocomplete interface
