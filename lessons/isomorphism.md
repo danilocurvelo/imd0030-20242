@@ -169,7 +169,7 @@ Dual-pivot quicksort is a relatively new algorithm published in 2009. Experiment
 
 {% include learning_objectives.md lesson="Counting Sorts" %}
 
-In practice, Java's system sorts like Timsort and dual-pivot quicksort have a linearithmic order of growth. Is it possible to sort in faster than worst case Θ(N log N) time? In the best case, we know that sorting algorithms like insertion sort can tell that an already-sorted array is indeed sorted in linear time. But can we design an algorithm that sorts an array of N elements in linear time in the worst case?
+In practice, Java's system sorts like Timsort and dual-pivot quicksort have a linearithmic order of growth. Is it possible to sort in faster than worst case Θ(_N_ log _N_) time? In the best case, we know that sorting algorithms like insertion sort can tell that an already-sorted array is indeed sorted in linear time. But can we design an algorithm that sorts an array of _N_ elements in linear time in the worst case?
 
 ### Sorting decision tree
 
@@ -202,9 +202,9 @@ else
 For each of the 6 permutations in a, b, c, we can insert the fourth element d before, in-between, or after each element. For example, if we consider the permutation `{a, b, c}`, we can insert d in 4 different places: `{d, a, b, c}`, `{a, d, b, c}`, `{a, b, d, c}`, and `{a, b, c, d}`. Ultimately, we take the 6 permutations we had for 3 elements and multiply by 4 to get 24 total permutations for 4 elements. More generally, the number of permutations can be described using the factorial function: 4! = 4 ∙ 3 ∙ 2 ∙ 1.
 </details>
 
-If N elements have N! factorial potential permutations, and each potential permutation is a leaf in a balanced sorting decision tree, then the optimal comparison sorting algorithm in the worst case needs about log<sub>2</sub> N! comparisons to determine the correct sorting of the elements. [Stirling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation) can be used to show that log<sub>2</sub> N! ∈ Θ(N log N).
+If _N_ elements have _N_! factorial potential permutations, and each potential permutation is a leaf in a balanced sorting decision tree, then the optimal comparison sorting algorithm in the worst case needs about log<sub>2</sub> _N_! comparisons to determine the correct sorting of the elements. [Stirling's approximation](https://en.wikipedia.org/wiki/Stirling%27s_approximation) can be used to show that log<sub>2</sub> _N_! ∈ Θ(_N_ log _N_).
 
-In other words, the optimal comparison sorting algorithm requires Θ(N log N) comparisons in the worst case. It's not possible to design a comparison sorting algorithm that takes linear time in the worst case.
+In other words, the optimal comparison sorting algorithm requires Θ(_N_ log _N_) comparisons in the worst case. It's not possible to design a comparison sorting algorithm that takes linear time in the worst case.
 
 ### Counting sorts and enumeration
 

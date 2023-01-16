@@ -278,7 +278,7 @@ A Science and Technology Studies (STS) perspective might even suggest that sorti
 Data is a key part of affordance analysis. But you might have noticed that your computing education rarely actually considers data on its own merit:
 
 - When verifying the correctness of your programs, we write code that generates dummy data or reads an example dataset without explanation about the data, who or what it aims to represent, and why the data was chosen.
-- When analyzing the running time of your programs, data matters to the extent that it helps us in case analysis, asymptotic analysis, or experimental analysis. Data is reduced to variables like N or abstract inputs.
+- When analyzing the running time of your programs, data matters to the extent that it helps us in case analysis, asymptotic analysis, or experimental analysis. Data is reduced to variables like _N_ or abstract inputs.
 
 **To evaluate affordances, we will need to think about how each affordance interacts with the world by thinking through more realistic data and problems.**
 
