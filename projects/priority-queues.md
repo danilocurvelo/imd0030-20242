@@ -59,8 +59,20 @@ The `MinPQ` interface represents a priority queue that affords access to minimum
 `int size()`
 : Returns the number of elements in this priority queue.
 
+The interface also defines two **default methods** that rely on implementations of the above methods.
+
+`void addOrChangePriority(E element, double priority)`
+: Adds an element with the given priority value if it is not already present. Otherwise, updates the priority value of the existing element.
+: ```java
+  if (!contains(element)) {
+      add(element, priority);
+  } else {
+      changePriority(element, priority);
+  }
+  ```
+
 `boolean isEmpty()`
-: Returns true if this priority queue contains no elements. This is a **default method** that works by calling the `size` method, so implementations do not need to define it.
+: Returns true if this priority queue contains no elements. Returns whether `size() == 0`.
 
 {: .hint }
 A `MinPQ` cannot contain duplicate elements. However, different elements can have the same priority value. `peekMin` and `removeMin` may return any element with the minimum priority value.
