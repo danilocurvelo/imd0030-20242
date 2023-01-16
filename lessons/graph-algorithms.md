@@ -20,6 +20,8 @@ youtube: yes
 
 ## Shortest Paths Trees
 
+{% include learning_objectives.md lesson="Shortest Paths Trees" %}
+
 Breadth-first search (BFS) can be used to solve the **unweighted shortest paths problem**, of which we've studied 3 variations:
 
 Single-pair shortest paths
