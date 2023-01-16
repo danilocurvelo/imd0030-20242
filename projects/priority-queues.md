@@ -41,19 +41,19 @@ Satisfactory completion of the project requires a **video-recorded team presenta
 
 The `MinPQ` interface represents a priority queue that affords access to minimum-priority elements. Priority values are extrinsic to each element: rather than relying on a `compareTo` method, priority values are specified as arguments to the `add` and `changePriority` methods.
 
-`void add(T element, double priority)`
+`void add(E element, double priority)`
 : Adds an element with the given priority value if the element is not already in this priority queue.
 
-`boolean contains(T element)`
+`boolean contains(E element)`
 : Returns true if the given element is in this priority queue.
 
-`T peekMin()`
+`E peekMin()`
 : Returns the element with the minimum priority value.
 
-`T removeMin()`
+`E removeMin()`
 : Returns and removes an element with the minimum priority value.
 
-`void changePriority(T element, double priority)`
+`void changePriority(E element, double priority)`
 : Updates the given element's associated priority value.
 
 `int size()`
