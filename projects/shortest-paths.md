@@ -26,7 +26,6 @@ In this project, we will compare 2 graph representations, 2 graph algorithms, an
 
 - **Design and implement** graph representations and graph algorithms for image processing.
 - **Analyze and compare** the runtimes and affordances for graph algorithms.
-- **Critique and connect** the implications of automated image processing algorithms.
 
 <details markdown="block">
 <summary>What am I submitting at the end of this project?</summary>

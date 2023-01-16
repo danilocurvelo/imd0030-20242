@@ -23,7 +23,6 @@ In this project, we will compare 4 implementations of priority queues to simulat
 
 - **Design and implement** multiple data structures to solve complex problems.
 - **Analyze and compare** implementation runtimes and interface affordances.
-- **Critique and connect** the design of content moderation to information society.
 
 In the next project, we'll also use your priority queues as a building block for shortest paths.
 
