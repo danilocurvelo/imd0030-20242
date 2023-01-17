@@ -50,7 +50,7 @@ How might we efficiently perform binary search on nodes?
 The **binary search tree** (BST) is a hierarchical node-based data structure designed for efficient binary search. Each node in a binary search tree has a left and right child node, where all the elements to the left are less than the current element and all the elements to the right are greater than the current element. Binary search trees are commonly used to implement sets or maps.
 
 Set abstract data type
-: A collection of unique elements or "keys". Unlike lists and deques, sets do not maintain indices for each element, which enables more effcieint data structure implementations.
+: A collection of unique elements or "keys". Unlike lists and deques, sets do not maintain indices for each element, which enables more efficient data structure implementations.
 
 Map abstract data type
 : A collection that associates each unique key with a value. Maps are like sets except each key can have a (not necessarily unique) value.
