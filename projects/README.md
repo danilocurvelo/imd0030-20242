@@ -132,12 +132,12 @@ At this point, you should be able to run the `MapServer` class (located in the `
 
 ```
 [main] INFO io.javalin.Javalin - Starting Javalin ...
-[main] INFO org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 11.0.16+8-post-Debian-1deb11u1
+[main] INFO org.eclipse.jetty.server.Server - jetty-11.0.13; built: 2022-12-07T20:47:15.149Z; git: a04bd1ccf844cf9bebc12129335d7493111cbff6; jvm 11.0.16+8-post-Debian-1deb11u1
 [main] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
-[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started i.j.j.@e4487af{/,null,AVAILABLE}
-[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@e50a6f6{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
-[main] INFO org.eclipse.jetty.server.Server - Started Server@1df82230{STARTING}[11.0.12,sto=0] @4485ms
-[main] INFO io.javalin.Javalin -
+[main] INFO org.eclipse.jetty.server.handler.ContextHandler - Started i.j.j.@683dbc2c{/,null,AVAILABLE}
+[main] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@2b6856dd{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+[main] INFO org.eclipse.jetty.server.Server - Started Server@3c72f59f{STARTING}[11.0.13,sto=0] @4349ms
+[main] INFO io.javalin.Javalin - 
        __                  ___          ______
       / /___ __   ______ _/ (_)___     / ____/
  __  / / __ `/ | / / __ `/ / / __ \   /___ \
@@ -147,8 +147,8 @@ At this point, you should be able to run the `MapServer` class (located in the `
        https://javalin.io/documentation
 
 [main] INFO io.javalin.Javalin - Listening on http://localhost:8080/
-[main] INFO io.javalin.Javalin - You are running Javalin 5.1.4 (released November 12, 2022).
-[main] INFO io.javalin.Javalin - Javalin started in 384ms \o/
+[main] INFO io.javalin.Javalin - You are running Javalin 5.3.1 (released January 8, 2023).
+[main] INFO io.javalin.Javalin - Javalin started in 309ms \o/
 ```
 
 You're done! All the app features work because we've provided reference implementations for each interface that we'll learn in this class. The goal of this approach is to enable you to compare different ways to implement the same functionality, each with their own trade-offs. Through studying interfaces and implementations, we'll gain a deeper understanding about why programs are designed the way they are.
