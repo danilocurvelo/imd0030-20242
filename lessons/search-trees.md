@@ -31,7 +31,7 @@ Representation
 
 Functionality
 : The `addAll` method adds new elements to the data type. After the elements are added, the entire array is re-sorted to maintain the sorted representation.
-: The `allMatches` method returns all the elements that start with the given prefix. Since the terms are stored in a sorted array, we can use binary search to find find the first term that starts with the prefix in the sorted array and then iterate to the right to collect the all the remaining prefix-matching terms.
+: The `allMatches` method returns all the elements that start with the given prefix. Since the terms are stored in a sorted array, we can use binary search to find the first term that starts with the prefix in the sorted array and then iterate to the right to collect the all the remaining prefix-matching terms.
 
 `BinarySearchAutocomplete` provides a very efficient `allMatches`, but needs to spend a lot of time sorting all the elements in the data type after each call to `addAll`. Even if we add only one element, putting that element in the right place in the sorted array takes at least linear time. If `addAll` is called infrequently, this might not be a problem. But, in real-world mapping applications, we might need to respond to new information about the world. How might we design a more robust data type that can not only find elements efficiently, but also add or remove elements efficiently too?
 
