@@ -263,13 +263,21 @@ Explain the part of the `TernarySearchTreeAutocomplete` class that you're most p
 ### Asymptotic analysis
 
 {: .deliverable }
-Give a big-theta bound for the worst-case runtime of the `addAll` and `allMatches` methods for each implementation, including `TreeSetAutocomplete`, with respect to *N*, the total number of terms **already stored in the data structure**. Explain the runtime of each implementation in a couple sentences while referencing the code.
+Give a big-theta bound for the worst-case runtime of the `addAll` and `allMatches` methods for each implementation, including `TreeSetAutocomplete`, with respect to _N_, the total number of terms **already stored in the data structure**. Explain the runtime of each implementation in a couple sentences while referencing the code.
 
-Assume all strings, including the `prefix` for `allMatches`, have a constant length. For `TernarySearchTreeAutocomplete`, assume that there are an infinite number of characters (don't assume only the 26 letters in the alphabet).
+As you perform your asymptotic analysis, make sure to carefully read through and keep in mind the assumptions and hints given below.
 
-For `addAll`, assume a **constant number of terms are added to the dataset**. Whenever a resizing array is used, assume it can fit all the new terms without resizing. For `allMatches`, consider the relationship between the added terms and the prefix. What happens if all of the terms in the dataset begin with *A* and the prefix is *A*? What happens if all of the terms in the dataset begin with *B* and the prefix is *A*?
+What does the underlying data structure look like in the worst case? How are terms organized? Based on that worst case, analyze the runtime of operations performed on that data structure.
 
-`TreeSet` is implemented using a red-black tree, which has the same asymptotic runtime as a left-leaning red-black tree or a 2-3 tree. `Collections.sort` uses Timsort, an optimized version of merge sort with runtime in [O(*N* log *N*)](https://drops.dagstuhl.de/opus/volltexte/2018/9467/) where *N* is the size or length of the collection or array.
+`addAll`
+: Assume a constant number of terms are added to a dataset that already contains _N_ terms.
+: Assume that arrays can accommodate all the new terms without resizing.
+: `Collections.sort` uses Timsort, an optimized version of merge sort with runtime in [O(_N_ log _N_)](https://drops.dagstuhl.de/opus/volltexte/2018/9467/) where _N_ is the size or length of the collection or array.
+
+`allMatches`
+: Consider the relationship between the added terms and the prefix. How many matches will we have if all the terms in the dataset begin with _A_ and the prefix is _A_? How many matches will we have if all the terms in the data set begin with _B_ and the prefix is _A_?
+
+Assume all strings have a constant length. `TreeSet` is implemented using a red-black tree, which has the same asymptotic runtime as a left-leaning red-black tree or a 2-3 tree.
 
 ### Experimental analysis
 
