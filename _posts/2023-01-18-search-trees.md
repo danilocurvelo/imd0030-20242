@@ -29,23 +29,6 @@ Draw the trie containing all the words in: “she sells sea shells by the sea sh
 
 Then, identify the subtree containing all words starting with “se”.
 2
-Draw the trie containing all the words in: “she sells sea shells by the sea shore”. Omit null references to keep your drawing simple.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Then, identify the subtree containing all words starting with “se”.
 
 Ternary search trees
 What node represents the string CAC? Where would we insert the string CCC?
