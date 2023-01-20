@@ -123,11 +123,11 @@ Binary search trees aimed to address the linear-time worst case for adding or re
 
 To realize the promise of a more efficient tree data structure, we need stronger invariants that ensure the tree never becomes unbalanced. In inventors of the 2-3 tree hypothesized that unbalanced growth in a binary search tree occurs because adding an element requires creating a new leaf node that unevenly increases the height of the tree. For example, when elements are added in ascending order to a binary search tree, the overall height of the tree increases because the height of only the right child increases.
 
-Given that creating new leaves can lead to unbalanced growth, 2-3 trees avoid creating new leaf nodes entirely. Instead, the nodes of a 2-3 tree can expand to fit more than one key so new elements can be added by fitting them into existing nodes rather than creating new leaves. If new leaf nodes are never created, the tree can never become unbalanced!
+Given that creating new leaves can lead to unbalanced growth, 2-3 trees avoid creating new leaf nodes entirely. Instead, the nodes of a 2-3 tree can expand to fit more than one key (element) so new elements can be added by fitting them into existing nodes rather than creating new leaves. If new leaf nodes are never created, the tree can never become unbalanced!
 
 {% include youtube.html id="-ECGVvUHA5c" start="12" end="418" aspect_ratio="16/9" %}
 
-The **2-3 search tree** (often shortened to just "2-3 tree") is a _self-balancing_ search tree designed to ensure a logarithmic-height tree no matter the order that elements are added to the data structure. Each node in a binary search tree could only contain a single key per node, the nodes of a 2-3 tree can be either:
+The **2-3 search tree** (often shortened to just "2-3 tree") is a _self-balancing_ search tree designed to ensure a logarithmic-height tree no matter the order that elements are added to the data structure. Whereas each node in a binary search tree can only contain a single key per node, the nodes of a 2-3 tree can be either:
 
 2-node
 : A node that contains exactly 1 key and 2 non-null children.
