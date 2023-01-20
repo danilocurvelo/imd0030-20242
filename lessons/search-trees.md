@@ -121,7 +121,7 @@ Binary search trees aimed to address the linear-time worst case for adding or re
 
 {% include youtube.html id="yz850zzjrHQ" start="220" aspect_ratio="16/9" %}
 
-To realize the promise of a more efficient tree data structure, we need stronger invariants that ensure the tree never becomes unbalanced. In inventors of the 2-3 tree hypothesized that unbalanced growth in a binary search tree occurs because adding an element requires creating a new leaf node that contributes to unevenly to the height of the tree. For example, when elements are added in ascending order to a binary search tree, the overall height of the tree increases because the height of only the right child increases.
+To realize the promise of a more efficient tree data structure, we need stronger invariants that ensure the tree never becomes unbalanced. In inventors of the 2-3 tree hypothesized that unbalanced growth in a binary search tree occurs because adding an element requires creating a new leaf node that unevenly increases the height of the tree. For example, when elements are added in ascending order to a binary search tree, the overall height of the tree increases because the height of only the right child increases.
 
 Given that creating new leaves can lead to unbalanced growth, 2-3 trees avoid creating new leaf nodes entirely. Instead, the nodes of a 2-3 tree can expand to fit more than one key so new elements can be added by fitting them into existing nodes rather than creating new leaves. If new leaf nodes are never created, the tree can never become unbalanced!
 
