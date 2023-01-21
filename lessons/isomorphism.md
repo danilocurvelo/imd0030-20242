@@ -151,9 +151,9 @@ The quicksort on the left always chooses the leftmost element as the pivot eleme
 >
 > Note that the visualization does not use an ideal partitioning algorithm for quicksort.
 
-### Dual-pivot quicksort and 2-3 search trees
+### Dual-pivot quicksort
 
-If choosing 1 pivot element is like choosing 1 root element in a binary node, then choosing 2 pivot elements is like choosing 2 root elements in a 3-child node. Dual-pivot quicksort chooses 2 pivots on each level, just like how 3-child nodes in 2-3 trees maintain 2 keys and 3 children.
+Dual-pivot quicksort chooses 2 pivots on each recursive call, just like how 3-child nodes in 2-3 trees maintain 2 keys and 3 children. If choosing 1 pivot element is like choosing 1 root element in a binary node, then choosing 2 pivot elements is like choosing 2 root elements in a 3-child node.
 
 {: .hint }
 Strictly speaking, dual-pivot quicksort is not isomorphic to 2-3 trees because there does not exist a one-to-one correspondence. Consider 2-3 trees that only contain 2-child nodes: the corresponding quicksort is single-pivot quicksort, not dual-pivot quicksort.
