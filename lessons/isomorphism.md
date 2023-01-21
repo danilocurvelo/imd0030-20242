@@ -119,21 +119,19 @@ Stable system sort
 Unstable system sort
 : When sorting an array of numbers or booleans, Java uses a sorting algorithm called **quicksort**. Quicksort has many variants, each of which are isomorphic to a different type of search tree such as a binary search tree and a 2-3 search tree.
 
-### Single-pivot quicksort and binary search trees
+### Partitioning
 
-Quicksort relies on the idea of recursively **partitioning** an array around a pivot element, `data[i]`. A partitioning of an array rearranges its elements in a weaker way than sorting by requiring elements in the order:
+Quicksort relies on the idea of recursively **partitioning** an array around a pivot element, `data[i]`.
+
+{% include youtube.html id="Z8G5oWSCQjU" start="9" aspect_ratio="16/9" %}
+
+A partitioning of an array rearranges its elements in a weaker way than sorting by requiring elements in the order:
 
 - All elements to the left of the pivot are less than or equal to the pivot element.
 - The **pivot element**, `data[i]`, moves to position `j`. (The pivot might not need to move.)
 - All elements to the right of the pivot are greater than or equal to the pivot element.
 
-Consider partitioning the array [5, 550, 330, 10, 4, 10, 9] around the pivot element `data[3]` (the first 10).
-
-<details markdown="block">
-<summary>Is [5, 9, 10, 4, 10, 550, 330] a valid partitioning?</summary>
-
-The answer to this question is not simply yes or no because it depends whether the index of the pivot. If the pivot index `j = 2`, then this is not a valid partitioning because the element 4 is to the right of the pivot. If the pivot index `j = 4`, then this is a valid partitioning because all requirements are satisfied.
-</details>
+### Single-pivot quicksort and binary search trees
 
 Partitioning an array around a pivot element in quicksort is like selecting a root element in a binary search tree. All the elements in the left subtree will be less than the root element, and all the elements in the right subtree will be greater than the root element.
 
