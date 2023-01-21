@@ -32,7 +32,7 @@ Before we introduce red-black trees formally, we'll first need a way to reorgani
 
 {% include youtube.html id="kkd8d0QhiQ0" start="202" aspect_ratio="16/9" %}
 
-Each rotation makes a local adjustment to the tree. Sometimes, this local adjustment increases the height of the tree; other times, it decreases the height of the tree. However, rotations always respect the binary search tree invariant. Elements that are ordered between **B** and **D** in the example below stay ordered after a rotation.
+Each rotation makes a local adjustment to the tree. Sometimes, this local adjustment increases the height of the tree; other times, it decreases the height of the tree; and in yet other times the overall height of the tree might not change at all. However, rotations always respect the binary search tree invariant. Elements that are ordered between **B** and **D** in the example below stay ordered after a rotation.
 
 ![Rotations respect the binary search tree invariant]({{ site.baseurl }}{% link assets/images/rotation-invariants.svg %})
 
