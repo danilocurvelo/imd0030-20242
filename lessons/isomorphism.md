@@ -138,6 +138,8 @@ A partitioning of an array rearranges its elements in a weaker way than sorting 
 
 Partitioning an array around a pivot element in quicksort is like selecting a root element in a binary search tree. All the elements in the left subtree will be less than the root element, and all the elements in the right subtree will be greater than the root element.
 
+{% include youtube.html id="9NEzYoZmM3Y" aspect_ratio="16/9" %}
+
 ![Quicksort isomorphism to binary search trees]({{ site.baseurl }}{% link assets/images/quicksort-bst.svg %})
 
 The quicksort on the left always chooses the leftmost element as the pivot element and uses an ideal partitioning that maintains the relative order of the remaining elements. The binary search tree on the right shows the result of inserting each element in the left-to-right input order given by the array.
