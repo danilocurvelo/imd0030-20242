@@ -109,9 +109,11 @@ Right child
 {% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/52DemoTST/index.html" aspect_ratio="16/9" %}
 
 {: .hint }
-> Open the Algorithm Visualizations module to visualize ternary search trees. Insert words and predict how the data structure will change. Notice that the visualization differs from the slides in how they represent complete words.
+> Open the Algorithm Visualizations module to visualize ternary search trees. Insert words and predict how the data structure will change.
 >
 > [Ternary Search Tree Visualization](https://www.cs.usfca.edu/~galles/visualization/TST.html){: .btn .btn-purple target="_blank" }
+>
+> Note that the visualization differs from the slides in how it marks complete words by going down one more time and creating an an extra node.
 
 ## 2-3 Trees
 
