@@ -32,7 +32,7 @@ chance: yes
 > 1. Add "known" words.
 > 1. Return how many "observed" words are present in "known".
 >
-> Give a worst-case asymptotic analysis for all methods where _N_ is the number of "observed" words and MM is the number of "known" words.
+> Give a worst-case asymptotic analysis for all methods where _N_ is the number of "observed" words and _M_ is the number of "known" words.
 
 {: .note .d-none }
 > Describe 3 approaches to design a data type that can:
@@ -95,7 +95,7 @@ chance: yes
 > 1. Undo the last post written by a given user.
 > 1. Return a list of all posts written by a given user in the order that they were added.
 >
-> Give a worst-case asymptotic analysis for all methods where _N_ is the number of posts and MM is the number of users.
+> Give a worst-case asymptotic analysis for all methods where _N_ is the number of posts and _M_ is the number of users.
 
 {: .note .d-none }
 > Describe 3 approaches to design a data type that can:
@@ -104,7 +104,7 @@ chance: yes
 > 1. Return the number of votes for a given candidate.
 > 1. Return the candidate with the greatest number of votes.
 >
-> Give a worst-case asymptotic analysis for all methods where _N_ is the number of votes and MM is the number of candidates.
+> Give a worst-case asymptotic analysis for all methods where _N_ is the number of votes and _M_ is the number of candidates.
 
 <script>
 const email = document.getElementById("email");
