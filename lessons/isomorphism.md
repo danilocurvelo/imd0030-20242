@@ -225,7 +225,7 @@ Counting sort
 
 {% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/51DemoKeyIndexedCounting/index.html" aspect_ratio="16/9" %}
 
-### Radix sorts and tries
+### Radix sorts
 
 Counting sorts work great with small integer values when we know the range between the smallest integer and the largest integer. But many other data types, like strings, are more difficult to enumerate because we can always make a more complicated string. For example, suppose we have a string "a" and we decide to put it at index 0 in the count array. Where would the string "b" belong in the count array? We know it comes after "a", but how far after "a"? We might run into strings like "aa", "aaa", "aaaa", etc. and not know how many spaces to reserve for these elements.
 
@@ -239,13 +239,12 @@ Least-Significant Digit (LSD) radix sort
 : Starts from the rightmost (in English, the least significant) character and proceeds to the left.
 : For each index into the strings, iteratively counting sorts all the elements again on the current index.
 
-
 {: .hint }
 > Open the VisuAlgo module to visualize sorting algorithms. Press `Esc` to exit the e-Lecture Mode, and choose **RAD** from the top navigation bar to switch to an LSD radix sort. Run the sorting algorithm using **Sort** from the bottom left menu.
 >
 > [Sorting Visualization](https://visualgo.net/en/sorting){: .btn .btn-purple target="_blank" }
 
-### 3-way radix quicksort and TSTs
+### 3-way radix quicksort
 
 Is there a sorting algorithm analogy for ternary search trees? It exists, and it combines the ideas of radix sort with quicksort just like how ternary search trees represent a midpoint between tries and binary search trees.
 
