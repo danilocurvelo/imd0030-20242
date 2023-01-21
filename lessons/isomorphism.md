@@ -22,7 +22,7 @@ youtube: yes
 
 {% include learning_objectives.md lesson="Left-Leaning Red-Black Trees" %}
 
-Although 2-3 trees addressed the worst-case runtime problem with binary search trees by overstuffing and splitting nodes, they are rarely used in the real world. Overstuffing and splitting nodes involves constructing a lot of new 2-nodes and 3-nodes, which is not only complicated to design and implement, but also incurs a significant runtime cost since new nodes are constantly created in a 2-3 tree. Although creating new nodes doesn't affect the asymptotic analysis, this cost is often noticeable in experimental analysis.
+Although 2-3 trees addressed the worst-case runtime problem with binary search trees by overstuffing and splitting nodes, they are rarely used in the real world. Overstuffing and splitting nodes involves constructing many 2-nodes and 3-nodes, which is not only complicated to design and implement, but also incurs a significant runtime cost since new nodes are constantly created or removed from a 2-3 tree. While this doesn't affect the asymptotic analysis, it is often noticeable in experimental analysis.
 
 In Java, `TreeSet` is the standard implementation of a set that uses a self-balancing binary search tree data structure called a **red-black tree**. We were careful to note that 2-3 trees were not binary search trees because 3-nodes (nodes with 2 keys and 3 non-null children) can't be found in a binary search tree. The difference with red-black trees is that they are valid binary search trees. Red-black trees take the idea of overstuffing and splitting in a 2-3 tree and map them back to binary search tree operations. This data structure has all the asymptotic runtime guarantees of a 2-3 tree without the experimental runtime slowdowns.
 
