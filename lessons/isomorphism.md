@@ -117,7 +117,10 @@ Stable system sort
 > Timsort is also an _adaptive sort_ that changes behavior depending on the input array. Many real-world arrays are not truly random. They often contain _natural runs_, or sorted subsequences of elements that could be efficiently merged. Rather than recursively dividing top-down, Timsort works bottom-up by identifying natural runs in the input array and combining them from left to right.
 
 Unstable system sort
-: When sorting an array of numbers or booleans, Java uses a sorting algorithm called **quicksort**. Quicksort has many variants, each of which are isomorphic to a different type of search tree such as a binary search tree and a 2-3 search tree.
+: When sorting an array of numbers or booleans, Java uses a sorting algorithm called **quicksort**. Quicksort has many variants, but we'll focus on two in this course:
+
+  1. Single-pivot quicksort, which is isomorphic to binary search trees.
+  2. Dual-pivot quicksort, which is like a 2-3 tree that only contains 3-nodes.
 
 ### Partitioning
 
@@ -131,7 +134,7 @@ A partitioning of an array rearranges its elements in a weaker way than sorting 
 - The **pivot element**, `data[i]`, moves to position `j`. (The pivot might not need to move.)
 - All elements to the right of the pivot are greater than or equal to the pivot element.
 
-### Single-pivot quicksort and binary search trees
+### Single-pivot quicksort
 
 Partitioning an array around a pivot element in quicksort is like selecting a root element in a binary search tree. All the elements in the left subtree will be less than the root element, and all the elements in the right subtree will be greater than the root element.
 
