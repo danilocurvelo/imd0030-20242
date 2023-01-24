@@ -20,16 +20,16 @@ title: Shortest Paths
 : {% include learning_objectives.md lesson="Dynamic Programming" %}
 : **Asm**{: .label .label-green }[**Assessment 3**]({{ site.baseurl }}{% link assessments/3.md %})
 
-#### Graph Applications
+#### Applications
 
 2/27
 : **Disjoint Sets**
 
 3/1
-: **Reduction Algorithms**
+: **Program Decomposition**
 
 3/2
-: **Sec**{: .label .label-purple }**Graph Algorithms**
+: **Sec**{: .label .label-purple }**Applications**
 
 3/3
-: **Knowledge Graphs**
+: **Inclusive Design**
