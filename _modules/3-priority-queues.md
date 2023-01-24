@@ -24,6 +24,7 @@ title: Priority Queues
 #### Midterm Interview
 
 2/6
+: **Inclusive Design**
 : [**Midterm Interview**]({{ site.baseurl }}{% link assessments/midterm.md %})
 
 2/8
