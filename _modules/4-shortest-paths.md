@@ -33,3 +33,4 @@ title: Shortest Paths
 
 3/3
 : **Inclusive Design**
+: {% include learning_objectives.md lesson="Inclusive Design" %}

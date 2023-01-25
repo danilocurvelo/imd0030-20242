@@ -64,6 +64,12 @@ Affordance Analysis:
     - Identify the affordances of a program abstraction such as a class or interface.
     - Evaluate affordances by applying the 3 value-sensitive design principles.
 
+Inclusive Design:
+  Objectives:
+    - Identify assumptions about users embedded in the design of a technology.
+    - Given an assumption, explain a scenario where the user experience breaks down.
+    - Given an assumption, identify multiple ways to make the design more inclusive.
+
 Graph Data Type:
   Objectives:
     - Identify the features and representation for an example graph or graph problem.

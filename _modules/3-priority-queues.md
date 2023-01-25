@@ -25,6 +25,7 @@ title: Priority Queues
 
 2/6
 : **Inclusive Design**
+: {% include learning_objectives.md lesson="Inclusive Design" %}
 : [**Midterm Interview**]({{ site.baseurl }}{% link assessments/midterm.md %})
 
 2/8
