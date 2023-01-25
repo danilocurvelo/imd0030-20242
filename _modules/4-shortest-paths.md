@@ -27,7 +27,8 @@ title: Shortest Paths
 : {% include learning_objectives.md lesson="Disjoint Sets" %}
 
 3/1
-: **Program Decomposition**
+: **System Design**
+: {% include learning_objectives.md lesson="System Design" %}
 
 3/2
 : **Sec**{: .label .label-purple }**Applications**

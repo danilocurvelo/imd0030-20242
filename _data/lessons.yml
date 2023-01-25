@@ -105,3 +105,9 @@ Disjoint Sets:
     - Trace Kruskal's algorithm to find a minimum spanning tree in a graph.
     - Compare Kruskal's algorithm runtime on different disjoint sets implementations.
     - Describe opportunities to improve algorithm efficiency by identifying bottlenecks.
+
+System Design:
+  Objectives:
+    - Explain the principle of composition in program design and in system design.
+    - Explain the limits of monolithic system architecture design.
+    - Identify data structures used in database, storage, and load-balancing systems.
