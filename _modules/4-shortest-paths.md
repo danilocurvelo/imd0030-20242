@@ -23,7 +23,7 @@ title: Shortest Paths
 #### Applications
 
 2/27
-: **Disjoint Sets**
+: [**Disjoint Sets**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#disjoint-sets)
 : {% include learning_objectives.md lesson="Disjoint Sets" %}
 
 3/1
