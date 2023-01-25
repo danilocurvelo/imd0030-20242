@@ -24,6 +24,7 @@ title: Shortest Paths
 
 2/27
 : **Disjoint Sets**
+: {% include learning_objectives.md lesson="Disjoint Sets" %}
 
 3/1
 : **Program Decomposition**

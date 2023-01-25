@@ -99,3 +99,9 @@ Dynamic Programming:
     - Identify whether a recursive algorithm can be rewritten using DP.
     - Explain how unique paths can be counted using recursion and DP.
     - Explain how a min-cost seam can be found using recursion and DP.
+
+Disjoint Sets:
+  Objectives:
+    - Trace Kruskal's algorithm to find a minimum spanning tree in a graph.
+    - Compare Kruskal's algorithm runtime on different disjoint sets implementations.
+    - Describe opportunities to improve algorithm efficiency by identifying bottlenecks.
