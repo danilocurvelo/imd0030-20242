@@ -1,6 +1,6 @@
-{%- assign generated = include.id | prepend: "https://docs.google.com/presentation/d/" | append: "/embed" -%}
+{%- assign generated = include.id | prepend: "https://docs.google.com/presentation/d/" | append: "/embed?rm=minimal" -%}
 <div class="module full-width">
-<iframe src="{{ include.src | default: generated }}?rm=minimal"
+<iframe src="{{ include.src | default: generated }}"
         {% if include.id %}
         class="slide"
         {% endif %}
