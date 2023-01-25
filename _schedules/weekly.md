@@ -24,7 +24,7 @@ schedule:
       - name: Office Hours
         start: 1:30 PM
         end: 3:30 PM
-        location: SIG 228
+        location: SAV 155
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
@@ -44,7 +44,7 @@ schedule:
       - name: Office Hours
         start: 11:30 AM
         end: 3:30 PM
-        location: SIG 228
+        location: SAV 155
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
@@ -63,7 +63,7 @@ schedule:
       - name: Office Hours
         start: 1:30 PM
         end: 3:30 PM
-        location: SIG 228
+        location: SAV 139
       - name: Lecture
         start: 3:30 PM
         end: 4:30 PM
