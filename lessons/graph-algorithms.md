@@ -289,3 +289,101 @@ public static long fib(int N) {
     return F[N];
 }
 ```
+
+## Disjoint Sets
+
+{% include learning_objectives.md lesson="Disjoint Sets" %}
+
+A few weeks ago, we learned Prim's algorithm for finding a minimum spanning tree in a graph. Prim's uses the same overall graph algorithm design pattern as breadth-first search (BFS) and Dijkstra's algorithm. All three algorithms:
+
+- use a queue or a priority queue to determine the next vertex to visit,
+- finish when all the reachable vertices have been visited,
+- and depend on a `neighbors` method to gradually explore the graph vertex-by-vertex.
+
+Even depth-first search (DFS) relies on the same pattern. Instead of iterating over a queue or a priority queue, DFS uses recursive calls to determine the next vertex to visit. But not all graph algorithms share this same pattern. In this lesson, we'll explore an example of a graph algorithm that works in an entirely different fashion.
+
+### Kruskal's algorithm
+
+**Kruskal's algorithm** is another algorithm for finding a minimum spanning tree (MST) in a graph. Kruskal's algorithm has just a few simple steps:
+
+1. Given a list of the edges in a graph, sort the list of edges by their edge weights.
+2. Build up a minimum spanning tree by considering each edge from least weight to greatest weight.
+  1. Check if adding the current edge would introduce a cycle.
+  2. If it doesn't introduce a cycle, add it! Otherwise, skip the current edge and try the next one.
+
+The algorithm is done when |_V_| - 1 edges have been added to the growing MST. This is because a spanning tree connecting |_V_| vertices needs exactly |_V_| - 1 undirected edges.
+
+{% include youtube.html id="71UQH7Pr9kU" aspect_ratio="16/9" %}
+
+You can think of Kruskal's algorithm as another way of repeatedly applying the cut property.
+
+Prim's algorithm
+: Applied the cut property by selecting the minimum-weight crossing edge on the cut between the visited vertices and the unvisited vertices. In each iteration of Prim's algorithm, we chose the next-smallest weight edge to an unvisited vertex. Since we keep track of a set of visited vertices, Prim's algorithm never introduces a cycle.
+
+Kruskal's algorithm
+: Instead of growing the MST outward from a single start vertex, there are lots of small independent **connected components**, or disjoint (non-overlapping) sets of vertices that are connected to each other.
+
+{% include youtube.html id="vmWSnkBVvQ0" aspect_ratio="16/9" %}
+
+Informally, you can think of each connected component as its own "island". Initially, each vertex is its own island. These independent islands are gradually connected to neighboring islands by choosing the next-smallest weight edge that doesn't introduce a cycle.[^1]
+
+[^1]: Robert Sedgewick and Kevin Wayne. 2022. [Minimum Spanning Trees](https://www.cs.princeton.edu/courses/archive/spring22/cos226/lectures/43MinimumSpanningTrees.pdf). In COS 226: Spring 2022.
+
+![Kruskal's algorithm]({{ site.baseurl }}{% link assets/images/kruskals-algorithm.webp %})
+
+In case 2 (on the left of the above slide), adding an edge _v-w_ creates a cycle _within_ a connected component. In case 1 (on the right of the above slide), adding an edge _v-w_ merges two connected components, forming a larger connected component.
+
+### Disjoint sets abstract data type
+
+The **disjoint sets (aka union-find)** abstract data type is used to maintain the state of connected components. Specifically, our disjoint sets data type stores all the vertices in a graph as elements. A Java interface for disjoint sets might include two methods.
+
+`find(v)`
+: Returns the representative for the given vertex. In Kruskal's algorithm, we only add the current edge to the result if `find(v) != find(w)`.
+
+`union(v, w)`
+: Connects the two vertices _v_ and _w_. In Kruskal's algorithm, we use this to keep track of the fact that we joined the two connected components.
+
+Using this `DisjointSets` data type, we can now implement Kruskal's algorithm.
+
+```java
+kruskalMST(Graph graph) {
+    // Create a DisjointSets implementation storing all vertices
+    DisjointSets components = new DisjointSetsImpl(graph.vertices());
+    // Get the list of edges in the graph
+    List<Edge> edges = graph.edges();
+    // Sort the list of edges by weight
+    edges.sort(Double.comparingDouble(Edge::weight));
+
+    List<Edge> result = new ArrayList<>();
+    int i = 0;
+    while (result.size() < graph.vertices().size() - 1) {
+        Edge e = edges.get(i);
+        if (!components.isConnected(e.from, e.to)) {
+            components.connect(e.from, e.to);
+            result.add(e);
+        }
+        i += 1;
+    }
+    return result;
+}
+```
+
+The remainder of this lesson will focus on how we can go about implementing disjoint sets.
+
+{: .hint }
+> Look-over the following slides where Robert Sedgewick and Kevin Wayne introduce 3 ways of implementing the disjoint sets (union-find) abstract data type.
+>
+> [Union-Find data structures](https://www.cs.princeton.edu/courses/archive/spring22/cos226/lectures/15UnionFind.pdf){: .btn .btn-purple target="_blank" }
+
+Quick-find
+: Optimizes for the `find` operation.
+
+Quick-union
+: Optimizes for the `union` operation, but doesn't really succeed.
+
+{% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/15DemoQuickUnion/index.html" aspect_ratio="16/9" %}
+
+Weighted quick-union
+: Addresses the worst-case height problem introduced in quick-union.
+
+{% include slides.html src="https://www.cs.princeton.edu/courses/archive/spring22/cos226/demos/15DemoWeightedQuickUnion/index.html" aspect_ratio="16/9" %}
