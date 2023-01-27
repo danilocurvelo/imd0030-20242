@@ -128,7 +128,7 @@ Two `PriorityNode` objects are considered equal if and only if their elements ar
 <details markdown="block">
 <summary>How will this property of PriorityNode equality help you implement MinPQ?</summary>
 
-`MinPQ` does not allow duplicate elements, but does allow duplicate priority values. When using Java collections such as a `List`, methods like `List.contains` or `List.remove` will call `equalsTo` to check for equality. The following `contains` call will return `true`, and the `remove` call will successfully remove the priority node even though their priority values are different.
+`MinPQ` does not allow duplicate elements, but does allow duplicate priority values. When using Java collections such as a `List`, methods like `List.contains` or `List.remove` will call the objects' `equals` method to check for equality. The following `contains` call will return `true`, and the `remove` call will successfully remove the priority node even though their priority values are different.
 
 ```java
 elements.contains(new PriorityNode<>("example", 1));
