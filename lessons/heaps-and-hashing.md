@@ -106,7 +106,7 @@ Array representation is the default and assumed representation for a binary heap
 
 Node representation
 : Explicitly maintains tree structure through a hierarchy of references.
-: Only maintains parent-to-child references, so which makes `swim` challenging to efficiently implement.
+: Only maintains parent-to-child references, which makes `swim` challenging to efficiently implement.
 
 Array representation
 : Implicitly maintains tree structure through a mapping between array indices and tree location.
