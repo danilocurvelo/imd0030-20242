@@ -284,7 +284,7 @@ Assume all strings have a constant length. `TreeSet` is implemented using a red-
 {: .deliverable }
 Compare the runtimes across different implementations. Are certain algorithms faster than others? Are there any disagreements between the runtimes you hypothesized in asymptotic analysis and the runtimes you observed in your experimental graphs? Describe how differences between the theoretical assumptions made for asymptotic analysis and the actual settings in `RuntimeExperiments` might explain those disagreements. For `allMatches`, describe how the default prefix affects the experimental analysis.
 
-Run the provided `RuntimeExperiments` to compare the real-world runtime of each implementation. For each implementation, `RuntimeExperiments` constructs an empty instance and records the number of seconds to add _N_ terms to the dataset and then compute all matches for the `prefix` (e.g. _Sea_).
+Run the provided `RuntimeExperiments` to compare the real-world runtime of each implementation. For each implementation, `RuntimeExperiments` constructs an empty instance and records the number of seconds to add _N_ terms to the dataset and then compute all matches for the `prefix` (such as _Sea_).
 
 - The first column denotes _N_, the total number of terms.
 - The second column denotes the average runtime for `addAll` in seconds.

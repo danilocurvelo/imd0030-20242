@@ -211,7 +211,7 @@ There are different ways to find duplicates in an array. `dup1` represents one w
 > - When _N_ = 1,000,000, **about 1 second**.
 > </details>
 >
-> **Many algorithms (including most algorithms in this class) are fast on tiny inputs, e.g. when _N_ < 1000**. While there may be situations where we care about the efficiency of algorithms processing tiny inputs, these differences are often unnoticeable. When they are noticeable, they may be caused by unanticipated changes in your computer's workload.
+> **Many algorithms (including most algorithms in this class) are fast on tiny inputs, such as when _N_ < 1000**. While there may be situations where we care about the efficiency of algorithms processing tiny inputs, these differences are often unnoticeable. When they are noticeable, they may be caused by unanticipated changes in your computer's workload.
 >
 > **Differences become more appreciable when _inefficient algorithms_ run on inputs of size _N_ > 1000**. Whether the runtime is tolerable depends on the problem. An inefficient algorithm may be acceptable if we only need to run it infrequently, the size of the input is not particularly big, or the amount of processing power can make up for the time.
 >
