@@ -125,7 +125,7 @@ The following slides and visualizations show a **binary max-heap** where the hea
 
 {% include learning_objectives.md lesson="Hash Tables" %}
 
-Java's `TreeSet` and `TreeMap` classes are implemented using red-black trees that guarantee logarithmic time for most individual element operations. This is a massive improvement over linear search: a balanced search tree containing over 1 million elements has a height on the order of about 20!
+Java's `TreeSet` and `TreeMap` classes are implemented using red-black trees that guarantee logarithmic time for most individual element operations. This is a massive improvement over sequential search: a balanced search tree containing over 1 million elements has a height on the order of about 20!
 
 But it turns out that we can do even better by studying Java's `HashSet` and `HashMap` classes, which are implemented using hash tables. Under certain conditions, hash tables can have **constant time** for most individual element operations---regardless of whether your hash table contains 1 million, 1 billion, 1 trillion, or even more elements.
 
