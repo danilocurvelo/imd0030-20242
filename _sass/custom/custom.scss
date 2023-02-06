@@ -6,11 +6,6 @@
 @import 'schedule';
 @import 'staffer';
 
-// Monkey patch
-.search-result {
-  padding: $sp-1 $sp-3;
-}
-
 // Overrides
 code {
   font-size: 14px;
