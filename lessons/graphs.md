@@ -76,7 +76,7 @@ Vertex (node)
 
 Edge
 : A direct connection between two vertices _v_ and _w_ in a graph, usually written as (_v_, _w_). Optionally, each edge can have an associated **weight**.
-: In `MapGraph`, edges are represented using an `Edge` class.
+: In `MapGraph`, edges are represented using the `Edge` class. The weight of an edge represents the physical distance between the two points _adjacent_ to the edge.
 
 Given a vertex, its edges lead to **neighboring** (or **adjacent**) vertices. In this course, we will always assume two restrictions on edges in a graph.
 
