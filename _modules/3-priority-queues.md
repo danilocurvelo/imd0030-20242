@@ -33,13 +33,13 @@ title: Priority Queues
 : [**Midterm Interview**]({{ site.baseurl }}{% link assessments/midterm.md %})
 
 2/8
-: *Ex Machina*
+: *Coded Bias*
 
 2/9
 : **Sec**{: .label .label-purple }**Midterm Interview**
 
 2/10
-: *Ex Machina*
+: *Coded Bias*
 
 #### Graphs
 
