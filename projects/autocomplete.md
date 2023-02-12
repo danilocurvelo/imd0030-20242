@@ -65,38 +65,26 @@ Implementations of `Autocomplete` must provide the following methods:
 `List<CharSequence> allMatches(CharSequence prefix)`
 : Returns a list of all terms that begin with the same characters as the given prefix.
 
-Given the terms [alpha, delta, do, cats, dodgy, pilot, dog], `allMatches("do")` should return [do, dodgy, dog] in any order. Here's this example using the `TreeSetAutocomplete` class included in the project.
+Given the terms [alpha, delta, do, cats, dodgy, pilot, dog], `allMatches("do")` should return [do, dodgy, dog] in any order. Try this example yourself by writing a new test case in the `AutocompleteTests` class. You can write additional test cases like this to assist in debugging.
 
 ```java
-List<CharSequence> terms = new ArrayList<>();
-terms.add("alpha");
-terms.add("delta");
-terms.add("do");
-terms.add("cats");
-terms.add("dodgy");
-terms.add("pilot");
-terms.add("dog");
+@Test
+void compareSimple() {
+    List<CharSequence> terms = List.of(
+        "alpha", "delta", "do", "cats", "dodgy", "pilot", "dog"
+    );
+    Autocomplete testing = createAutocomplete();
+    testing.addAll(terms);
 
-// Choose your Autocomplete implementation.
-Autocomplete autocomplete = new TreeSetAutocomplete();
-autocomplete.addAll(terms);
-// Choose your prefix string.
-CharSequence prefix = "do";
-List<CharSequence> matches = autocomplete.allMatches(prefix);
-for (CharSequence match : matches) {
-    System.out.println(match);
+    CharSequence prefix = "do";
+    List<CharSequence> expected = List.of("do", "dodgy", "dog");
+    List<CharSequence> actual = autocomplete.allMatches(prefix);
+
+    assertEquals(expected.size(), actual.size());
+    assertTrue(expected.containsAll(actual));
+    assertTrue(actual.containsAll(expected));
 }
 ```
-
-Try this example yourself!
-
-1. Open the **Project tool window**, right-click the "**src**" folder, select **New \| Java Class**, and give the new class a name such as `SimpleExample`.
-1. Start typing "main" and press **Tab** or **Enter** on your keyboard. IntelliJ [should automatically expand it](https://youtu.be/ffBeoE6NBSs?t=27) to `public static void main(String[] args)`.
-1. Copy and paste the code snippet into your generated `main` method.
-1. Move your cursor over the red-colored text for the `List` declaration that you just pasted. In the dropdown, select the suggestion to import the classes from `java.util`.
-1. Finally, [run the class](https://www.jetbrains.com/help/idea/running-applications.html#quick-way) by finding the green ▶️ button in the gutter next to the `SimpleExample` class definition and choosing **Run 'SimpleExample.main()'**.
-
-If everything works, you should see `[do, dodgy, dog]` in the run tool window.
 
 ### Reference implementation
 
