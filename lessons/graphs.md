@@ -61,7 +61,7 @@ Here's a breakdown of the data type for the `neighbors` variable:
 
 ![U District map with two markers on NE 43rd St]({{ site.baseurl }}{% link assets/images/u-district-map.webp %})
 
-In this image, the `Point` labeled A represents the intersection _Brooklyn Ave NE & NE 43rd St_ while the `Point` labeled B represents the intersection _University Way NE & NE 43rd St_. We might say that the two points are "neighbors" because there's a stretch of _NE 43rd St_ in front of the light rail station that directly connects the two points.
+In this image, the `Point` labeled A represents the intersection _Brooklyn Ave NE & NE 43rd St_ while the `Point` labeled B represents the intersection _University Way NE & NE 43rd St_. We say that the two points are "neighbors" because there's a stretch of _NE 43rd St_ in front of the light rail station that directly connects the two points.
 
 More generally, a graph is a data type composed of vertices and edges defined by the client. In Husky Maps, the vertices are unique `Point` objects while the edges are stretches of road connecting points. Street intersections are connected to other street intersections. Unlike lists, deques, sets, maps, and priority queues that are defined largely by how they organize elements, graphs are defined by vertices and edges that define relationships between vertices.
 
