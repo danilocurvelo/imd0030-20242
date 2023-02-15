@@ -34,5 +34,4 @@ title: Shortest Paths
 : **Sec**{: .label .label-purple }**Applications**
 
 3/3
-: **Inclusive Design**
-: {% include learning_objectives.md lesson="Inclusive Design" %}
+: **Iterative Design**
