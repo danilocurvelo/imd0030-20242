@@ -5,7 +5,7 @@ title: Final Portfolio
 #### Conclusion
 
 3/6
-: **Research**
+: **Election Integrity**
 
 3/8
 : **Ask us anything**
