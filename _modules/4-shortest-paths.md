@@ -9,6 +9,7 @@ title: Shortest Paths
 
 2/22
 : [**Shortest Paths Trees**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#shortest-paths-trees)
+  : [Slides]({{ site.baseurl }}{% post_url 2023-02-22-shortest-paths-trees %})
 : {% include learning_objectives.md lesson="Shortest Paths Trees" %}
 : **Prj**{: .label .label-yellow }[**Shortest Paths**]({{ site.baseurl }}{% link projects/shortest-paths.md %})
 
@@ -17,6 +18,7 @@ title: Shortest Paths
 
 2/24
 : [**Dynamic Programming**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#dynamic-programming)
+  : [Slides]({{ site.baseurl }}{% post_url 2023-02-24-dynamic-programming %})
 : {% include learning_objectives.md lesson="Dynamic Programming" %}
 : **Asm**{: .label .label-green }[**Assessment 3**]({{ site.baseurl }}{% link assessments/3.md %})
 
@@ -24,6 +26,7 @@ title: Shortest Paths
 
 2/27
 : [**Disjoint Sets**]({{ site.baseurl }}{% link lessons/graph-algorithms.md %}#disjoint-sets)
+  : [Slides]({{ site.baseurl }}{% post_url 2023-02-27-disjoint-sets %})
 : {% include learning_objectives.md lesson="Disjoint Sets" %}
 
 3/1
