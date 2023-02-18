@@ -93,11 +93,10 @@ while (!perimeter.isEmpty()) {
         if (newDist < oldDist) {
             edgeTo.put(to, edge);
             distTo.put(to, newDist);
-            if (perimeter.contains(to)) {
-                perimeter.changePriority(to, newDist);
-            } else {
-                perimeter.add(to, newDist);
-            } } } }
+            perimeter.addOrChangePriority(to, newDist);
+        }
+    }
+}
 4
 
 A* search
@@ -112,11 +111,10 @@ while (!perimeter.isEmpty()) {
             edgeTo.put(to, edge);
             distTo.put(to, newDist);
             double priority = newDist + graph.est(to, goal);
-            if (perimeter.contains(to)) {
-                perimeter.changePriority(to, priority);
-            } else {
-                perimeter.add(to, priority);
-            } } } }
+            perimeter.addOrChangePriority(to, priority);
+        }
+    }
+}
 5
 
 Bellman–Ford algorithm

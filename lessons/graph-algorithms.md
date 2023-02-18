@@ -66,8 +66,8 @@ public class DijkstraSolver<V> implements ShortestPathSolver<V> {
         edgeTo = new HashMap<>();
         distTo = new HashMap<>();
 
-        MinPQ<V> pq = new DoubleMapMinPQ<>();
-        pq.add(start, 0.0);
+        MinPQ<V> perimeter = new DoubleMapMinPQ<>();
+        perimeter.add(start, 0.0);
 
         // The shortest path from the start to the start requires no edges (0 cost).
         edgeTo.put(start, null);
@@ -75,8 +75,8 @@ public class DijkstraSolver<V> implements ShortestPathSolver<V> {
 
         Set<V> visited = new HashSet<>();
 
-        while (!pq.isEmpty()) {
-            V from = pq.removeMin();
+        while (!perimeter.isEmpty()) {
+            V from = perimeter.removeMin();
             visited.add(from);
 
             for (Edge<V> e : graph.neighbors(from)) {
@@ -90,11 +90,7 @@ public class DijkstraSolver<V> implements ShortestPathSolver<V> {
                 if (newDist < oldDist) {
                     edgeTo.put(to, e);
                     distTo.put(to, newDist);
-                    if (pq.contains(to)) {
-                        pq.changePriority(to, newDist);
-                    } else {
-                        pq.add(to, newDist);
-                    }
+                    perimeter.addOrChangePriority(to, newDist);
                 }
                 // This entire if block is called "relaxing" an edge.
             }

@@ -421,12 +421,7 @@ public class PrimMST<V> implements MSTSolver<V> {
                     edgeTo.put(to, edge);
                     // Diff 1. Store the edge weight rather than distance from start.
                     distTo.put(to, edge.weight);
-
-                    if (perimeter.contains(to)) {
-                        perimeter.changePriority(to, edge.weight);
-                    } else {
-                        perimeter.add(to, edge.weight);
-                    }
+                    perimeter.addOrChangePriority(to, edge.weight);
                 }
                 // This entire if block is called "relaxing" an edge.
             }
