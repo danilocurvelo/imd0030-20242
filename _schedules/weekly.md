@@ -1,7 +1,5 @@
 ---
 timeline:
-  - '8:30 AM'
-  - '9:00 AM'
   - '9:30 AM'
   - '10:00 AM'
   - '10:30 AM'
@@ -52,7 +50,7 @@ schedule:
   - name: Thursday
     events:
       - name: Sections
-        start: 8:30 AM
+        start: 9:30 AM
         end: 4:30 PM
       - name: Office Hours
         start: 3:30 PM
