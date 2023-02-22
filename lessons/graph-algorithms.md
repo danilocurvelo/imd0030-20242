@@ -79,16 +79,16 @@ public class DijkstraSolver<V> implements ShortestPathSolver<V> {
             V from = perimeter.removeMin();
             visited.add(from);
 
-            for (Edge<V> e : graph.neighbors(from)) {
-                V to = e.to;
+            for (Edge<V> edge : graph.neighbors(from)) {
+                V to = edge.to;
                 // oldDist is the weight of the best-known path not using this edge.
                 double oldDist = distTo.getOrDefault(to, Double.POSITIVE_INFINITY);
                 // newDist is the weight of the shortest path using this edge.
-                double newDist = distTo.get(from) + e.weight;
+                double newDist = distTo.get(from) + edge.weight;
                 // Check that we haven't added the vertex to the SPT already...
                 // AND the path using this edge is better than the best-known path.
                 if (!visited.contains(to) && newDist < oldDist) {
-                    edgeTo.put(to, e);
+                    edgeTo.put(to, edge);
                     distTo.put(to, newDist);
                     perimeter.addOrChangePriority(to, newDist);
                 }
