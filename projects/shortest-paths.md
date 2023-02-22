@@ -157,9 +157,6 @@ A graph algorithm that implements `ShortestPathSolver`. Finds a shortest paths t
 Edge relaxation
 : If the new distance to the neighboring node using this edge is better than the best-known `distTo` the node, update `distTo` and `edgeTo` accordingly.
 
-{: .deliverable }
-Explain the part of the `ToposortDAGSolver` class that you're most proud of programming.
-
 ### DynamicProgrammingSeamFinder
 
 A dynamic programming algorithm that implements `SeamFinder`. The dynamic programming approach processes pixels in a topological order: start from the leftmost column and work your way right, using the previous columns to help identify the best shortest paths. The difference is that dynamic programming does not create a graph representation (vertices and edges) nor does it use a graph algorithm.
