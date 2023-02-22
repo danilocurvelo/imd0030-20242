@@ -307,7 +307,7 @@ Even depth-first search (DFS) relies on the same pattern. Instead of iterating o
   1. Check if adding the current edge would introduce a cycle.
   2. If it doesn't introduce a cycle, add it! Otherwise, skip the current edge and try the next one.
 
-The algorithm is done when |_V_| - 1 edges have been added to the growing MST. This is because a spanning tree connecting |_V_| vertices needs exactly |_V_| - 1 undirected edges.
+The algorithm is done when \|_V_\| - 1 edges have been added to the growing MST. This is because a spanning tree connecting \|_V_\| vertices needs exactly \|_V_\| - 1 undirected edges.
 
 {% include youtube.html id="71UQH7Pr9kU" aspect_ratio="16/9" %}
 
