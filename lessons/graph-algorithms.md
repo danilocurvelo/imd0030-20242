@@ -87,7 +87,7 @@ public class DijkstraSolver<V> implements ShortestPathSolver<V> {
                 double newDist = distTo.get(from) + e.weight;
                 // Check that we haven't added the vertex to the SPT already...
                 // AND the path using this edge is better than the best-known path.
-                if (newDist < oldDist) {
+                if (!visited.contains(to) && newDist < oldDist) {
                     edgeTo.put(to, e);
                     distTo.put(to, newDist);
                     perimeter.addOrChangePriority(to, newDist);
