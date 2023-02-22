@@ -82,7 +82,7 @@ G
 3
 
 Dijkstra’s runtime
-Give the worst-case number of calls to add, removeMin, and changePriority.
+Give the worst-case number of calls to removeMin and addOrChangePriority.
 perimeter.add(start, 0.0);
 while (!perimeter.isEmpty()) {
     Vertex from = perimeter.removeMin();
