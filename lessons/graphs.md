@@ -413,11 +413,11 @@ public class PrimMST<V> implements MSTSolver<V> {
 
             for (Edge<V> edge : graph.neighbors(from)) {
                 V to = edge.to;
-                double bestKnownWeight = distTo.getOrDefault(to, Double.POSITIVE_INFINITY);
+                double oldWeight = distTo.getOrDefault(to, Double.POSITIVE_INFINITY);
                 // Diff 3. Check that we haven't added the vertex to the MST already...
                 // AND this edge is better than the previous best edge to this vertex
                 //     (infinity if this vertex has not been encountered before).
-                if (!visited.contains(to) && edge.weight < bestKnownWeight) {
+                if (!visited.contains(to) && edge.weight < oldWeight) {
                     edgeTo.put(to, edge);
                     // Diff 1. Store the edge weight rather than distance from start.
                     distTo.put(to, edge.weight);
