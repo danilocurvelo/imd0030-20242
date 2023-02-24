@@ -122,7 +122,7 @@ This code works fine, but in practice, you'll often see a similar version of thi
 
 {% include youtube.html id="TyZN6HKk6wE" end="393" aspect_ratio="16/9" %}
 
-The algorithm that we'll introduce to solve topological sorting [doesn't have a commonly-accepted name](https://en.wikipedia.org/wiki/Topological_sorting#Depth-first_search). The algorithm solves topological sorting by returning all the vertices in the graph in **reverse DFS postorder**:
+The algorithm that we'll introduce to solve topological sorting [doesn't have a commonly-accepted name](https://en.wikipedia.org/wiki/Topological_sorting#Application_to_shortest_path_finding). The algorithm solves topological sorting by returning all the vertices in the graph in **reverse DFS postorder**:
 
 DFS
 : Depth-first search.
