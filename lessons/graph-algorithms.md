@@ -342,20 +342,20 @@ The **disjoint sets (aka union-find)** abstract data type is used to maintain th
 Using this `DisjointSets` data type, we can now implement Kruskal's algorithm.
 
 ```java
-kruskalMST(Graph graph) {
+kruskalMST(Graph<V> graph) {
     // Create a DisjointSets implementation storing all vertices
-    DisjointSets components = new DisjointSetsImpl(graph.vertices());
+    DisjointSets<V> components = new DisjointSetsImpl<V>(graph.vertices());
     // Get the list of edges in the graph
-    List<Edge> edges = graph.edges();
+    List<Edge<V>> edges = graph.edges();
     // Sort the list of edges by weight
     edges.sort(Double.comparingDouble(Edge::weight));
 
-    List<Edge> result = new ArrayList<>();
+    List<Edge<V>> result = new ArrayList<>();
     int i = 0;
     while (result.size() < graph.vertices().size() - 1) {
-        Edge e = edges.get(i);
-        if (!components.isConnected(e.from, e.to)) {
-            components.connect(e.from, e.to);
+        Edge<V> e = edges.get(i);
+        if (!components.find(e.from).equals(components.find(e.to))) {
+            components.union(e.from, e.to);
             result.add(e);
         }
         i += 1;
