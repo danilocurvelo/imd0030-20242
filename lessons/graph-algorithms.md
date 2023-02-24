@@ -214,9 +214,6 @@ Eric Allender summarizes the importance of this insight:[^1]
 
 Although reductions provide a powerful way to define classes of equivalent computational problems, they don't necessarily lead to the most experimentally-efficient solutions. The seam finding reduction to single-pair shortest paths will be limited by the runtime for shortest paths algorithms like Dijkstra's algorithm. In practice, algorithm designers apply _algorithm design paradigms_ like **dynamic programming** to develop more efficient solutions when greater efficiency is necessary.
 
-Dynamic programmming
-: An algorithm design paradigm for speeding-up multiple recursion (algorithm that makes multiple recursive calls) that repeatedly reuses the same subproblems.
-
 ### Fibonacci sequence case study
 
 The [Fibonacci Sequence](https://en.wikipedia.org/wiki/Fibonacci_number) is a series of numbers in which each number is the sum of the two preceding numbers, starting with 0 and 1. We can represent this rule as a recurrence: F(N) = F(N - 1) + F(N - 2) with the base cases F(0) = 0 and F(1) = 1.
@@ -285,6 +282,11 @@ public static long fib(int N) {
     return F[N];
 }
 ```
+
+After learning both top-down and bottom-up dynamic programming, we can see that there's a common property between the two approaches.
+
+Dynamic programmming
+: An algorithm design paradigm for speeding-up algorithms that makes multiple recursive calls by identifying and reusing solutions to repeated recursive subproblems.
 
 ## Disjoint Sets
 
