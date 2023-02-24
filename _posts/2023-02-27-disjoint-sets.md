@@ -36,8 +36,8 @@ Prim’s algorithm is in Θ(|E| log |V|) time overall.
 Fill in the blanks with the greatest big-O bounds for isConnected and connect if we know that Kruskal’s algorithm is in Θ(|E| log |E|) time overall.
 Merge sort the list of edges in the graph.				Θ(|E| log |E|)
 While the size of the MST < |V| - 1…
-Determine if isConnected(e.from, e.to).		________________
-If false, connect(e.from, e.to) and add e.		________________
+Determine if find(e.from).equals(find(e.to)).	________________
+If false, union(e.from, e.to) and add e to result.	________________
 Then, fill in the table with the worst-case runtime for each implementation.
 2
 Disjoint Sets
