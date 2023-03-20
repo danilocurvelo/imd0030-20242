@@ -200,3 +200,130 @@ Copy and paste each result into its own [Desmos graphing calculator](https://www
 
 {: .deliverable }
 Compare your plots and lines of best fit for the `addLast` method between all three implementations: `ArrayListDeque`, `ArrayDeque`, and `LinkedDeque`. Then, identify an operation that should show a significant difference between `ArrayListDeque` and the `ArrayDeque`, and modify the `RuntimeExperiments` class so that it measures this difference. Compare your new plots and lines of best fit to confirm that `ArrayDeque` is more efficient than `ArrayListDeque` for your operation.
+
+## Apply and Extend
+
+Now that you've completed three implementations of the `Deque` interface and analyzed its methods both asymptotically and experimentally, you've gained a strong understanding of the `Deque` abstract data type (ADT) that you can use in a variety of applications.
+
+Here are some examples of ways you can develop your `Deque` implementations into smaller applications and bigger projects. We also included a Leetcode problem for some practice at using deques in interview problems!
+
+- **Client Classes.** Flashcards and a SoptifyQueue using Deques!
+- **Project/Game Ideas.** Cake (layering flavors) and Snake!
+- **LeetCode.** The Sliding Window Maximum problem can be solved using a Deque!
+
+### Client Classes
+
+#### `Flashcards.java`
+
+Deques can have very helpful functionality when implementing a deck of flashcards! Here's an example of how we can use Deques to create and practice flashcards!
+
+{% include youtube.html id="rz-KkS7Z6Gc" aspect_ratio="1280/777" %}
+
+#### `SpotifyQueue.java`
+
+A music queue is one application in which a deque may actually be more helpful in bringing more functionality to our queue! Here's an example of how we can use Deques to simulate Spotify's queue.
+
+{% include youtube.html id="6HT89pzBDS0" aspect_ratio="1280/777" %}
+
+### Project Ideas
+
+#### Cake Layering
+
+Cake is an idea for an interactive mobile game where the game play is inspired functionality of a `Deque`.
+
+The user is presented with a specific flavor of cake (ex. vanilla) and there are flying cake layers below and above the cake. The goal is to construct the largest cake of one type by adding layers from the bottom and top. The cake layers flying progressively fly faster as the cake gets bigger and the game ends once the user accidentally picks a cake layer that has a different flavor from the base.
+
+This idea applies the functionality of a `Deque` being able to add elements to the top and bottom of a structure. You may choose any functionality to inspire your cake game. The final product is something you can show potential employers to reveal that you are capable of both creating a mobile game and understanding the functionality of the `Deque` ADT.
+
+#### Snake
+
+Snake is a classic game with a simple premise: move the snake to collect apples and to grow; run into a wall or yourself and the game is over. The snake can only move up, down, left, and right one square at a time.
+
+If you represent each unit of the snake's body as a pair of coordinates, then you can represent the whole snake as a `LinkedList` of coordinate pairs. In this way, the First-In-First-Out (FIFO) property of a queue is perfect for simulating the movement of a snake. Each time the snake moves, one coordinate pair is removed, and one coordinate pair is added. You can use a `Deque` instead of a queue to expand on the original rules of the game. Here are some examples of features you might add:
+
+- Eating a rotten apple decreases the length of the snake
+- Eating a clock reverses the direction of movement
+
+Here are some resources to help you get started:
+
+- [Implementing Snake with a Queue (JavaScript).](https://www.youtube.com/watch?v=gyN-EmV4zgQ) Video with a good conceptual overview of how a queue can be used to simulate snake. Implemented using JavaScript.
+- [Snake Game in Java (OOP design concepts).](https://iq.opengenus.org/snake-game-java/) Article describing the classes, objects, and functions required to implement the game using a queue, along with some starter code in Java.
+
+### Leetcode
+
+#### Sliding Window Maximum
+
+This problem is directly taken from Leetcode problem 239. Sliding Window Maximum [https://leetcode.com/problems/sliding-window-maximum/](https://leetcode.com/problems/sliding-window-maximum/).
+
+Here we can see how a double ended queue is used as a data structure to solve this problem. Please attempt the question yourself first before looking at the solution.
+
+**Problem Statement:**
+
+You are given an array of integers `nums`, there is a sliding window of size `k` which is moving from the very left of the array to the very right. You can only see the `k` numbers in the window. Each time, the sliding window moves right by one position.
+
+Return the *max sliding window*.
+
+**Example 1:**
+
+```
+Input: nums = [1, 3, -1, -3, 5, 3, 6, 7], k = 3
+Output: [3, 3, 5, 5, 6, 7]
+Explanation:
+Window position                Max
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7
+```
+
+**Example 2:**
+
+```java
+Input: nums = [1], k = 1
+Output: [1]
+```
+
+**Contraints:**
+
+- `1 <= nums.length <= 105`
+- `-104 <= nums[i] <= 104`
+- `1 <= k <= nums.length`
+
+<details markdown="block">
+<summary><strong>Solution Code:</strong></summary>
+
+```java
+public int[] maxSlidingWindow(int[] a, int k) {
+    if (a == null || k <= 0) {
+        return new int[0];
+    }
+    int n = a.length;
+    int[] r = new int[n-k+1];
+    int ri = 0;
+    // store index
+    Deque<Integer> q = new ArrayDeque<>();
+    for (int i = 0; i < a.length; i++) {
+        // remove numbers out of range k
+        while (!q.isEmpty() && q.peek() < i - k + 1) {
+            q.poll();
+        }
+        // remove smaller numbers in k range as they are useless
+        while (!q.isEmpty() && a[q.peekLast()] < a[i]) {
+            q.pollLast();
+        }
+        // q contains index... r contains content
+        q.offer(i);
+        if (i >= k - 1) {
+            r[ri++] = a[q.peek()];
+        }
+    }
+    return r;
+}
+```
+
+</details>
+
+
