@@ -227,15 +227,15 @@ A music queue is one application in which a deque may actually be more helpful i
 
 ### Project Ideas
 
-#### **Cake Layering**
+#### Cake Layering
 
-Cake is an idea for an interactive mobile game where the game play is inspired functionality of a `Deque`.
+Cake is an idea for an interactive mobile game where the game play is inspired functionaslity of a `Deque`.
 
 The user is presented with a specific flavor of cake (ex. vanilla) and there are flying cake layers below and above the cake. The goal is to construct the largest cake of one type by adding layers from the bottom and top. The cake layers flying progressively fly faster as the cake gets bigger and the game ends once the user accidentally picks a cake layer that has a different flavor from the base.
 
 This idea applies the functionality of a `Deque` being able to add elements to the top and bottom of a structure. You may choose any functionality to inspire your cake game. The final product is something you can show potential employers to reveal that you are capable of both creating a mobile game and understanding the functionality of the `Deque` ADT.
 
-#### **Snake**
+#### Snake
 
 Snake is a classic game with a simple premise: move the snake to collect apples and to grow; run into a wall or yourself and the game is over. The snake can only move up, down, left, and right one square at a time.
 
