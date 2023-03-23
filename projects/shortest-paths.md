@@ -255,7 +255,7 @@ Return the _minimum cost to make the grid have at least one valid path_.
 
 Feel free to look through the Solution code after trying the Leetcode problem out yourself!
 
-<details>
+<details markdown="block">
 <summary>Solution Code:</summary>
 
 ```java
@@ -358,17 +358,17 @@ A way you can extend the knowledge you have learned in the Shortest Path Project
 
 ### Graph puns
 
-<details>
+<details markdown="block">
 <summary>What do you call using Shaprie on the wall of a classroom to finda shortest paths tree?</summary>
 Graph-iti!
 </details>
 
-<details>
+<details markdown="block">
 <summary>How do you express your thanks for having learning about data structures composed of vertices and edges?</summary>
 Graph-titude!
 </details>
 
-<details>
+<details markdown="block">
 <summary>What do you call the act of appreciating graph-related humor?</summary>
 Graphing. Hahaha....ha?
 </details>
