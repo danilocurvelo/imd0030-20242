@@ -345,7 +345,7 @@ A way you can extend the knowledge you have learned in the Shortest Path Project
     - **Use of graphs:** Each webpage can be represented by a node, and links between webpages can be represented by edges! The probability of going from one page to another will affect the weight of that edge.
         - If you're interested in learning more about the math behind PageRank using linear algebra or Markov chains, check out these videos:
             - [The algorithm that started google.](https://www.youtube.com/watch?v=qxEkY8OScYY) _Zach Star._
-            -[PageRank: A Trillion Dollar Algorithm.](https://www.youtube.com/watch?v=JGQe4kiPnrU) _Reducible._
+            - [PageRank: A Trillion Dollar Algorithm.](https://www.youtube.com/watch?v=JGQe4kiPnrU) _Reducible._
 
 ### Research at UW using Graphs
 
