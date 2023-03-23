@@ -227,7 +227,7 @@ A music queue is one application in which a deque may actually be more helpful i
 
 ### Project Ideas
 
-#### Cake Layering
+#### **Cake Layering**
 
 Cake is an idea for an interactive mobile game where the game play is inspired functionality of a `Deque`.
 
@@ -235,7 +235,7 @@ The user is presented with a specific flavor of cake (ex. vanilla) and there are
 
 This idea applies the functionality of a `Deque` being able to add elements to the top and bottom of a structure. You may choose any functionality to inspire your cake game. The final product is something you can show potential employers to reveal that you are capable of both creating a mobile game and understanding the functionality of the `Deque` ADT.
 
-#### Snake
+#### **Snake**
 
 Snake is a classic game with a simple premise: move the snake to collect apples and to grow; run into a wall or yourself and the game is over. The snake can only move up, down, left, and right one square at a time.
 
@@ -249,9 +249,7 @@ Here are some resources to help you get started:
 - [Implementing Snake with a Queue (JavaScript).](https://www.youtube.com/watch?v=gyN-EmV4zgQ) Video with a good conceptual overview of how a queue can be used to simulate snake. Implemented using JavaScript.
 - [Snake Game in Java (OOP design concepts).](https://iq.opengenus.org/snake-game-java/) Article describing the classes, objects, and functions required to implement the game using a queue, along with some starter code in Java.
 
-### Leetcode
-
-#### Sliding Window Maximum
+### Leetcode: Sliding Window Maximum
 
 This problem is directly taken from Leetcode problem 239. Sliding Window Maximum [https://leetcode.com/problems/sliding-window-maximum/](https://leetcode.com/problems/sliding-window-maximum/).
 
@@ -281,7 +279,7 @@ Window position                Max
 
 **Example 2:**
 
-```java
+```
 Input: nums = [1], k = 1
 Output: [1]
 ```
@@ -293,7 +291,7 @@ Output: [1]
 - `1 <= k <= nums.length`
 
 <details markdown="block">
-<summary><strong>Solution Code:</strong></summary>
+<summary>Solution Code:</summary>
 
 ```java
 public int[] maxSlidingWindow(int[] a, int k) {

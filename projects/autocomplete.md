@@ -270,7 +270,7 @@ Assume all strings have a constant length. `TreeSet` is implemented using a red-
 ### Experimental analysis
 
 {: .deliverable }
-Compare the runtimes across different implementations. Are certain algorithms faster than others? Are there any disagreements between the runtimes you hypothesized in asymptotic analysis and the runtimes you observed in your experimental graphs? Describe how differences between the theoretical assumptions made for asymptotic analysis and the actual settings in `RuntimeExperiments` might explain those disagreements. For `allMatches`, describe how the default prefix affects the experimental analysis.
+Compare the runtimes across all 4 implementations, including `TreeSetAutocomplete`. Are certain algorithms faster than others? Are there any disagreements between the runtimes you hypothesized in asymptotic analysis and the runtimes you observed in your experimental graphs? Describe how differences between the theoretical assumptions made for asymptotic analysis and the actual settings in `RuntimeExperiments` might explain those disagreements. For `allMatches`, describe how the default prefix affects the experimental analysis.
 
 Run the provided `RuntimeExperiments` to compare the real-world runtime of each implementation. For each implementation, `RuntimeExperiments` constructs an empty instance and records the number of seconds to add _N_ terms to the dataset and then compute all matches for the `prefix` (such as _Sea_).
 
@@ -279,3 +279,375 @@ Run the provided `RuntimeExperiments` to compare the real-world runtime of each 
 - The third column denotes the average runtime for `allMatches` in seconds.
 
 Copy-paste the text into plotting software such as [Desmos](https://www.desmos.com/calculator). Plot the runtimes of all 4 implementations on `addAll` and `allMatches`.
+
+## Apply and Extend
+
+Now that you've completed 3 implementations of the Autocomplete interface and analyzed its methods both asymptotically and experimentally, you've not only gotten a sense of how Autocomplete in a search engine might be implemented, but have gained a stronger understanding of how different trees optimize for storing and finding information!
+
+Here are a variety of ways we've put together in which you might continue exploring and expanding on your knowledge of Autocomplete and trees!
+
+- **Project Ideas.** Wordscapes!
+- **LeetCode.** Count of Range Sum can be solved using a type of binary tree called a Segment Tree.
+- **TrieSearchTreeAutocomplete.** If you enjoyed the challenge of implementing and adapting code for the TST and wanted to trie one more implementation, we've provided some resources and starter code for implementing a Trie as well.
+- **More connections.**
+    - **Predictive Text and Machine Learning.** Our `Autocomplete` implementation outputs all the matching terms from a pre-existing dataset, but machine learning can help us take into consideration other factors that make a predicted term more likely to be typed next.
+    - **“Can Large Scale Information Access Systems Be Made Fair, Unbiased, and Transparent?”** -- a UW Data Science Seminar talk by Chirag Shah.
+
+### Project Ideas: Wordscapes
+
+One way to display what you have learned throughout this Autocomplete project is to create your own Wordscapes game! Wordscapes is an app that has multiple levels where you try to fill out a crossword puzzle using only the letters provided. One of the attributes of this game is that, although a set of words can create several valid words, only a select few are considered to fill out the puzzle (perfect place to use isTerm). You can choose an implementation that you feel is most appropriate for the game and also create your own list of words to use for the crosswords you create. This is an awesome way to show future employers you know how to choose the most ideal implementation for a certain situation and use your creativity to utilize it!
+
+### LeetCode: Count of Range Sum
+
+This problem is directly taken from Leetcode problem 327: Count of Range Sum - [https://leetcode.com/problems/count-of-range-sum/](https://leetcode.com/problems/count-of-range-sum/).
+
+**Problem Statement:**
+
+Given an integer array `nums` and two integers `lower` and `upper`, return the *number of range sums that lie in `[lower, upper]` inclusive*.
+
+Range sum `S(i, j)` is defined as the sum of the elements in nums between indices `i` and `j` inclusive, where `i <= j`.
+
+**Example 1:**
+```
+Input: nums = [-2,5,-1], lower = -2, upper = 2
+Output: 3
+Explanation: The three ranges are: [0,0], [2,2], and [0,2] and their respective sums are: -2, -1, 2.
+```
+
+**Example 2:**
+```
+Input: nums = [1], k = 1
+Output: [1]
+```
+
+**Constraints:**
+- `1 <= nums.length <= 105`
+- `-104 <= nums[i] <= 104`
+- `1 <= k <= nums.length`
+
+**Prerequisite Knowledge:**
+
+In order to build a solution for this Leetcode problem, it is essential to understand a data structure called a [Segment Tree](https://en.wikipedia.org/wiki/Segment_tree).
+
+- A Segment Tree is a tree data structure (looks just like a binary tree) for storing intervals, or segments.
+- It allows for faster querying operations in these intervals or segments.
+- For instance, if we were to find the min value within a segment or interval of an array, Segment Trees can handle such a situation in a very efficient manner.
+
+Watch the video below in order to get a comprehensive understanding and overview of the Segment Tree data structure. The video covers everything you will need in order to come up with a Segment Tree approach solution for the Leetcode problem discussed above.
+
+{% include youtube.html id="rc1HEFA3VwA" aspect_ratio="1280/777" %}
+
+Now that you've watched the video, here is what you should have a decent understanding of in order to solve the LeetCode problem:
+
+- How a Segment Tree is useful in order to solve range query questions.
+- How a Segment Tree works to solve range query questions.
+- Pseudocode to move from an initial array to an array representation of a Segment Tree (keeping in mind the visualization of a Segment Tree).
+- Pseudocode to run a range query given an array representation of a Segment Tree.
+
+Assuming we have a decent understanding of the 4 bullet points mentioned above, go ahead and try to think of ways a Segment Tree can be used to address this Leetcode problem. The video uses finding a min value as an example, while the Leetcode problem asks for the sum.
+
+Feel free to look through the Solution code after trying the Leetcode problem out yourself!
+
+<details markdown="block">
+<summary>Solution Code:</summary>
+
+```java
+class Solution {
+
+    /**
+     * First, we have to make a SegmentTreeNode Class in order to work with and use
+     * concepts of Segment tree learned in the previous knowledge section!
+     */
+    class SegmentTreeNode {
+        SegmentTreeNode left; // Left Node
+        SegmentTreeNode right; // Right Node
+        int count; // Number of sub ranges under a SegmentTreeNode
+        long min;
+        long max;
+
+        // Constructor
+        public SegmentTreeNode(long min, long max) {
+            this.min = min;
+            this.max = max;
+        }
+    }
+
+    /**
+     * This method should be fairly similar to the psuedocode introduced in the previous
+     * knowledge video. We are essentially trying to build the segmentTreeArray from the
+     * initialArray!
+     */
+    private SegmentTreeNode buildSegmentTree(Long[] valArr, int low, int high) {
+        if(low > high) {
+            return null;
+        }
+        SegmentTreeNode stn = new SegmentTreeNode(valArr[low], valArr[high]);
+        if(low == high) {
+            return stn;
+        }
+        int mid = (low + high)/2;
+        stn.left = buildSegmentTree(valArr, low, mid);
+        stn.right = buildSegmentTree(valArr, mid+1, high);
+        return stn;
+    }
+
+    /**
+     * In this method, all that we are really doing is updating the value of 'count'
+     * with respect to where we are in the segmentTree!
+     */
+    private void updateSegmentTree(SegmentTreeNode stn, Long val) {
+        if(stn == null) {
+            return;
+        }
+        if(val >= stn.min && val <= stn.max) {
+            stn.count++;
+            updateSegmentTree(stn.left, val);
+            updateSegmentTree(stn.right, val);
+        }
+    }
+
+    /**
+     * This method too should be extremely similar to the psuedocode introduced in the video.
+     * We are trying to perform the actual range query aspect of this problem!
+     */
+    private int getCount(SegmentTreeNode stn, long min, long max) {
+        if(stn == null) {
+            return 0;
+        }
+        if(min > stn.max || max < stn.min) {
+            return 0;
+        }
+        if(min <= stn.min && max >= stn.max) {
+            return stn.count;
+        }
+        return getCount(stn.left, min, max) + getCount(stn.right, min, max);
+    }
+
+    /**
+     * Now for the actual method, this method returns the number of range sums that lie between
+     * the inputed interval with the help of all the private methods we made earlier that
+     * dealt with manipulating a segment tree!
+     */
+    public int countRangeSum(int[] nums, int lower, int upper) {
+
+        // Base Case!
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
+        // Initialize the final answer we will return!
+        int ans = 0;
+
+        // Initialize a Set! We use a set because all that we care about is keeping track of the
+        // range of the sum. We do not care about duplicates!
+        Set<Long> valSet = new HashSet<Long>();
+
+        // Use Long to prevent overflow!
+        long sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += (long) nums[i];
+            valSet.add(sum);
+        }
+
+        // At this point, it is important to understand that your valSet contains all sum of
+        // range(i, j) where i = 0 and j from 0 to nums.length - 1!
+
+        Long[] valArr = valSet.toArray(new Long[0]);
+
+        // We are sorting here because we will be extracting the range of sum!
+        Arrays.sort(valArr);
+
+       /*
+        * Finally we use Segment Tree and its underlying concept to find the range sum!
+        * SegmentTreeNode root = buildSegmentTree(valArr, 0, valArr.length-1);
+        *
+        * Before manipulating the SegmentTree, here is how you would want to visualize
+        * it: You have a binary tree, each node contains a range formed by the "min" and "max".
+        * The "min" of a parent node is determined by the minimum lower boundary of all its
+        * children. The "max" is determined by the maximum upper boundary of all its children.
+        *
+        * NOTE: The boundary value must be a sum of a certain range(i, j), and values between
+        * min and max may not correspond to a valid sum!
+        */
+        for (int i = nums.length-1; i >= 0; i--) {
+
+            /*
+             * This private method call will update nodes' count value by pushing 1 if the node
+             * contains range [sum(0, i)]. Each leaf of the segment tree contains
+             * range[sum[0,i], sum[0,i]], where i ranges from 1 to nums.length.
+             * Which means, we will definitely find the leaf if we search from the root of
+             * the tree.
+             * And during the process of finding this leaf node, we update every node's
+             * count value by 1 as it must contain the leaf's range by definition!
+             */
+            updateSegmentTree(root, sum);
+
+            // Doing this enables our sum of range to be (0, i-1) which serves as the initial
+            // base for performing range query on the Segment Tree.
+            sum -= (long) nums[i];
+
+            /*
+             * Get Count method will return how many valid subranges under [sum + lower, sum
+             * + upper] exist. We add sum to range[lower, upper] as we want it to search the
+             * ranges fromed by all ranges starting from i - 1.
+             *
+             * For instance, if sum is 0, the method would look like getCount(root, 0 + upper).
+             * Which will return number of valid ranges formed by sum(0, j).
+             * However, we still need the number of valid ranges fromed by sum(i, j) where i is
+             * not 0, which is what Line 109 takes care of.
+             */
+            ans += getCount(root, (long)lower+sum, (long)upper+sum);
+        }
+
+        // finally return ans!
+        return ans;
+    }
+}
+```
+</details>
+
+### TrieSearchTreeAutocomplete
+
+#### Design and Implement
+
+In lecture, we compared and contrasted the Ternary Search Tree and Trie implementations. Like a TST, a Trie can also be used to implement our Autocomplete interface!
+
+Using this example [`TrieST`](https://github.com/kevin-wayne/algs4/blob/2a3d7f7a36d76fbf5222c26b3d71fcca85d82fc1/src/main/java/edu/princeton/cs/algs4/TrieST.java#L50-L267) class, identify and adapt relevant portions of the code to implement the `Autocomplete` interface. Most of the code in the [`TrieST`](https://github.com/kevin-wayne/algs4/blob/2a3d7f7a36d76fbf5222c26b3d71fcca85d82fc1/src/main/java/edu/princeton/cs/algs4/TrieST.java#L50-L267) class is not needed for implementing `Autocomplete`.
+
+Here is a file containing some starter code and a Trie node class to get you started.
+
+<details markdown="block">
+<summary>TrieSearchTreeAutocomplete.java</summary>
+
+```java
+package autocomplete;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class TrieSearchTreeAutocomplete implements Autocomplete {
+    /**
+     * The number of total characters in extended ASCII.
+     */
+    private static final int R = 256;
+    /**
+     * The overall root of the tree: the first character any autocompletion term added to this tree.
+     */
+    private Node overallRoot;
+
+    /**
+     * Constructs an empty instance.
+     */
+    public TrieSearchTreeAutocomplete() { overallRoot = null; }
+
+    @Override
+    public void addAll(Collection<? extends CharSequence> terms) {
+        // TODO: Replace with your code
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
+
+    @Override
+    public List<CharSequence> allMatches(CharSequence prefix) {
+        // TODO: Replace with your code
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
+
+    /**
+     * A trie search tree node representing the nth character in an autocompletion term.
+     */
+    private static class Node {
+        private boolean isTerm;
+        private Node[] children;
+
+        private Node() {
+            this.isTerm = false;
+            this.children = new Node[R];
+        }
+    }
+}
+```
+</details>
+
+In contrast to a `TST`, which maintains left/middle/right children to store strings, each node in a `Trie` maintains its own `Node[]` array, where each index may store a reference to another `Node[]`. Each index in the array corresponds to exactly one ASCII character (ex: a lower case "a" is at the decimal number 97). This implementation makes use of [extended ASCII](https://en.wikipedia.org/wiki/Extended_ASCII), which gives us access to 256 characters rather than the typical 128.
+
+Here are some tips and tricks to help you keep trie-ing if you find yourself getting stuck:
+
+<details markdown="block">
+<summary>Trie logistics:</summary>
+
+- In your `TST` class, the left/mid/right fields of a node are initially null, but in the `Trie` class, the children field of a node is initialized with an empty array of 256 buckets. This is intentional! For example, in the string "sells", the last "s" in the string is represented as a pointer from index 18 to a new `Node[]` array. In fact, every string ends in a new, empty `Node[]` array.
+- Since the pointer rather than the array itself indicates if we're "using" a character (ex: a pointer from index 18 means we're using "s"), the end of a term is at the empty array being pointed to rather than the array you're pointing from.
+- Since our `Node[]` arrays have 256 indices, you don't need to do any work to convert a char to its corresponding decimal representation, Java will implicitly do this for you!
+```java
+public class Fridge {
+    private static final int R = 256;
+
+    public static void main(String[] args) {
+        String[] fridge = new String[R];
+
+        // Each char can be used in place of its equivalent
+        // decimal value to access indices of an array!
+        fridge['a'] = "milk"; // a = 97
+        fridge['b'] = "eggs"; // b = 98
+
+        print(fridge);
+
+        // Now, let's access the same buckets and swap out our
+        // items using decimal values
+        fridge[97] = "cheese";
+        fridge[98] = "chicken";
+
+        print(fridge);
+    }
+
+    public static void print(String[] arr) {
+        // Notice that we can use char types to iterate through
+        // an array as well!
+        for (char i = 0; i < R; i++) {
+            String item = arr[i];
+            if (item != null) {
+                System.out.println(item + " at index " + (int) i);
+            }
+        }
+        System.out.println();
+    }
+}
+```
+</details>
+
+<details markdown="block">
+<summary>Debugging Tips:</summary>
+
+- Use the [Trie Visualization](https://www.cs.usfca.edu/~galles/visualization/Trie.html) to see what you expect your tree to look like! Using the `SimpleExample` class may be an easier way to debug `addAll` and `allMatches`.
+-  A lot of your `Trie` class will be very structurally similar to your `TST` class! If you get lost in the example `Trie` code, look back to your `TST` class as a reference for the methods used and the structure of the code.
+- While the jGRASP debugger can't visualize an entire Trie, it may still be useful for viewing your `overallRoot` array. If your string starts with an "a", you should expect to find something at the corresponding index 97.
+</details>
+
+#### Analyze and Compare
+
+In section, we explained why a `TST` has a worst-case runtime of Θ(N+L) and a `Trie` has a worst-case runtime of Θ(L), where N is the number of strings in our data structure, and L is maximum length of a string.
+
+Now that you've implemented both a `TST` and a `Trie`, try running `RuntimeExperiments` on both of them and seeing if these theoretical runtimes hold!
+
+### More Connections
+
+#### Predictive Text and Machine Learning
+
+Have you ever tried turning on predictive text on your phone, typing in a single word, and then clicking whatever your phone suggests to see what kind of story it creates?
+
+Our version of `Autocomplete` uses strings from pre-existing datasets of city names and DNA sequences to find matches with a given prefix. It then outputs all of the matching terms in a sometimes arbitrary order. Predictive text goes beyond just outputing all pre-existing matching terms, but also takes into consideration what's relevant to the user and what's likely based on previous text patterns.
+
+Implementing text prediction involves tools from machine learning, natural language processing, and deep learning that are beyond the scope of this course, but if you're interested in learning more about these topics, here are some resources you may find interesting!
+
+{: .hint }
+> If you're interested in learning more about machine learning, [CSE 416](http://courses.cs.washington.edu/courses/cse416/) is a great course to take next (CSE 446 for CS majors, STAT 435 for Statistics). You can continue onto [CSE 490 G1](https://courses.cs.washington.edu/courses/cse599g1/18au/) or LING 574 afterwards to learn about deep learning. If you're interested in the NLP/Computational Linguistics side of the equation, check out LING/CSE 472 or CSE 447.
+
+- [Predictive Text Keyboard using Markov Chains.](https://www.youtube.com/watch?v=WypWvaCw3zs) Here's a short 5 minute video explaining how a predictive text keyboard can be implemented using Markov Chains!
+- [Simple Explanation of LSTM | Deep Learning.](https://www.youtube.com/watch?v=LfnrRPFhkuY) This video gives a conceptual overview of a type of neural network that can take those initial words as inputs to predict what words will come later.
+- [Next Word Prediction with NLP and Deep Learning.](https://towardsdatascience.com/next-word-prediction-with-nlp-and-deep-learning-48b9fe0a17bf) A tutorial article on implementing next word prediction that takes you from pre-processing the dataset to producing prediction. Understanding the details will require more knowledge of deep learning and neural networks, but it may still be interesting to skim over it to see if this is something you'd be interested in learning more about!
+- [Making a Predictive Text Keyboard using Recurrent Neural Networks.](https://medium.com/@curiousily/making-a-predictive-keyboard-using-recurrent-neural-networks-tensorflow-for-hackers-part-v-3f238d824218) Part of a seven part series of articles introducing you to neural networks.
+
+#### [“Can Large Scale Information Access Systems Be Made Fair, Unbiased, and Transparent?”](https://www.youtube.com/watch?v=L2YhtGeQZvA)
+
+In your project, you may have explored more ideas about how search engines display their results, and which sources they chose to display first. In this talk, Chirag Shah expands on these ideas, explores how ranking of search results impact users, and presents some algorithms and statistical methods that can be used to increase fairness and diversity in search result rankings.

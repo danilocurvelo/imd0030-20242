@@ -209,3 +209,166 @@ Copy-paste the text into plotting software such as [Desmos](https://www.desmos.c
 
 {: .deliverable }
 Compare the runtimes across all 5 approaches. Are certain algorithms faster than others? What might explain the differences? How does the choice of `SeamFinder` and the choice of `ShortestPathSolver` affect the runtime? Briefly speculate possible implications for algorithm design.
+
+## Apply and Extend
+
+You've now completed 2 SeamFinder implementations and 1 ShortestPathSolver implementation, analyzed the runtimes across multiple graph traversal algorithms experimentally, and thought about graphs conceptually in your assessments. You've not only gotten a sense of how Seam Carving for image reduction might be implemented, but have gained a stronger understanding of how graphs may be applied to a real world context.
+
+Hopefully, you've had some fun seam-carving your own images as well! Here are some examples and ideas (aka "grapplications") of how you can expand upon your knowledge of graphs to other problems!
+
+- **LeetCode.** Minimum Cost to Make at least One Valid Path in a Grid can be solved using Dijkstra's Algorithm!
+- **Extend your knowledge to Web Design.** Consider taking CSE 154 and INFO 340 so you can build interfaces for your Seam Carver!
+- **Problem Solving using Graphs.**
+    - `Graph Theory:` Crop harvesting in Stardew Valley!
+    - `Google PageRank:` The algorithm behind how Google ranks their search results.
+- **Research at UW using Graphs.**
+    - `Pathways through Conspiracy:` How does conspiracy radicalization process evolve for users on Reddit?
+    - `Wikipedia2Vec:` How can we learn the embeddings of words and entities from Wikipedia?
+- **Graph puns.** Pretty self-edgeplanatory.
+
+### LeetCode: Minimum Cost to Make at least One Valid Path in a Grid
+
+This problem is directly taken from Leetcode problem 1368: Minimum Cost to Make at least One Valid Path in a Grid - [https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/](https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/)
+
+**Problem Statement:**
+
+Given an `m x n` grid. Each cell of the grid has a sign pointing to the next cell you should visit if you are currently in this cell. The sign of `grid[i][j]` can be:
+
+- `1` which means go to the cell to the right. (i.e go from `grid[i][j]` to `grid[i][j + 1]`)
+- `2` which means go to the cell to the left. (i.e go from `grid[i][j]` to `grid[i][j - 1]`)
+- `3` which means go to the lower cell. (i.e go from `grid[i][j]` to `grid[i + 1][j]`)
+- `4` which means go to the upper cell. (i.e go from `grid[i][j]` to `grid[i - 1][j]`)
+
+Notice that there could be some signs on the cells of the grid that point outside the grid.
+
+You will initially start at the upper left cell `(0, 0)`. A valid path in the grid is a path that starts from the upper left cell `(0, 0)` and ends at the bottom-right cell `(m - 1, n - 1)` following the signs on the grid. The valid path does not have to be the shortest.
+
+You can modify the sign on a cell with `cost = 1`. You can modify the sign on a cell **one time only**.
+
+Return the _minimum cost to make the grid have at least one valid path_.
+
+(See original problem for examples and constraints.)
+
+**Live Code/Problem Walkthrough:**
+
+{% include youtube.html id="GWGcwUY5HAQ" aspect_ratio="1280/777" %}
+
+Feel free to look through the Solution code after trying the Leetcode problem out yourself!
+
+<details>
+<summary>Solution Code:</summary>
+
+```java
+class Solution {
+
+    // handle location of GridCell along with the cost to get to it!
+    class GridCell {
+        int row, col, cost;
+        public GridCell(int r, int c, int costVal) {
+            row = r;
+            col = c;
+            cost = costVal;
+        }
+    }
+
+    public int minCost(int[][] grid) {
+
+        // Permiter of the grid -> Rows and Columns!
+        int rows = grid.length;
+        int columns = grid[0].length;
+
+        // Initializing the start and target nodes to run Dijkstras!
+        GridCell start = new GridCell(0, 0, 0);
+        int targetRow = grid.length - 1;
+        int targetCol = grid[0].length - 1;
+
+        // To keep track of the seen GridCells and ensure we don't change the sign more than once!
+        boolean[][] seen = new boolean[rows][columns];
+
+        // min-heap store GridCell values -> The row, the col; order the minHeap with the cost!
+        PriorityQueue<GridCell> minHeap = new PriorityQueue<>((a, b) -> (a.cost - b.cost));
+
+        minHeap.add(start);
+
+        // Run Dijkstras!
+        while(!minHeap.isEmpty()) {
+            // Initialize a couple important variables!
+            GridCell cur = minHeap.poll();
+            int row = cur.row;
+            int col = cur.col;
+            seen[row][col] = true;
+
+            // End Dijkstras when we reach the Target!
+            if (row == targetRow && col == targetCol) {
+                return cur.cost;
+            }
+
+            // Traverse through the other nodes!!
+
+            // If we are going Right! -> 1!
+            if (col + 1 != columns && !seen[row][col + 1]) {
+                minHeap.add(new GridCell(row, col + 1, (grid[row][col] == 1 ? 0 : 1) + cur.cost));
+            }
+
+            // If we are going Left! -> 2!
+            if (col - 1 != -1 && !seen[row][col - 1]) {
+                minHeap.add(new GridCell(row, col - 1, (grid[row][col] == 2 ? 0 : 1) + cur.cost));
+            }
+
+            // If we are going Down! -> 3!
+            if (row + 1 != rows && !seen[row + 1][col]) {
+                minHeap.add(new GridCell(row + 1, col, (grid[row][col] == 3 ? 0 : 1) + cur.cost));
+            }
+
+            // If we are going Up! -> 4!
+            if (row - 1 != -1 && !seen[row - 1][col]) {
+                minHeap.add(new GridCell(row - 1, col, (grid[row][col] == 4 ? 0 : 1) + cur.cost));
+            }
+        }
+        return 0;
+    }
+}
+```
+</details>
+
+### Extend your knowledge to Web Design
+
+A way you can extend the knowledge you have learned in the Shortest Path Project is to make a client side code that makes seam carving more user friendly! If you are familiar with web design or are interested, you can attempt to create an app or website that can allow a user to use seam carving themselves—instead of having to do it through Intelli J which can be confusing even for software engineers. You can experiment with user design, typography, and learn to insert a link to other platforms (such as social media platforms) to display the new photo generated. And if you have no experience with web design, here are two incredible classes you can take next quarter that will: CSE 154 and INFO 340. Having your own finished website that displays work from both client and server side would be very impressive to show to future recruiters or any employer since this process is both difficult and requires prior knowledge to complete.
+
+### Problem Solving using Graphs
+
+- [Solving a Stardew Valley Routing Problem with Graph Theory & Python.](https://towardsdatascience.com/solving-a-stardew-valley-routing-problem-with-graph-theory-python-fd4471077b3a) _Lily Wu._
+    - **Summary:** In this article, Lilly will take you through how they conceptualised their Stardew Valley farm as a graph, the algorithms they explored for shortest path and minimum spanning tree problems and how these inspired the algorithm they wrote in Python to find the fastest way to harvest their crops.
+    - **Use of graph algorithms:** Starts with solutions using BFS, Dijkstra's, Bellman-Ford, Prim's, and Kruskal's, and improves upon these solutions to create Farmer Lily's algorithm!
+- [How Google's PageRank Algorithm Works.](https://www.youtube.com/watch?v=meonLcN7LD4) _Spanning Tree._
+    - **Summary:** Google's PageRank algorithm is one of the most important algorithms on the Internet. The algorithm attempts to rank pages according to their importance. But what does it mean for a web page to be "important"? In this video, we explore the "random surfer" model, which allows us to calculate a page's PageRank by simulating a random surfer who browses the web one page at a time.
+    - **Use of graphs:** Each webpage can be represented by a node, and links between webpages can be represented by edges! The probability of going from one page to another will affect the weight of that edge.
+        - If you're interested in learning more about the math behind PageRank using linear algebra or Markov chains, check out these videos:
+            - [The algorithm that started google.](https://www.youtube.com/watch?v=qxEkY8OScYY) _Zach Star._
+            -[PageRank: A Trillion Dollar Algorithm.](https://www.youtube.com/watch?v=JGQe4kiPnrU) _Reducible._
+
+### Research at UW using Graphs
+
+- [Pathways through Conspiracy: The Evolution of Conspiracy Radicalization through Engagement in Online Conspiracy Discussions.](https://arxiv.org/abs/2204.10729) _Shruti Phadke, Mattia Samory, Tanushree Mitra._ [Social Computing and ALgorithmic Experiences Lab (SCALE)]
+    - **Summary:** What are the pathways of online conspiracy engagement? How does conspiracy radicalization process evolve for users? Through a theory-driven, empirical study of the conspiracy radicalization process, we answer these questions by studying 36K Reddit users through their 169M contributions.
+    - **Use of Graphs:** Uses a subreddit-entity network to represent relationships between subreddits that discuss the same topics. Nodes represent subreddits, and edges exist between subreddits if top posts from both subreddits mention the same entity (person, place, organization, etc.).
+- [Wikipedia2Vec: An Efficient Toolkit for Learning and Visualizing the Embeddings of Words and Entities from Wikipedia.](https://arxiv.org/abs/1812.06280) Ikuya Yamada, Akari Asai, Jin Sakuma, Hiroyuki Shindo, Hideaki Takeda, Yoshiyasu Takefuji, Yuji Matsumoto.
+    - **Summary:** The embeddings of entities in a large knowledge base (e.g., Wikipedia) are highly beneficial for solving various natural language tasks that involve real world knowledge. In this paper, we present Wikipedia2Vec, a Python-based open-source tool for learning the embeddings of words and entities from Wikipedia. [Demo.](https://wikipedia2vec.github.io/demo/)
+    - **Use of Graphs:** Uses an undirected Wikipedia-link graph where nodes are entities, and edges exist between nodes if links exists between the two entities. Graph is stored as an adjacency matrix, where rows and columns are entities, and a value exists at arr[i][j] if entities i and j are linked.
+
+### Graph puns
+
+<details>
+<summary>What do you call using Shaprie on the wall of a classroom to finda shortest paths tree?</summary>
+Graph-iti!
+</details>
+
+<details>
+<summary>How do you express your thanks for having learning about data structures composed of vertices and edges?</summary>
+Graph-titude!
+</details>
+
+<details>
+<summary>What do you call the act of appreciating graph-related humor?</summary>
+Graphing. Hahaha....ha?
+</details>
