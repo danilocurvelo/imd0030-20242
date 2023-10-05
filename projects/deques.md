@@ -201,6 +201,9 @@ Copy and paste each result into its own [Desmos graphing calculator](https://www
 {: .deliverable }
 Compare your plots and lines of best fit for the `addLast` method between all three implementations: `ArrayListDeque`, `ArrayDeque`, and `LinkedDeque`. Then, identify an operation that should show a significant difference between `ArrayListDeque` and the `ArrayDeque`, and modify the `RuntimeExperiments` class so that it measures this difference. Compare your new plots and lines of best fit to confirm that `ArrayDeque` is more efficient than `ArrayListDeque` for your operation.
 
+{: .hint }
+To modify the `RuntimeExperiments` class to measure the runtime of a new operation (`addFirst`, `removeFirst`, `removeLast`), go to the `RuntimeExperiments` class, located at the bottom of the `DequeTests` file. Then, change `deque.addLast(size)` on line 292 to the operation you'd like the test. Change `deque.removeLast()` on line 297 to the opposite of what you're testing. For example, if want to test `removeFirst` on line 292, use `addFirst` on line 297 to revert the `Deque` to its previous state.
+
 ## Apply and Extend
 
 Now that you've completed three implementations of the `Deque` interface and analyzed its methods both asymptotically and experimentally, you've gained a strong understanding of the `Deque` abstract data type (ADT) that you can use in a variety of applications.
