@@ -40,7 +40,7 @@ layout: table_wrappers
       {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Buscar" aria-label="Buscar" autocomplete="off">
+          <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{ search_placeholder | strip_html | strip }}" aria-label="{{ search_placeholder | strip_html| strip }}" autocomplete="off">
           <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
         </div>
         <div id="search-results" class="search-results"></div>
@@ -57,9 +57,7 @@ layout: table_wrappers
         {{ content }}
       {% endif %}
 
-      <!-- {% if page.has_children == true and page.has_toc != false %}
-        {% include components/children_nav.html toc_list=toc_list %}
-      {% endif %} -->
+      
 
       {% include components/footer.html %}
 
