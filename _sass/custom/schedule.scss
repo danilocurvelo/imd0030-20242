@@ -1,6 +1,6 @@
 .schedule {
   @include abstract-card();
-  overflow-x: scroll;
+  overflow-x: auto;
   position: relative;
 
   li::before {

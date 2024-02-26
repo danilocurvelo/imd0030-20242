@@ -39,7 +39,6 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
     <li class="schedule-time">19:30 </li>
     <li class="schedule-time">20:30 </li>
     <li class="schedule-time">21:20 </li>
-    <li class="schedule-time">22:10 </li>
   </ul>
   <ul class="schedule-group">
 
@@ -49,7 +48,7 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 
     <li class="schedule-day">
       <h2 class="schedule-header">Terça</h2>
-      <ul class="schedule-events" style="height: 80x">
+      <ul class="schedule-events" style="height: 160px">
         <li class="schedule-event office-hours"
             style="top: 0px; height: 80px;">
           <div class="name">Turma 01</div>
@@ -71,7 +70,7 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 
     <li class="schedule-day">
       <h2 class="schedule-header">Quinta</h2>
-      <ul class="schedule-events" style="height: 80px">
+      <ul class="schedule-events" style="height: 160px">
         <li class="schedule-event office-hours"
             style="top: 0px; height: 80px;">
           <div class="name">Turma 01</div>
