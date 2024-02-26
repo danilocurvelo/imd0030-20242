@@ -1,12 +1,12 @@
 ---
 layout: minimal
-title: CSE 373
+title: IMD0030
 has_children: true
 has_toc: true
 permalink: /:path/
 seo:
   type: Course
-  name: Data Structures and Algorithms
+  name: Linguagem de Programação I
 ---
 
 # {{ site.description }}

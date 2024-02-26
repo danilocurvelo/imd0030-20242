@@ -1,75 +1,34 @@
 ---
 timeline:
-  - '9:30 AM'
-  - '10:00 AM'
-  - '10:30 AM'
-  - '11:00 AM'
-  - '11:30 AM'
-  - '12:00 PM'
-  - '12:30 PM'
-  - '1:00 PM'
-  - '1:30 PM'
-  - '2:00 PM'
-  - '2:30 PM'
-  - '3:00 PM'
-  - '3:30 PM'
-  - '4:00 PM'
-  - '4:30 PM'
-  - '5:00 PM'
+  - '18:40'
+  - '19:30'
+  - '20:30'
+  - '21:20'
 schedule:
-  - name: Monday
+  - name: Segunda
     events:
-      - name: Office Hours
-        start: 1:30 PM
-        end: 3:30 PM
-        location: SAV 155
-      - name: Lecture
-        start: 3:30 PM
-        end: 4:30 PM
-        location: GUG 220
-  - name: Tuesday
+  - name: Terça
     events:
-      - name: Office Hours
-        start: 9:30 AM
-        end: 11:30 AM
-        location: CSE 560
-      - name: Office Hours
-        start: 1:30 PM
-        end: 5:30 PM
-        location: CSE 560
-  - name: Wednesday
+      - name: Turma 01
+        start: 18:40
+        end: 20:20
+        location: A309
+      - name: Turma 02
+        start: 20:30
+        end: 22:10
+        location: A307
+  - name: Quarta
     events:
-      - name: Office Hours
-        start: 11:30 AM
-        end: 3:30 PM
-        location: SAV 155
-      - name: Lecture
-        start: 3:30 PM
-        end: 4:30 PM
-        location: GUG 220
-  - name: Thursday
+  - name: Quinta
     events:
-      - name: Sections
-        start: 9:30 AM
-        end: 4:30 PM
-      - name: Office Hours
-        start: 3:30 PM
-        end: 5:30 PM
-        location: CSE 560
-  - name: Friday
+      - name: Turma 01
+        start: 18:40
+        end: 20:20
+        location: A309
+      - name: Turma 02
+        start: 20:30
+        end: 22:10
+        location: A307
+  - name: Sexta
     events:
-      - name: Office Hours
-        start: 1:30 PM
-        end: 3:30 PM
-        location: SAV 139
-      - name: Lecture
-        start: 3:30 PM
-        end: 4:30 PM
-        location: GUG 220
-  - name: Saturday
-    events:
-      - name: Office Hours
-        start: 1:30 PM
-        end: 3:30 PM
-        location: Zoom
 ---
