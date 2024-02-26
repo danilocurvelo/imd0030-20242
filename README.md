@@ -34,7 +34,7 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 ## Calendário
 
 <div class="schedule">
-  <ul class="schedule-timeline" style="min-width: {{ page.schedule | size | times: 120 }}px">
+  <ul class="schedule-timeline" style="min-width: 300px">
     <li class="schedule-time">18:40 </li>
     <li class="schedule-time">19:30 </li>
     <li class="schedule-time">20:30 </li>
@@ -43,9 +43,25 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
   <ul class="schedule-group">
     <li class="schedule-day">
       <h2 class="schedule-header">Terça</h2>
-      <ul class="schedule-events" style="height: 200px">
+      <ul class="schedule-events" style="height: 150px">
         <li class="schedule-event lecture"
-            style="top: 0px; height: 200px;">
+            style="top: 0px; height: 150px;">
+          <div class="name">Turma 01</div>
+          <div class="time">18:40–20:20</div>
+          <div class="location">A309</div>
+        </li>
+      </ul>
+    </li>
+
+    <li class="schedule-day">
+      <h2 class="schedule-header">Quarta</h2>
+    </li>
+
+    <li class="schedule-day">
+      <h2 class="schedule-header">Quinta</h2>
+      <ul class="schedule-events" style="height: 150px">
+        <li class="schedule-event lecture"
+            style="top: 0px; height: 150px;">
           <div class="name">Turma 01</div>
           <div class="time">18:40–20:20</div>
           <div class="location">A309</div>
