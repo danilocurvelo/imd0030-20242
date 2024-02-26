@@ -1,34 +1,35 @@
----
 timeline:
-  - '18:40'
-  - '19:30'
-  - '20:30'
-  - '21:20'
+  - '6:40 PM'
+  - '7:30 PM'  
+  - '8:30 PM'
+  - '9:20 PM'
+  - '22:10 PM'
 schedule:
-  - name: Segunda
+  - name: Monday
     events:
-  - name: Terça
-    events:
-      - name: Turma 01
-        start: 18:40
-        end: 20:20
-        location: A309
-      - name: Turma 02
-        start: 20:30
-        end: 22:10
-        location: A307
-  - name: Quarta
-    events:
-  - name: Quinta
+  - name: Tuesday
     events:
       - name: Turma 01
-        start: 18:40
-        end: 20:20
+        start: 6:40 PM
+        end: 8:20 PM
         location: A309
       - name: Turma 02
-        start: 20:30
-        end: 22:10
+        start: 8:30 PM
+        end: 22:10 PM
         location: A307
-  - name: Sexta
+  - name: Wednesday
     events:
----
+  - name: Thursday
+    events:
+      - name: Turma 01
+        start: 6:40 PM
+        end: 8:20 PM
+        location: A309
+      - name: Turma 02
+        start: 8:30 PM
+        end: 22:10 PM
+        location: A307
+  - name: Friday
+    events:
+  - name: Saturday
+    events:
