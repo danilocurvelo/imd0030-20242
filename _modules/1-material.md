@@ -5,7 +5,7 @@ title: Material
 #### Apresentação
 
 05/03
-: **Conteúdo**{: .label .label-purple } ___Apresentação___
+: **Conteúdo**{: .label .label-purple } Apresentação
   : [Slides]({{ site.baseurl }}{% post_url 2023-01-09-asymptotic-analysis %})
 
 07/03
