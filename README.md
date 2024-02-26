@@ -19,25 +19,19 @@ seo:
 {{ staffer }}
 {% endfor %}
 
-[Husky Maps](https://huskymaps.kevinl.info/) is a web app for mapping the world, searching for places, and navigating around Seattle. All these features are powered by the sociotechnical infrastructure of data structures and algorithms, programming abstractions designed by software engineers to represent data and automate processes. In your prior programming experience, you learned *how to implement specifications* by writing Java programs that used data structures to solve problems. In this course, you'll learn how to answer the *why* question: *Why did we choose to write the specification that way?*
+Bem vindo ao curso **Linguagem de Programação I (IMD0030)** oferecido pelo Instituto Metrópole Digital no semestre 2024.1.
 
-There are many decisions to make when designing a software system, and many of these decisions have significant consequences on qualities of a system. In this course, we'll focus on learning *data structures* as implementations of *abstract data types*. An abstract data type describes what you can do with a data type, but not how the data type is implemented; a data structure provides both a description of functionality and a specific implementation of functionality. As a cultural idea that took hold in the 1970s, abstraction enabled computer scientists to think of their algorithms less as custom solutions made from scratch and more as templates adapted to address a particular problem.
+Este curso foi desenvolvido para capacitar o estudante a utilizar a linguagem de programação C++ para a implementação de programas visando a solução de problemas, sem nunca esquecer de aplicar as *boas práticas de programação*. Durante este curso, nos aprofundaremos na sintaxe, lógica e paradigmas da programação em C++, capacitando vocês a dominarem os fundamentos e a prática da codificação eficiente e robusta. Que este curso seja uma experiência enriquecedora, preparando-os para enfrentar os desafios do mundo da programação com confiança e habilidade.
 
-**Data Structures and Algorithms** presents a selection of these cultural ideas in a way intended to help you design, analyze, and evaluate software systems. Learning these ideas can enable fuller participation in the community of computing professionals. This 10-week course is organized around four 2-week historical case study projects and a final portfolio. By the end of the course, you'll have retraced the history of invention for 4 abstract data types, 12 implementations of them, and 7 real-world problems that they address:
+Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operadores de alocação dinâmica; Formas de implementação de TADs (Tipos Abstratos de Dados); Funções e Recursividade; Tipos de recursão; Recursão x Interação; Performance, Expressividade; Introdução a Classes; Construtores e Destrutores; Tipos compostos; Tipos recursivos; Gerenciamento de memória; Modularização de Programas; Depuração e Profiling; Aplicações em estruturas e algoritmos presentes em EDB1.
 
-1. **Deque** data structures for browsing history.
-1. **Autocomplete** data structures and algorithms for search suggestions and DNA indexing.
-1. **Priority queue** data structures for content moderation and shortest paths.
-1. **Shortest paths** and graph data structures for seam carving and navigation directions.
-1. **Portfolio** assembling all of your work throughout the quarter.
-
-## What will you learn?
+## Material
 
 {% for module in site.modules %}
 {{ module }}
 {% endfor %}
 
-## Why should we learn?
+## Por que aprender linguagem de programação?
 
 The education you receive in this course can help prepare you for programming jobs, but this isn't the only purpose for learning computer science.[^1] Education is not only about yourself and your personal gain, but also about all of us and our capacity to live together as a community.
 
