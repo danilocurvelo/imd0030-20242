@@ -13,17 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: CSE 373
-description: Data Structures and Algorithms
-tagline: University of Washington, Winter 2023
-author: Kevin Lin
-baseurl: '/courses/cse373/23wi' # the subpath of your site, e.g. /blog
-url: 'https://courses.cs.washington.edu' # the base hostname & protocol for your site, e.g. http://example.com
+title: IMD0030
+description: Linguagem de Programação I
+tagline: Universidade Federal do Rio Grande do Norte, 2024.1
+author: Danilo Curvelo
+baseurl: '/imd0030-20241' # the subpath of your site, e.g. /blog
+url: 'https://danilocurvelo.github.io' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 include: [".htaccess"]
 future: true
 google_site_verification: 'QclY_1udbdKts462GzFHLmFoaioICIQ16kjZumjRJIg'
-canvas: 'https://canvas.uw.edu/courses/1612302'
+canvas: '#'
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.4.1
