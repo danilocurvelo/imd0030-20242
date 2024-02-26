@@ -35,7 +35,7 @@ heading_anchors: true
 permalink: pretty
 back_to_top: true
 back_to_top_text: Back to top
-footer_content: 'Kevin Lin &copy; 2023 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'
+footer_content: 'Template by Kevin Lin &copy; 2023 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'
 enable_copy_code_button: true
 
 callouts:

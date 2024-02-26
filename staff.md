@@ -1,9 +1,9 @@
 ---
 layout: minimal
-title: Staff
-description: &desc All the teaching and learning assistants.
+title: Equipe
+description: &desc Equipe envolvida em IMD0030.
 summary: *desc
-parent: CSE 373
+parent: IMD0030
 ---
 
 # {{ page.title }}
@@ -11,6 +11,11 @@ parent: CSE 373
 
 {{ page.description }}
 {: .fs-6 .fw-300 }
+
+{% assign instructors = site.staffers | where: 'role', 'Instructor' %}
+{% for staffer in instructors %}
+{{ staffer }}
+{% endfor %}
 
 {% assign teaching_assistants = site.staffers | where: 'role', 'Teaching Assistant' | sort: 'section' %}
 {% for staffer in teaching_assistants %}
