@@ -26,3 +26,13 @@ title: Material
 19/03
 : **Lab**{: .label .label-yellow } Modularização na prática
   : [Slides]({{ site.baseurl }}{% post_url 2023-01-09-asymptotic-analysis %})
+
+#### Recursão
+
+21/03
+: **Conteúdo**{: .label .label-purple } Recursividade
+  : [Slides]({{ site.baseurl }}{% post_url 2023-01-09-asymptotic-analysis %})
+
+26/03
+: **Lab**{: .label .label-yellow } Recursividade na prática
+  : [Slides]({{ site.baseurl }}{% post_url 2023-01-09-asymptotic-analysis %})
