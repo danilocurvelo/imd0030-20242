@@ -5,11 +5,11 @@ title: Material
 #### Apresentação
 
 05/03
-: **Conteúdo**{: .label .label-purple } Apresentação
+: **Conteúdo**{: .label .label-purple } *Apresentação*
   : [Slides]({{ site.baseurl }}{% post_url 2023-01-09-asymptotic-analysis %})
 
 07/03
-: **Conteúdo**{: .label .label-purple } A linguagem C++
+: **Conteúdo**{: .label .label-purple } _A linguagem C++_
   : [Slides]({{ site.baseurl }}{% post_url 2023-01-09-asymptotic-analysis %})
 
 12/03
