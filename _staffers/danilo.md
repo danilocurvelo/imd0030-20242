@@ -1,5 +1,5 @@
 ---
-name: Danilo Curvelo
+name: Prof. Danilo Curvelo
 role: Instructor
 email: danilocurvelo@imd.ufrn.br
 website: #
