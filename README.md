@@ -49,15 +49,15 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 
     <li class="schedule-day">
       <h2 class="schedule-header">Terça</h2>
-      <ul class="schedule-events" style="height: 120px">
+      <ul class="schedule-events" style="height: 80x">
         <li class="schedule-event office-hours"
-            style="top: 0px; height: 150px;">
+            style="top: 0px; height: 80px;">
           <div class="name">Turma 01</div>
           <div class="time">18:40–20:20</div>
           <div class="location">A309</div>
         </li>
         <li class="schedule-event happy-hour"
-            style="top: 120px; height: 120px;">
+            style="top: 80px; height: 80px;">
           <div class="name">Turma 02</div>
           <div class="time">20:30–22:10</div>
           <div class="location">A307</div>
@@ -71,15 +71,15 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 
     <li class="schedule-day">
       <h2 class="schedule-header">Quinta</h2>
-      <ul class="schedule-events" style="height: 120px">
+      <ul class="schedule-events" style="height: 80px">
         <li class="schedule-event office-hours"
-            style="top: 0px; height: 150px;">
+            style="top: 0px; height: 80px;">
           <div class="name">Turma 01</div>
           <div class="time">18:40–20:20</div>
           <div class="location">A309</div>
         </li>
         <li class="schedule-event happy-hour"
-            style="top: 120px; height: 120px;">
+            style="top: 80px; height: 80px;">
           <div class="name">Turma 02</div>
           <div class="time">20:30–22:10</div>
           <div class="location">A307</div>
