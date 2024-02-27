@@ -94,13 +94,17 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 
 ## Recursos
 
-[![discord](https://img.shields.io/badge/discord-entrar_no_canal-7289da?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/zKm3f83vnY)&nbsp;&nbsp;&nbsp;&nbsp;
-[![github](https://img.shields.io/badge/github-repositório-0d74e7?logo=github&logoColor=white&style=for-the-badge)](https://github.com/danilocurvelo-ufrn/imd0030-codes)&nbsp;&nbsp;&nbsp;&nbsp;
-[![githubclassroom](https://img.shields.io/badge/GitHub_Classroom-atividades-2dba4e?logo=googleclassroom&logoColor=white&style=for-the-badge)](https://classroom.github.com/classrooms/113917566-imd0030-2024-1)&nbsp;&nbsp;&nbsp;&nbsp;
+[![discord](https://img.shields.io/badge/discord-entrar_no_canal-7289da?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/zKm3f83vnY)
+
+[![github](https://img.shields.io/badge/github-repositório-0d74e7?logo=github&logoColor=white&style=for-the-badge)](https://github.com/danilocurvelo-ufrn/imd0030-codes)
+
+[![githubclassroom](https://img.shields.io/badge/GitHub_Classroom-atividades-2dba4e?logo=googleclassroom&logoColor=white&style=for-the-badge)](https://classroom.github.com/classrooms/113917566-imd0030-2024-1)
+
 [![slides](https://img.shields.io/badge/google_slides-apresentações-ffe430?logo=googleslides&logoColor=white&style=for-the-badge)](#)
 
-
-
+[![discord](https://img.shields.io/badge/discord-canal-7289da?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/zKm3f83vnY)&nbsp;&nbsp;&nbsp;&nbsp;
+[![github](https://img.shields.io/badge/github-repositório-0d74e7?logo=github&logoColor=white&style=for-the-badge)](https://github.com/danilocurvelo-ufrn/imd0030-codes)&nbsp;&nbsp;&nbsp;&nbsp;
+[![githubclassroom](https://img.shields.io/badge/GitHub_Classroom-atividades-2dba4e?logo=googleclassroom&logoColor=white&style=for-the-badge)](https://classroom.github.com/classrooms/113917566-imd0030-2024-1)&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 ## Avaliação
