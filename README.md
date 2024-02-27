@@ -92,6 +92,10 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
   </ul>
 </div>
 
+## Recursos
+
+[![Support Server](https://img.shields.io/discord/591914197219016707.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge)](https://discord.gg/zKm3f83vnY)
+
 ## Avaliação
 
 O processo de avaliação enste curso é contínuo e envolve diferentes vertentes: atividades práticas em sala de aula e provas escritas. Desta forma, as unidades 1 e 2 deste curso são formadas por 50% de atividades de laboratório desenvolvidas em sala de aula, e os outros 50% compostos pela nota obtida na prova escrita. Lembrando que o aprendizado por meio da prática é altamente recomendado, enfatizando no processo de revisão e reenvio dos trabalhos de programação. Todos os roteiros de laboratório são elaborados em torno de ciclos de *feedback* onde você tenta algo, obtém *feedback* e tenta novamente. Já a prova escrita é necessária para contemplar os requisitos dispostos na [resolução Nº 016/2023-CONSEPE](https://arquivos.info.ufrn.br/arquivos/202319510188f5132967936bb99cbc4964/res0162023-aprova_o_regulamento_da_graduao_da_UFRN._COM_EMENDA_INCORPORADA.pdf), que rege o regulamento dos Cursos de Graduação da Universidade Federal do Rio Grande do Norte - UFRN. Por fim. as notas são baseadas no que você eventualmente aprende por meio desse processo. 
