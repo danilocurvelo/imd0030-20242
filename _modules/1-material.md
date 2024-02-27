@@ -14,7 +14,7 @@ title: Material
 
 12/03
 : **Lab**{: .label .label-yellow } Conhecendo o ambiente
-  : [Google Classroom](#)
+  : [GitHub Classroom](#)
 
 
 #### Modularização
@@ -25,7 +25,7 @@ title: Material
 
 19/03
 : **Lab**{: .label .label-yellow } Modularização na prática
-  : [Google Classroom](#)
+  : [GitHub Classroom](#)
 
 #### Recursão
 
@@ -35,4 +35,4 @@ title: Material
 
 26/03
 : **Lab**{: .label .label-yellow } Recursividade na prática
-  : [Google Classroom](#)
+  : [GitHub Classroom](#)
