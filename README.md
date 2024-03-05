@@ -98,3 +98,13 @@ Unidade 2
 
 Unidade 3
 : **100%**{: .label .label-purple } Projeto final
+
+## Bibliografia
+
+Os principais recursos bibliográficos para esta disciplina estão disponíveis gratuitamente na Internet:
+
+- [learncpp.com](learncpp.com)
+- [cplusplus.com](cplusplus.com)
+- [cppreference.com](cppreference.com)
+
+
