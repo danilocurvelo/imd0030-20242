@@ -106,6 +106,6 @@ Os principais recursos bibliográficos para esta disciplina estão disponíveis 
 - [learncpp.com](learncpp.com)
 - [cplusplus.com](cplusplus.com)
 - [cppreference.com](cppreference.com)
-- [https://roadmap.sh/cpp](https://roadmap.sh/cpp)
+- [roadmap.sh/cpp](roadmap.sh/cpp)
 
 
