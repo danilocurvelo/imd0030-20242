@@ -14,7 +14,7 @@ title: Material
 
 12/03
 : **Lab**{: .label .label-yellow } Conhecendo o ambiente
-  : [GitHub Classroom](#) [Slides](https://docs.google.com/presentation/d/1JDRKity_kRB2nW9Mp_zOoIuVZD-_nRdH_WTG8wlNsiI/edit?usp=sharing)
+  : [GitHub Classroom](#), [Slides](https://docs.google.com/presentation/d/1JDRKity_kRB2nW9Mp_zOoIuVZD-_nRdH_WTG8wlNsiI/edit?usp=sharing)
 
 
 #### Modularização
