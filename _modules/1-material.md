@@ -26,7 +26,7 @@ title: Material
 
 19/03
 : **Lab**{: .label .label-yellow } Modularização na prática
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/a8DtbqF2)
 
 #### Recursão
 
