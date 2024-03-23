@@ -103,9 +103,9 @@ Unidade 3
 
 Os principais recursos bibliográficos para esta disciplina estão disponíveis gratuitamente na Internet:
 
-- [learncpp.com](https://www.learncpp.com)
+- [learncpp.com](https://learncpp.com)
 - [cplusplus.com](https://cplusplus.com)
 - [cppreference.com](https://cppreference.com)
-- [roadmap.sh/cpp](htpps://roadmap.sh/cpp)
+- [roadmap.sh/cpp](https://roadmap.sh/cpp)
 
 
