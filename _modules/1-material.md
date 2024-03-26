@@ -36,7 +36,7 @@ title: Material
 
 26/03
 : **Lab**{: .label .label-yellow } Recursividade na prática
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/_rI6YHNI)
 
 #### Orientação a Objetos
 
