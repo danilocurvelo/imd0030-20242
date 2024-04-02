@@ -15,7 +15,6 @@ title: Material
 12/03
 : **Lab**{: .label .label-yellow } Conhecendo o ambiente
   : [GitHub Classroom](https://classroom.github.com/a/QUlmlEss), [Slides](https://docs.google.com/presentation/d/1JDRKity_kRB2nW9Mp_zOoIuVZD-_nRdH_WTG8wlNsiI/edit?usp=sharing)
-: **Prazo: 12/03 20:20**{: .label .label-red }
 
 
 #### Modularização
@@ -38,16 +37,24 @@ title: Material
 : **Lab**{: .label .label-yellow } Recursividade na prática
   : [GitHub Classroom](https://classroom.github.com/a/_rI6YHNI)
 
+02/04
+: **Revisão**{: .label .label-blue } Recursividade na prática
+  : [Slides](#)
+
 #### Orientação a Objetos
 
-28/03
+09/04
 : **Conteúdo**{: .label .label-purple } Introdução
   : [Slides](#)
 
-02/04
+11/04
 : **Conteúdo**{: .label .label-purple } Construtores e destrutores
   : [Slides](#)
 
-04/04
-: **Lab**{: .label .label-yellow } POO
+16/04
+: **Lab**{: .label .label-yellow } POO na prática
   : [GitHub Classroom](#)
+
+18/04
+: **PROVA**{: .label .label-red } 1ª avaliação escrita
+  : 50% da Unidade 1
