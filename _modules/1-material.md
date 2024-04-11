@@ -49,7 +49,11 @@ title: Material
 
 11/04
 : **Conteúdo**{: .label .label-purple } Construtores e destrutores
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/11edp46XDHJ5XakJp2kS6eQ5VXRbLz8qjPImaSPCpkLs/edit?usp=sharing)
+
+11/04
+: **Conteúdo**{: .label .label-purple } Sobrecarga de funções e passagem por referência
+  : [Slides](https://docs.google.com/presentation/d/1zPSsnCJNx4VrlCI_pjZvjPphZkc-XvAgX0VqWCtyagg/edit?usp=sharing)
 
 16/04
 : **Lab**{: .label .label-yellow } POO na prática
