@@ -57,7 +57,7 @@ title: Material
 
 16/04
 : **Lab**{: .label .label-yellow } POO na prática
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/R6myva5i)
 
 18/04
 : **PROVA**{: .label .label-red } 1ª avaliação escrita
