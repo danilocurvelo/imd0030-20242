@@ -41,7 +41,7 @@ title: Material
 : **Revisão**{: .label .label-blue } Recursividade na prática
   : [Slides](https://docs.google.com/presentation/d/1-zUexJCW46oSB84ksonRTS77XJSHCvfcYTAToNZ_6Mk/edit?usp=sharing)
 
-#### Orientação a Objetos
+#### Introdução a Orientação a Objetos
 
 09/04
 : **Conteúdo**{: .label .label-purple } Introdução
@@ -51,14 +51,36 @@ title: Material
 : **Conteúdo**{: .label .label-purple } Construtores e destrutores
   : [Slides](https://docs.google.com/presentation/d/11edp46XDHJ5XakJp2kS6eQ5VXRbLz8qjPImaSPCpkLs/edit?usp=sharing)
 
-11/04
-: **Conteúdo**{: .label .label-purple } Sobrecarga de funções e passagem por referência
-  : [Slides](https://docs.google.com/presentation/d/1zPSsnCJNx4VrlCI_pjZvjPphZkc-XvAgX0VqWCtyagg/edit?usp=sharing)
-
 16/04
 : **Lab**{: .label .label-yellow } POO na prática
   : [GitHub Classroom](https://classroom.github.com/a/R6myva5i)
 
+#### AVALIAÇÃO
+
 18/04
 : **PROVA**{: .label .label-red } 1ª avaliação escrita
   : 50% da Unidade 1
+
+#### REVISÃO
+
+25/06
+: **Conteúdo**{: .label .label-purple } Revisão IMD0030
+  : [Slides](#)
+
+27/06
+: **Lab**{: .label .label-yellow } Revisão IMD0030
+  : [GitHub Classroom](#)
+
+#### Sobrecarga (_overloading_)
+
+02/07
+: **Conteúdo**{: .label .label-purple } Sobrecarga de funções e passagem por referência
+  : [Slides](https://docs.google.com/presentation/d/1zPSsnCJNx4VrlCI_pjZvjPphZkc-XvAgX0VqWCtyagg/edit?usp=sharing)
+
+02/07
+: **Conteúdo**{: .label .label-purple } Sobrecarga de operadores
+  : [Slides](#)
+
+27/06
+: **Lab**{: .label .label-yellow } Sobrecarga de funções e operadores
+  : [GitHub Classroom](#)
