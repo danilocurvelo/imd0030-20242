@@ -63,13 +63,9 @@ title: Material
 
 #### REVISÃO
 
-25/06
+27/06
 : **Conteúdo**{: .label .label-purple } Revisão IMD0030
   : [Slides](#)
-
-27/06
-: **Lab**{: .label .label-yellow } Revisão IMD0030
-  : [GitHub Classroom](#)
 
 #### Sobrecarga (_overloading_)
 
