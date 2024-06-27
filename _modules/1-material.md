@@ -69,14 +69,14 @@ title: Material
 
 #### Sobrecarga (_overloading_)
 
-02/07
+04/07
 : **Conteúdo**{: .label .label-purple } Sobrecarga de funções e passagem por referência
   : [Slides](https://docs.google.com/presentation/d/1zPSsnCJNx4VrlCI_pjZvjPphZkc-XvAgX0VqWCtyagg/edit?usp=sharing)
 
-02/07
+04/07
 : **Conteúdo**{: .label .label-purple } Sobrecarga de operadores
   : [Slides](#)
 
-27/06
+09/07
 : **Lab**{: .label .label-yellow } Sobrecarga de funções e operadores
   : [GitHub Classroom](#)
