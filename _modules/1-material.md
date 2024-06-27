@@ -65,7 +65,7 @@ title: Material
 
 27/06
 : **Conteúdo**{: .label .label-purple } Revisão IMD0030
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/1t6iohVwly2ThWnu65GdhF-TkSCrD8ibxDh-RgsyCRCY/edit?usp=sharing)
 
 #### Sobrecarga (_overloading_)
 
