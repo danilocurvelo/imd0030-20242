@@ -75,7 +75,7 @@ title: Material
 
 04/07
 : **Conteúdo**{: .label .label-purple } Sobrecarga de operadores
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/17kz4ci9IDzoyzja3nkPI7ckjSK3HEZqo1SNE3bHU7C0/edit?usp=sharing)
 
 09/07
 : **Lab**{: .label .label-yellow } Sobrecarga de funções e operadores
