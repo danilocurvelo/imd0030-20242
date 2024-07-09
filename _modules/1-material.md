@@ -91,11 +91,7 @@ title: Material
 : **Lab**{: .label .label-yellow } Templates de funções e classes
   : [GitHub Classroom](#)
 
-#### Outros conceitos de C++
-
-18/07
-: **Conteúdo**{: .label .label-purple } Ponteiros inteligentes (_smart pointers_)
-  : [Slides](#)
+#### Gerenciamento de I/O
 
 18/07
 : **Conteúdo**{: .label .label-purple } Manipulação de arquivos
