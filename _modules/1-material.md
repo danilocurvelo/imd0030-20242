@@ -130,5 +130,5 @@ title: Material
 #### Projeto Final
 
 26/08 - 28/08
-: **PROVA**{: .label .label-red } Apresentações
+: **PROJETO**{: .label .label-red } Apresentações
   : [Descrição](#)
