@@ -80,3 +80,59 @@ title: Material
 09/07
 : **Lab**{: .label .label-yellow } Sobrecarga de funções e operadores
   : [GitHub Classroom](#)
+
+#### Programação genérica
+
+11/07
+: **Conteúdo**{: .label .label-purple } Templates de funções e classes
+  : [Slides](#)
+
+16/07
+: **Lab**{: .label .label-yellow } Templates de funções e classes
+  : [GitHub Classroom](#)
+
+#### Outros conceitos de C++
+
+18/07
+: **Conteúdo**{: .label .label-purple } Ponteiros inteligentes (_smart pointers_)
+  : [Slides](#)
+
+18/07
+: **Conteúdo**{: .label .label-purple } Manipulação de arquivos
+  : [Slides](#)
+
+#### Herança e classes abstratas
+
+23/07
+: **Conteúdo**{: .label .label-purple } Herança e classes abstratas
+  : [Slides](#)
+
+25/07
+: **Lab**{: .label .label-yellow } Herança e classes abstratas
+  : [GitHub Classroom](#)
+
+#### Tipos Abstratos de Dados
+
+30/07
+: **Conteúdo**{: .label .label-purple } TADs genéricos
+  : [Slides](#)
+
+01/08
+: **Conteúdo**{: .label .label-purple } Biblioteca STL
+  : [Slides](#)
+
+06/08
+: **Lab**{: .label .label-yellow } TADs e STL
+  : [GitHub Classroom](#)
+
+#### AVALIAÇÃO
+
+08/08
+: **PROVA**{: .label .label-red } 2ª avaliação escrita
+  : 50% da Unidade 2
+
+#### Projeto Final
+
+26/08 - 28/08
+: **PROVA**{: .label .label-red } Apresentações
+  : [Descrição](#)
