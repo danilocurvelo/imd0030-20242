@@ -89,7 +89,7 @@ title: Material
 
 16/07
 : **Lab**{: .label .label-yellow } Templates de funções e classes
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/1dD0FKey)
 
 #### Gerenciamento de I/O
 
