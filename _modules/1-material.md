@@ -95,16 +95,16 @@ title: Material
 
 18/07
 : **Conteúdo**{: .label .label-purple } Manipulação de arquivos
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/1VOhkNDqSLLLsr_vT4y-u5cn6xx0O4QQoJyxcO5ns3Uo/edit?usp=sharing)
 
-#### Herança e classes abstratas
+#### Herança, classes abstratas e interfaces
 
 23/07
-: **Conteúdo**{: .label .label-purple } Herança e classes abstratas
-  : [Slides](#)
+: **Conteúdo**{: .label .label-purple } Herança, classes abstratas e interfaces
+  : [Slides](https://docs.google.com/presentation/d/1fW4LOh27FrLE_wLpx3HTGrq2HTIRZ069xNSZHOYOcpA/edit?usp=sharing)
 
 25/07
-: **Lab**{: .label .label-yellow } Herança e classes abstratas
+: **Lab**{: .label .label-yellow } Herança
   : [GitHub Classroom](#)
 
 #### Tipos Abstratos de Dados
