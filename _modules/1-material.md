@@ -105,7 +105,7 @@ title: Material
 
 25/07
 : **Lab**{: .label .label-yellow } Herança
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/ANUVfF_1)
 
 #### Tipos Abstratos de Dados
 
