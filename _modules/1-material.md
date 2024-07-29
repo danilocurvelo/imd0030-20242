@@ -110,14 +110,18 @@ title: Material
 #### Tipos Abstratos de Dados
 
 30/07
-: **Conteúdo**{: .label .label-purple } TADs genéricos
-  : [Slides](#)
+: **Conteúdo**{: .label .label-purple } TADs
+  : [Slides](https://docs.google.com/presentation/d/1Vaz2M0TOEuE8fMhu9fPEqEaFHNCveUK9Y1NdPzq7Efs/edit?usp=sharing)
+
+30/07
+: **Conteúdo**{: .label .label-purple } Namespaces
+  : [Slides](https://docs.google.com/presentation/d/1ZuRirQGyBuAnTWWiSDWAXQ3hIOlOEmwZCpXK2bfcyKg/edit?usp=sharing)
+
+30/07
+: **Conteúdo**{: .label .label-purple } Biblioteca STL
+  : [Slides](https://docs.google.com/presentation/d/17rC0-niGN0sYDjFISPbWMgoRfYT_KN7gtI_8L-iSiVM/edit?usp=sharing)
 
 01/08
-: **Conteúdo**{: .label .label-purple } Biblioteca STL
-  : [Slides](#)
-
-06/08
 : **Lab**{: .label .label-yellow } TADs e STL
   : [GitHub Classroom](#)
 
