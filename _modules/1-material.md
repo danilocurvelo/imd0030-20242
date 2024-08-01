@@ -129,4 +129,4 @@ title: Material
 
 01/08
 : **PROJETO**{: .label .label-red } Projeto final
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/DRx0rKZO)
