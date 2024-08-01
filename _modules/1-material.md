@@ -121,18 +121,12 @@ title: Material
 : **Conteúdo**{: .label .label-purple } Biblioteca STL
   : [Slides](https://docs.google.com/presentation/d/17rC0-niGN0sYDjFISPbWMgoRfYT_KN7gtI_8L-iSiVM/edit?usp=sharing)
 
-01/08
-: **Lab**{: .label .label-yellow } TADs e STL
-  : [GitHub Classroom](#)
-
 #### AVALIAÇÃO
 
-08/08
-: **PROVA**{: .label .label-red } 2ª avaliação escrita
-  : 50% da Unidade 2
+01/08
+: **PROJETO**{: .label .label-red } Projeto Unidade 2
+  : [GitHub Classroom](https://classroom.github.com/a/nxjb0mX1)
 
-#### Projeto Final
-
-26/08 - 28/08
-: **PROJETO**{: .label .label-red } Apresentações
-  : [Descrição](#)
+01/08
+: **PROJETO**{: .label .label-red } Projeto final
+  : [GitHub Classroom](#)
