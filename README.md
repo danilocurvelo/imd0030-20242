@@ -82,7 +82,7 @@ Dentro dos diferente tópicos que iremos abordar durante o curso estão: Operado
 
 [![discord](https://img.shields.io/badge/discord-canal-7289da?logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/zKm3f83vnY)&nbsp;&nbsp;&nbsp;&nbsp;
 [![github](https://img.shields.io/badge/github-repositório-0d74e7?logo=github&logoColor=white&style=for-the-badge)](https://github.com/danilocurvelo-ufrn/imd0030-codes)&nbsp;&nbsp;&nbsp;&nbsp;
-[![githubclassroom](https://img.shields.io/badge/GitHub_Classroom-atividades-2dba4e?logo=googleclassroom&logoColor=white&style=for-the-badge)](https://classroom.github.com/classrooms/113917566-imd0030-2024-1)&nbsp;&nbsp;&nbsp;&nbsp;
+[![githubclassroom](https://img.shields.io/badge/GitHub_Classroom-atividades-2dba4e?logo=googleclassroom&logoColor=white&style=for-the-badge)](https://classroom.github.com/classrooms/113917566-imd0030-2024-2)&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Avaliação
 
@@ -94,7 +94,7 @@ Unidade 1
 
 Unidade 2
 : **50%**{: .label .label-purple } Atividades práticas de laboratório 
-: **50%**{: .label .label-purple } Prova escrita
+: **50%**{: .label .label-purple } Projeto intermediário
 
 Unidade 3
 : **100%**{: .label .label-purple } Projeto final
