@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"autocomplete"},{"l":"graphs"},{"l":"graphs.shortestpaths"},{"l":"minpq"},{"l":"seamfinding"},{"l":"seamfinding.energy"}]
