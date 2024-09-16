@@ -19,7 +19,7 @@ seo:
 {{ staffer }}
 {% endfor %}
 
-Bem vindo ao curso **Linguagem de Programação I (IMD0030)** oferecido pelo Instituto Metrópole Digital no semestre 2024.1.
+Bem vindo ao curso **Linguagem de Programação I (IMD0030)** oferecido pelo Instituto Metrópole Digital no semestre 2024.2.
 
 Este curso foi desenvolvido para capacitar o estudante a utilizar a linguagem de programação C++ para a implementação de programas visando a solução de problemas, sem nunca esquecer de aplicar as *boas práticas de programação*. Durante este curso, nos aprofundaremos na sintaxe, lógica e paradigmas da programação em C++, capacitando vocês a dominarem os fundamentos e a prática da codificação eficiente e robusta. Que este curso seja uma experiência enriquecedora, preparando-os para enfrentar os desafios do mundo da programação com confiança e habilidade.
 
