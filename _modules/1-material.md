@@ -4,30 +4,30 @@ title: Material
 
 #### Apresentação
 
-05/03
+24/09
 : **Conteúdo**{: .label .label-purple } Apresentação
-  : [Slides](https://docs.google.com/presentation/d/1uk1gjGFvARII2xyfIbPDC9pn7wiFSCLQPpO2uS3ylHk/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1XUpt4twUsZN9wCybB49jNMNix13uvvFdk2evN1GBFKY/edit?usp=sharing)
 
-07/03
+26/09
 : **Conteúdo**{: .label .label-purple } A linguagem C++
-  : [Slides](https://docs.google.com/presentation/d/1iFGh60HsAPRiqYB34PjRo5jfHKM5ix1vBF7SYaqC9nE/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1hRgL43uYB5mpUJ7qCbCGqcfSubfNIhrMu4e255zBZkU/edit?usp=sharing)
 
-12/03
+01/10
 : **Lab**{: .label .label-yellow } Conhecendo o ambiente
-  : [GitHub Classroom](https://classroom.github.com/a/QUlmlEss), [Slides](https://docs.google.com/presentation/d/1JDRKity_kRB2nW9Mp_zOoIuVZD-_nRdH_WTG8wlNsiI/edit?usp=sharing)
+  : [GitHub Classroom](#), [Slides](https://docs.google.com/presentation/d/13a9nQdArKWNubZikmQlvTAYv5-VxPfT1WzxFd0WLJ0M/edit?usp=sharing)
 
 
-#### Modularização
+<!-- #### Modularização
 
-14/03
+08/10
 : **Conteúdo**{: .label .label-purple } Modularização
   : [Slides](https://docs.google.com/presentation/d/1iPhkW5NFE-0Ja0bHx1L4sYLm4jbOFspZJr-a0iXKC-8/edit?usp=sharing)
 
-19/03
+10/10
 : **Lab**{: .label .label-yellow } Modularização na prática
-  : [GitHub Classroom](https://classroom.github.com/a/a8DtbqF2)
+  : [GitHub Classroom](https://classroom.github.com/a/a8DtbqF2) -->
 
-#### Recursão
+<!-- #### Recursão
 
 21/03
 : **Conteúdo**{: .label .label-purple } Recursividade
@@ -129,4 +129,4 @@ title: Material
 
 01/08
 : **PROJETO**{: .label .label-red } Projeto final
-  : [GitHub Classroom](https://classroom.github.com/a/DRx0rKZO)
+  : [GitHub Classroom](https://classroom.github.com/a/DRx0rKZO) -->
