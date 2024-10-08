@@ -17,15 +17,15 @@ title: Material
   : [GitHub Classroom](https://classroom.github.com/a/OBS1bAIz), [Slides](https://docs.google.com/presentation/d/13a9nQdArKWNubZikmQlvTAYv5-VxPfT1WzxFd0WLJ0M/edit?usp=sharing)
 
 
-<!-- #### Modularização
-
-08/10
-: **Conteúdo**{: .label .label-purple } Modularização
-  : [Slides](https://docs.google.com/presentation/d/1iPhkW5NFE-0Ja0bHx1L4sYLm4jbOFspZJr-a0iXKC-8/edit?usp=sharing)
+#### Modularização
 
 10/10
+: **Conteúdo**{: .label .label-purple } Modularização
+  : [Slides](#)
+
+15/10
 : **Lab**{: .label .label-yellow } Modularização na prática
-  : [GitHub Classroom](https://classroom.github.com/a/a8DtbqF2) -->
+  : [GitHub Classroom](#)
 
 <!-- #### Recursão
 
