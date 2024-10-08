@@ -12,7 +12,7 @@ title: Material
 : **Conteúdo**{: .label .label-purple } A linguagem C++
   : [Slides](https://docs.google.com/presentation/d/1hRgL43uYB5mpUJ7qCbCGqcfSubfNIhrMu4e255zBZkU/edit?usp=sharing)
 
-01/10
+08/10
 : **Lab**{: .label .label-yellow } Conhecendo o ambiente
   : [GitHub Classroom](#), [Slides](https://docs.google.com/presentation/d/13a9nQdArKWNubZikmQlvTAYv5-VxPfT1WzxFd0WLJ0M/edit?usp=sharing)
 
