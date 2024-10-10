@@ -21,7 +21,7 @@ title: Material
 
 10/10
 : **Conteúdo**{: .label .label-purple } Modularização
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/1EN1vEBzqI06duny4fuUanIpY1cSFvmc8yCFMjX_vW1k/edit?usp=sharing)
 
 15/10
 : **Lab**{: .label .label-yellow } Modularização na prática
