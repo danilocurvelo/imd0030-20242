@@ -27,21 +27,21 @@ title: Material
 : **Lab**{: .label .label-yellow } Modularização na prática
   : [GitHub Classroom](https://classroom.github.com/a/bqGORhU-)
 
-<!-- #### Recursão
+#### Recursão
 
-21/03
+17/10
 : **Conteúdo**{: .label .label-purple } Recursividade
-  : [Slides](https://docs.google.com/presentation/d/1eZIlDJkmb8ssV5B9Q3_avTFusHo3WsaIAugnSAWO1JE/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1bJwYoZpTnxGPZbIpvqy7kTP16dk-lvseIsB-8uw6Tpk/edit?usp=sharing)
 
-26/03
+22/10
 : **Lab**{: .label .label-yellow } Recursividade na prática
-  : [GitHub Classroom](https://classroom.github.com/a/_rI6YHNI)
+  : [GitHub Classroom](#)
 
-02/04
+24/10
 : **Revisão**{: .label .label-blue } Recursividade na prática
-  : [Slides](https://docs.google.com/presentation/d/1-zUexJCW46oSB84ksonRTS77XJSHCvfcYTAToNZ_6Mk/edit?usp=sharing)
+  : [Slides](#)
 
-#### Introdução a Orientação a Objetos
+<!-- #### Introdução a Orientação a Objetos
 
 09/04
 : **Conteúdo**{: .label .label-purple } Introdução
