@@ -35,7 +35,7 @@ title: Material
 
 22/10
 : **Lab**{: .label .label-yellow } Recursividade na prática
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/mHQF_wkg)
 
 24/10
 : **Revisão**{: .label .label-blue } Recursividade na prática
