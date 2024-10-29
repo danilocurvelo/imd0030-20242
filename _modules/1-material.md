@@ -41,25 +41,27 @@ title: Material
 : **Revisão**{: .label .label-blue } Recursividade na prática
   : [Slides](#)
 
-<!-- #### Introdução a Orientação a Objetos
+#### Introdução a Orientação a Objetos
 
-09/04
+29/10
 : **Conteúdo**{: .label .label-purple } Introdução
-  : [Slides](https://docs.google.com/presentation/d/1-OAuYvc4tyXrzbJ5WhqXldX5V9uKnUL6sNKTrHjwXuc/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1El8t0GZCqaB-g1jd3AcI4qjDVthWnGA8FZqU2AXJgNw/edit?usp=sharing)
 
-11/04
+31/10
 : **Conteúdo**{: .label .label-purple } Construtores e destrutores
-  : [Slides](https://docs.google.com/presentation/d/11edp46XDHJ5XakJp2kS6eQ5VXRbLz8qjPImaSPCpkLs/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1_rnXh9etcMgfjI1HCP_BXxyWFoKzpV5AXJuYfJiXxFo/edit?usp=sharing)
 
-16/04
+05/11
 : **Lab**{: .label .label-yellow } POO na prática
-  : [GitHub Classroom](https://classroom.github.com/a/R6myva5i)
+  : [GitHub Classroom](#)
 
 #### AVALIAÇÃO
 
-18/04
+07/11
 : **PROVA**{: .label .label-red } 1ª avaliação escrita
   : 50% da Unidade 1
+
+<!-- 
 
 #### REVISÃO
 
