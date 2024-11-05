@@ -53,7 +53,7 @@ title: Material
 
 05/11
 : **Lab**{: .label .label-yellow } POO na prática
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/BmQ2AAXi)
 
 #### AVALIAÇÃO
 
