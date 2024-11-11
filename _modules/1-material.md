@@ -59,29 +59,23 @@ title: Material
 
 07/11
 : **PROVA**{: .label .label-red } 1ª avaliação escrita
-  : 50% da Unidade 1
-
-<!-- 
-
-#### REVISÃO
-
-27/06
-: **Conteúdo**{: .label .label-purple } Revisão IMD0030
-  : [Slides](https://docs.google.com/presentation/d/1t6iohVwly2ThWnu65GdhF-TkSCrD8ibxDh-RgsyCRCY/edit?usp=sharing)
+  : 50% da Unidade 1 
 
 #### Sobrecarga (_overloading_)
 
-04/07
+12/11
 : **Conteúdo**{: .label .label-purple } Sobrecarga de funções e passagem por referência
-  : [Slides](https://docs.google.com/presentation/d/1zPSsnCJNx4VrlCI_pjZvjPphZkc-XvAgX0VqWCtyagg/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1aR3X2HIxYL8sNfMxZEPfqcJB7SQsgoh2mZpJ4LnUB3o/edit?usp=sharing)
 
-04/07
+12/11
 : **Conteúdo**{: .label .label-purple } Sobrecarga de operadores
-  : [Slides](https://docs.google.com/presentation/d/17kz4ci9IDzoyzja3nkPI7ckjSK3HEZqo1SNE3bHU7C0/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1f3d8SjovlS9MuCwMG_CYIl_1eNPTR7svcM_5fNRflNk/edit?usp=sharing)
 
-09/07
+19/11
 : **Lab**{: .label .label-yellow } Sobrecarga de funções e operadores
-  : [GitHub Classroom](https://classroom.github.com/a/Ncmvopa0)
+  : [GitHub Classroom](#)
+
+<!--
 
 #### Programação genérica
 
