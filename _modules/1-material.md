@@ -75,33 +75,33 @@ title: Material
 : **Lab**{: .label .label-yellow } Sobrecarga de funções e operadores
   : [GitHub Classroom](https://classroom.github.com/a/V7IOYkSC)
 
-<!--
-
 #### Programação genérica
 
-11/07
+03/12
 : **Conteúdo**{: .label .label-purple } Templates de funções e classes
-  : [Slides](https://docs.google.com/presentation/d/12eDcLtGEqivLcVhcmKn28ze11nPD6gUaGwLSa2QdlZg/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1vl6CnbbvvTA67pmiIqxWr1nNxK0Y_bPkzhQHiCrgmhk/edit?usp=sharing)
 
-16/07
+05/12
 : **Lab**{: .label .label-yellow } Templates de funções e classes
-  : [GitHub Classroom](https://classroom.github.com/a/1dD0FKey)
-
-#### Gerenciamento de I/O
-
-18/07
-: **Conteúdo**{: .label .label-purple } Manipulação de arquivos
-  : [Slides](https://docs.google.com/presentation/d/1VOhkNDqSLLLsr_vT4y-u5cn6xx0O4QQoJyxcO5ns3Uo/edit?usp=sharing)
+  : [GitHub Classroom](#)
 
 #### Herança, classes abstratas e interfaces
 
-23/07
+10/12
 : **Conteúdo**{: .label .label-purple } Herança, classes abstratas e interfaces
-  : [Slides](https://docs.google.com/presentation/d/1fW4LOh27FrLE_wLpx3HTGrq2HTIRZ069xNSZHOYOcpA/edit?usp=sharing)
+  : [Slides](https://docs.google.com/presentation/d/1y8A5XkTgMrlQ165_z0bVEklUhjdzkpg0_vWg2hsZPJs/edit?usp=sharing)
 
-25/07
+12/12
 : **Lab**{: .label .label-yellow } Herança
-  : [GitHub Classroom](https://classroom.github.com/a/ANUVfF_1)
+  : [GitHub Classroom](#)
+
+#### Gerenciamento de I/O
+
+17/12
+: **Conteúdo**{: .label .label-purple } Manipulação de arquivos
+  : [Slides](#)
+
+<!--
 
 #### Tipos Abstratos de Dados
 
