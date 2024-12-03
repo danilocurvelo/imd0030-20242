@@ -82,7 +82,7 @@ title: Material
   : [Slides](https://docs.google.com/presentation/d/1vl6CnbbvvTA67pmiIqxWr1nNxK0Y_bPkzhQHiCrgmhk/edit?usp=sharing)
 
 05/12
-: **Lab**{: .label .label-yellow } Templates de funções e classes
+: **Lab-Remoto**{: .label .label-yellow } Templates de funções e classes
   : [GitHub Classroom](#)
 
 #### Herança, classes abstratas e interfaces
@@ -92,7 +92,7 @@ title: Material
   : [Slides](https://docs.google.com/presentation/d/1y8A5XkTgMrlQ165_z0bVEklUhjdzkpg0_vWg2hsZPJs/edit?usp=sharing)
 
 12/12
-: **Lab**{: .label .label-yellow } Herança
+: **Lab-Remoto**{: .label .label-yellow } Herança
   : [GitHub Classroom](#)
 
 #### Gerenciamento de I/O
