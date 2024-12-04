@@ -83,7 +83,7 @@ title: Material
 
 05/12
 : **Lab-Remoto**{: .label .label-yellow } Templates de funções e classes
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/t24-Xciw)
 
 #### Herança, classes abstratas e interfaces
 
