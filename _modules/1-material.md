@@ -99,7 +99,7 @@ title: Material
 
 17/12
 : **Conteúdo**{: .label .label-purple } Manipulação de arquivos
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/1s0HFf2IxjH5-TwTBRwueWtuqU3H2sJlDQUpz6QxpV90/edit?usp=sharing)
 
 <!--
 
