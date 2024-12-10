@@ -97,32 +97,26 @@ title: Material
 
 #### Gerenciamento de I/O
 
-17/12
+10/12
 : **Conteúdo**{: .label .label-purple } Manipulação de arquivos
   : [Slides](https://docs.google.com/presentation/d/1s0HFf2IxjH5-TwTBRwueWtuqU3H2sJlDQUpz6QxpV90/edit?usp=sharing)
 
-<!--
-
 #### Tipos Abstratos de Dados
 
-30/07
+17/12
 : **Conteúdo**{: .label .label-purple } TADs
-  : [Slides](https://docs.google.com/presentation/d/1Vaz2M0TOEuE8fMhu9fPEqEaFHNCveUK9Y1NdPzq7Efs/edit?usp=sharing)
+  : [Slides](#)
 
-30/07
-: **Conteúdo**{: .label .label-purple } Namespaces
-  : [Slides](https://docs.google.com/presentation/d/1ZuRirQGyBuAnTWWiSDWAXQ3hIOlOEmwZCpXK2bfcyKg/edit?usp=sharing)
-
-30/07
+19/12
 : **Conteúdo**{: .label .label-purple } Biblioteca STL
-  : [Slides](https://docs.google.com/presentation/d/17rC0-niGN0sYDjFISPbWMgoRfYT_KN7gtI_8L-iSiVM/edit?usp=sharing)
+  : [Slides](#)
 
 #### AVALIAÇÃO
 
-01/08
+19/12
 : **PROJETO**{: .label .label-red } Projeto Unidade 2
-  : [GitHub Classroom](https://classroom.github.com/a/nxjb0mX1)
+  : [GitHub Classroom](#)
 
-01/08
+19/12
 : **PROJETO**{: .label .label-red } Projeto final
-  : [GitHub Classroom](https://classroom.github.com/a/DRx0rKZO) -->
+  : [GitHub Classroom](#)
