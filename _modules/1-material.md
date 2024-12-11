@@ -93,7 +93,7 @@ title: Material
 
 12/12
 : **Lab-Remoto**{: .label .label-yellow } Herança
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/QcbTb6sQ)
 
 #### Gerenciamento de I/O
 
