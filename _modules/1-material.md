@@ -117,10 +117,8 @@ title: Material
 : **PROJETO**{: .label .label-red } Projeto Unidade 2
   : [GitHub Classroom](#)
   : 50% da Unidade 2
-  : Entrega em ?
 
 19/12
 : **PROJETO**{: .label .label-red } Projeto final
   : [GitHub Classroom](#)
   : 100% da Unidade 3
-  : Entrega em ?
