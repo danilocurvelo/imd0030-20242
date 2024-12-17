@@ -105,18 +105,22 @@ title: Material
 
 17/12
 : **Conteúdo**{: .label .label-purple } TADs
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/11yDFVkqMgxA4LqN5_1g89tIePQKOg9GjOeCQ44f98Ds/edit?usp=sharing)
 
 19/12
 : **Conteúdo**{: .label .label-purple } Biblioteca STL
-  : [Slides](#)
+  : [Slides](https://docs.google.com/presentation/d/1qgdSdZ1IeT-RsrAr4-eSmdNVVez084ZA-x8V5BXsmZQ/edit?usp=sharing)
 
 #### AVALIAÇÃO
 
 19/12
 : **PROJETO**{: .label .label-red } Projeto Unidade 2
   : [GitHub Classroom](#)
+  : 50% da Unidade 2
+  : Entrega em ?
 
 19/12
 : **PROJETO**{: .label .label-red } Projeto final
   : [GitHub Classroom](#)
+  : 100% da Unidade 3
+  : Entrega em ?
