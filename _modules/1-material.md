@@ -115,10 +115,10 @@ title: Material
 
 19/12
 : **PROJETO**{: .label .label-red } Projeto Unidade 2
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/i8jZEZX0)
   : 50% da Unidade 2
 
 19/12
 : **PROJETO**{: .label .label-red } Projeto final
-  : [GitHub Classroom](#)
+  : [GitHub Classroom](https://classroom.github.com/a/TIlrQHKG)
   : 100% da Unidade 3
